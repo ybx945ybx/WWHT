@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/filterCondictionLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/px_20"
+    android:paddingTop="@dimen/px_20"
+    android:visibility="gone">
+
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_vertical"
+        android:text="已选择:"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rycv_selected_labels"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <!--<HorizontalScrollView-->
+    <!--android:scrollbars="none"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent">-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/filterSonLayout"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent">-->
+
+    <!--<include layout="@layout/simple_condiction_txt_layout"/>-->
+
+    <!--<include layout="@layout/simple_condiction_txt_layout"/>-->
+
+    <!--<include layout="@layout/simple_condiction_txt_layout"/>-->
+
+    <!--</LinearLayout>-->
+
+    <!--</HorizontalScrollView>-->
+
+</LinearLayout>

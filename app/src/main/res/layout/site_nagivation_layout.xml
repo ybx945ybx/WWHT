@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.a55haitao.wwht.ui.view.SiteNagivationLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/floatingHeaderLayout"
+    android:layout_width="match_parent"
+    android:layout_height="46dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/bgImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        android:id="@+id/foregroundImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/img_blur_bar"/>
+
+    <ImageView
+        android:id="@+id/backImg"
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:padding="12dp"
+        android:src="@mipmap/ic_arrow_left_white"/>
+
+    <ImageView
+        android:id="@+id/shareImg"
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:padding="8dp"
+        android:src="@mipmap/ic_share_white"/>
+
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:id="@+id/rightTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:src="@mipmap/ic_share_white"
+        android:text="完成"
+        android:textColor="@color/colorWhite"
+        android:textSize="14sp"
+        android:visibility="gone"/>
+
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:id="@+id/titleTxt"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="142dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/size_32"
+        android:maxLines="1"
+        android:ellipsize="end"
+        tools:text=""/>
+
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:id="@+id/starTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/shareImg"
+        android:layout_toStartOf="@+id/shareImg"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:text=""
+        android:visibility="invisible"/>
+
+
+</com.a55haitao.wwht.ui.view.SiteNagivationLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/colorBlur40"
+              android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/shape_activity_window"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:id="@+id/centerView">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:id="@+id/activityImage" />
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:textColor="@color/colorGray333333"
+            android:textSize="@dimen/size_24"
+            app:expandTypeface="light"
+            android:id="@+id/activityTxt"/>
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:layout_width="100dp"
+            android:layout_height="36dp"
+            android:gravity="center"
+            android:text="马上进入"
+            android:layout_marginBottom="10dp"
+            android:textSize="@dimen/size_28"
+            android:textColor="@color/colorGray333333"
+            android:clickable="true"
+            android:background="@drawable/shape_activity_button"
+            android:id="@+id/activityEnterBtn"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center">
+            <include layout="@layout/line_divider_vertical_m_1_cccccc" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|center_horizontal">
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:textSize="@dimen/size_40"
+                app:expandTypeface="gotham"
+                android:textColor="@color/colorWhite"
+                android:text="X"
+                android:background="@drawable/shape_activity_circle_close"
+                android:id="@+id/activityCloseBtn"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

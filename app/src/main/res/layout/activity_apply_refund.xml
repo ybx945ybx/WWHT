@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/colorActivityBackground"
+              android:orientation="vertical">
+
+    <com.a55haitao.wwht.ui.view.DynamicHeaderView
+        android:id="@+id/headview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:headerTitleTxt="申请退款">
+
+    </com.a55haitao.wwht.ui.view.DynamicHeaderView>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headview"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llyt_goods"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <RelativeLayout
+                    android:id="@+id/rlyt_go_to_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp">
+
+                    <com.a55haitao.wwht.ui.view.HaiTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="受理的商品"
+                        android:textColor="@color/colorGray26241F"
+                        android:textSize="14sp"/>
+
+                    <com.a55haitao.wwht.ui.view.HaiTextView
+                        android:id="@+id/tv_goods_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/iv_go_select"
+                        android:text="请选择"
+                        android:textColor="@color/colorGray999999"
+                        android:textSize="14sp"/>
+
+                    <ImageView
+                        android:id="@+id/iv_go_select"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/margin_medium"
+                        android:src="@mipmap/ic_arrow_right_999"/>
+
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rycv_selected_products"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone">
+
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llyt_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorWhite"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <com.a55haitao.wwht.ui.view.HaiTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="问题描述"
+                    android:textColor="@color/colorGray26241F"
+                    android:textSize="14sp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="14dp">
+
+                    <com.a55haitao.wwht.ui.view.MyLinearLayout
+                        android:id="@+id/llyt_et_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fadingEdge="none"
+                        android:scrollbars="none"
+                        android:visibility="visible">
+
+                        <EditText
+                            android:id="@+id/et_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_radius_px_8"
+                            android:gravity="start"
+                            android:hint="请在此描述详细问题，最多300字"
+                            android:maxLength="300"
+                            android:minHeight="100dp"
+                            android:padding="10dp"
+                            android:textColor="@color/colorGray333333"
+                            android:textColorHint="@color/colorGray999999"
+                            android:textSize="14sp"/>
+                    </com.a55haitao.wwht.ui.view.MyLinearLayout>
+
+                    <com.a55haitao.wwht.ui.view.HaiTextView
+                        android:id="@+id/tv_desc_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="0/300"
+                        android:textColor="@color/colorGray999999"
+                        android:textSize="14sp"/>
+                </RelativeLayout>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="30dp"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rycv_imgs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="80dp"
+                            android:visibility="gone">
+
+                        </android.support.v7.widget.RecyclerView>
+
+                        <ImageView
+                            android:id="@+id/iv_add_img"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_gravity="bottom"
+                            android:src="@mipmap/add_product"/>
+
+                        <com.a55haitao.wwht.ui.view.HaiTextView
+                            android:id="@+id/tv_add_img_tips"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="14dp"
+                            android:text="为了帮助我们更好的解决问题，请上传照片。最多4张，每张不超过5M。"
+                            android:textColor="@color/colorGray666666"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="您的联系方式"
+                android:textColor="@color/colorGray666666"
+                android:textSize="12sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:background="@null"
+                    android:hint="姓名"
+                    android:maxLines="1"
+                    android:textColorHint="@color/colorGrayCCCCCC"
+                    android:textSize="14sp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorActivityBackground"/>
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:background="@null"
+                    android:hint="手机号"
+                    android:maxLines="1"
+                    android:textColorHint="@color/colorGrayCCCCCC"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhite"
+        android:padding="10dp">
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/tv_commit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_btn_black"
+            android:gravity="center"
+            android:text="提交申请"
+            android:textColor="@color/colorWhite"/>
+    </LinearLayout>
+</LinearLayout>

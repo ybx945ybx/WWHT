@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/ll_container"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:layout_margin="6dp">
+        <ImageView
+            android:id="@+id/img_pic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"/>
+        <ImageView
+            android:id="@+id/iv_soldout"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/soldout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:visibility="gone"/>
+        <CheckedTextView
+            android:id="@+id/like_button"
+            android:layout_width="@dimen/px_60"
+            android:layout_height="@dimen/px_60"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/sl_pray_button"
+            android:button="@null"
+            android:visibility="gone"/>
+        <CheckedTextView
+            android:id="@+id/checkedTxt"
+            android:layout_width="@dimen/px_40"
+            android:layout_height="@dimen/px_40"
+            android:background="@drawable/sl_for_check"
+            android:layout_alignParentRight="true"
+            android:button="@null"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:id="@+id/tv_brand_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="#000"
+        tools:text="Ferragamo/菲拉格慕"/>
+
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:id="@+id/tv_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="#999"
+        android:textSize="12sp"
+        tools:text="修身牛仔裤"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:gravity="center">
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/tv_real_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#D0021B"
+            tools:text="￥5319"/>
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/tv_mall_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:textColor="#999"
+            android:textSize="12sp"
+            tools:text="￥9042"/>
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            tools:text="\uffe5298"
+            android:id="@+id/tvDiscount"
+            android:textSize="@dimen/size_20"
+            android:textColor="@color/colorWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorRedED1A3A"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:layout_marginLeft="5dp"
+            app:expandTypeface="gotham"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_country"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            tools:src="@mipmap/ic_flag_usa_wave"/>
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/tv_seller"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="Century 21官网发货"
+            android:textColor="#999"
+            android:textSize="11sp"/>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:activity=".ui.activity.firstpage.CenterActivity">
+
+    <FrameLayout
+        android:id="@+id/framLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorWhite"/>
+
+    <include layout="@layout/line_divider_m_1_e5e5e5"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#FFF"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rdo_home"
+            style="@style/center_radio_btn_style"
+            android:drawableTop="@drawable/sl_tab_home"
+            android:text="首页"/>
+
+        <RadioButton
+            android:id="@+id/rdo_category"
+            style="@style/center_radio_btn_style"
+            android:drawableTop="@drawable/sl_tab_category"
+            android:text="发现"/>
+
+        <RadioButton
+            android:id="@+id/rdo_social"
+            style="@style/center_radio_btn_style"
+            android:drawableTop="@drawable/sl_tab_social"
+            android:text="社区"/>
+
+        <com.a55haitao.wwht.ui.view.WithNumberRadioButton
+            android:id="@+id/rdo_shopping_cart"
+            style="@style/center_radio_btn_style"
+            android:drawableTop="@drawable/sl_tab_shopping_cart"
+            android:text="购物车"/>
+
+        <RadioButton
+            android:id="@+id/rdo_myaccount"
+            style="@style/center_radio_btn_style"
+            android:drawableTop="@drawable/sl_tab_my_account"
+            android:text="我的"/>
+
+    </RadioGroup>
+
+</LinearLayout>

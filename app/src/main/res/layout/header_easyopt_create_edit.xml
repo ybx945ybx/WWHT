@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:tools="http://schemas.android.com/tools"
+       xmlns:app="http://schemas.android.com/apk/res-auto"
+       xmlns:android="http://schemas.android.com/apk/res/android"
+       tools:showIn="@layout/activity_easyopt_create">
+
+    <RelativeLayout
+        android:id="@+id/rl_img_cover"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:background="@color/colorWhite">
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:text="更换草单封面"
+            android:textColor="#333"
+            android:textSize="14sp"/>
+
+        <!-- 右箭头 -->
+        <ImageView
+            android:id="@+id/img_arrow_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:src="@mipmap/ic_arrow_right_grey"/>
+
+        <!-- 草单图片 -->
+        <ImageView
+            android:id="@+id/img_easyopt_logo"
+            android:layout_width="@dimen/avatar_big"
+            android:layout_height="@dimen/avatar_big"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:scaleType="centerInside"
+            android:layout_toLeftOf="@id/img_arrow_right"/>
+    </RelativeLayout>
+
+    <!-- 草单内容 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:paddingTop="25dp">
+
+        <!-- 草单名称 -->
+        <EditText
+            android:id="@+id/et_easypost_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@null"
+            android:hint="@string/hint_easyopt_name"
+            android:maxLength="30"
+            android:textColorHint="@color/colorHint"
+            android:textSize="14sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginTop="22dp"
+            android:background="@color/colorDivider"/>
+
+        <!-- 草单描述 -->
+        <EditText
+            android:id="@+id/et_easypost_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="22dp"
+            android:background="@null"
+            android:gravity="left|top"
+            android:hint="@string/hint_easyopt_desc"
+            android:minHeight="100dp"
+            android:textColorHint="@color/colorHint"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:background="@color/colorWhite">
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/tv_easyopt_visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_marginTop="14dp"
+            android:text="@string/easyopt_public_visible"
+            android:textColor="@color/colorDark"
+            android:textSize="14sp"/>
+
+        <ImageButton
+            android:id="@+id/ib_easyopt_visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv_easyopt_visible"
+            android:background="@null"
+            android:padding="@dimen/padding_small"
+            android:src="@mipmap/ic_question_mark_yellow"/>
+
+        <com.kyleduo.switchbutton.SwitchButton
+            android:id="@+id/sb_easyopt_visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:checked="true"
+            android:cursorVisible="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="4dp"
+            app:kswAnimationDuration="300"
+            app:kswBackDrawable="@drawable/ios_back_drawable"
+            app:kswBackMeasureRatio="1.4"
+            app:kswThumbDrawable="@drawable/ios_thumb_selector"
+            app:kswThumbMarginBottom="-8dp"
+            app:kswThumbMarginLeft="-5dp"
+            app:kswThumbMarginRight="-5dp"
+            app:kswThumbMarginTop="-2.5dp"/>
+    </RelativeLayout>
+</merge>

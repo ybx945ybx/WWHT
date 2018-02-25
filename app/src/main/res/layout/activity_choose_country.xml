@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <com.a55haitao.wwht.ui.view.DynamicHeaderView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:headerTitleTxt="选择国家">
+    </com.a55haitao.wwht.ui.view.DynamicHeaderView>
+
+    <ListView
+        android:id="@+id/lv_country_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#FFF"
+        android:divider="@mipmap/dot_line"
+        android:dividerHeight="1dp"
+        android:scrollbars="none">
+
+    </ListView>
+
+</LinearLayout>

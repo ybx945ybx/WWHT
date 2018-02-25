@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--UPaiYunManager 用到的id-->
+    <item name="u_pai_yun_default_tag" type="id"/>
+    <item name="u_pai_yun_null_holder_tag" type="id"/>
+    <item name="u_pai_yun_default_holder_tag" type="id"/>
+    <item name="u_pai_yun_rounded_tag" type="id" />
+    <item name="u_pai_yun_rounded_dip" type="id" />
+    <item name="u_pai_yun_origin_url" type="id"/>
+
+    <item name="empty_view" type="id"/>
+    <item name="error_view" type="id"/>
+    <item name="loading_view" type="id"/>
+    <item name="content_view" type="id"/>
+    <item name="no_network_view" type="id"/>
+
+    <item name="empty_retry_view" type="id"/>
+    <item name="error_retry_view" type="id"/>
+    <item name="no_network_retry_view" type="id"/>
+
+    <item name="tag_for_img" type="id"/>
+    <item name="tag_for_position" type="id"/>
+    <item name="tag_for_item" type="id"/>
+    <item name="tag_for_img_param" type="id"/>
+
+    <item name="adapter_item_tag_key" type="id"/>
+
+    <item type="id" name="tag_coupon_code"></item>
+    <item type="id" name="tag_coupon_value"></item>
+
+    <item type="id" name="tag_for_statement_type"></item>
+    <item type="id" name="tag_for_statement_url"></item>
+    <item type="id" name="tag_for_statement_title"></item>
+    <item type="id" name="tag_for_statement_position"></item>
+
+</resources>

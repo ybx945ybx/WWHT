@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:id="@+id/categoryNameTxt"
+        android:text="热 门 分 类"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/colorTab"
+        android:textSize="@dimen/size_28"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.a55haitao.wwht.ui.view.ExpandGridView
+        android:numColumns="3"
+        android:id="@+id/categoryGridView"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"/>
+
+</LinearLayout>

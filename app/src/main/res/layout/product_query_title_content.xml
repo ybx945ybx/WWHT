@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:gravity="left"
+        android:textSize="@dimen/size_28"
+        android:textColor="@color/colorGray333333"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="4dp"
+        android:lineSpacingMultiplier="1.5" />
+
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Content"
+        android:gravity="left"
+        android:textSize="@dimen/size_28"
+        android:textColor="@color/colorGray666666"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        app:expandTypeface="light"
+        android:lineSpacingMultiplier="1.5"/>
+
+</LinearLayout>

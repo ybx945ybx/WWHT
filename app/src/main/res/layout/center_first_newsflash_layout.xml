@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="40dp"
+              android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorGrayE6E6E6"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/llyt_newsflash"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <com.a55haitao.wwht.ui.view.HaiImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:src="@mipmap/ic_newsflash_text"/>
+
+                <!--<com.a55haitao.wwht.ui.view.HaiTextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:text="优惠"-->
+                    <!--android:textColor="@color/colorGray333333"-->
+                    <!--android:textSize="14sp"-->
+                    <!--app:expandTypeface="regular"/>-->
+
+                <!--<com.a55haitao.wwht.ui.view.HaiTextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="快报"-->
+                    <!--android:textColor="@color/colorOrange"-->
+                    <!--android:textSize="14sp"-->
+                    <!--app:expandTypeface="regular"/>-->
+                <com.a55haitao.wwht.ui.view.HaiImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:src="@mipmap/ic_newsflash"/>
+            </LinearLayout>
+
+
+            <com.a55haitao.wwht.ui.view.VerticalMarqueeView
+                android:id="@+id/tv_newsflash"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:ellipsize="end"
+                app:mvAnimDuration="500"
+                app:mvInterval="2000"
+                app:mvTextColor="@color/colorGray666666"
+                app:mvTextSize="12sp"
+                app:mvSingleLine="true"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="19dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tv_more_newsflash"
+            android:background="@color/colorGrayE6E6E6"/>
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/tv_more_newsflash"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="更多"
+            android:textColor="@color/colorGray999999"
+            android:textSize="12sp"
+            app:expandTypeface="regular"/>
+    </RelativeLayout>
+</LinearLayout>

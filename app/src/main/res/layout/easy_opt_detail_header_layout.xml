@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.a55haitao.wwht.ui.layout.EasyOptHeaderLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:background="@color/colorAccent">
+
+    <ImageView
+        android:id="@+id/groundImgView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:id="@+id/backgroundImgView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="#55000000"/>
+
+    <RelativeLayout
+        android:id="@+id/rlyt_opt_cover_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp">
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/nameTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_toLeftOf="@id/coverImg"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/colorWhite"
+            android:textSize="24sp"
+            tools:text="运动混搭风"/>
+
+        <!-- 头像 -->
+        <!--<ImageView
+            android:id="@+id/headerImgView"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignLeft="@id/nameTxt"
+            android:layout_below="@id/nameTxt"
+            android:layout_marginTop="5dp"
+            tools:src="@color/color_swipe"/>-->
+
+        <!-- 头像 -->
+        <com.a55haitao.wwht.ui.view.AvatarView
+            android:id="@+id/headerImgView"
+            android:layout_width="@dimen/avatar_medium"
+            android:layout_height="@dimen/avatar_medium"
+            android:layout_alignLeft="@id/nameTxt"
+            android:layout_below="@id/nameTxt"
+            android:layout_marginTop="5dp"
+            app:border_width="1px"
+            app:corner_size="@dimen/avatar_corner_medium"
+            app:placeholder="@mipmap/ic_avatar_default_medium"/>
+
+        <TextView
+            android:id="@+id/nickNameTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/headerImgView"
+            android:layout_alignTop="@id/headerImgView"
+            android:layout_toRightOf="@+id/headerImgView"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="1"
+            android:maxEms="8"
+            android:paddingLeft="10dp"
+            android:textColor="@color/colorGrayE6E6E6"
+            android:textSize="14sp"
+            tools:text="Crystal一只喵"/>
+
+        <ImageView
+            android:id="@+id/jumpImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/nickNameTxt"
+            android:layout_alignTop="@id/nickNameTxt"
+            android:layout_toRightOf="@+id/nickNameTxt"
+            android:paddingLeft="10dp"
+            android:src="@mipmap/ic_arrow_right_small"/>
+
+        <ImageView
+            android:id="@+id/coverImg"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="18dp"
+            tools:src="@color/colorTextYellow"
+            />
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/editTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignBottom="@id/coverImg"
+            android:layout_alignLeft="@id/coverImg"
+            android:layout_alignRight="@id/coverImg"
+            android:background="@drawable/shape_concer_at_bottom"
+            android:gravity="center"
+            android:text="编辑"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp"
+            android:visibility="gone"/>
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/descTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/coverImg"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:lineSpacingExtra="2.5dp"
+            android:lines="2"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp"/>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/infoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/rlyt_opt_cover_info"
+        android:background="@color/colorWhite"
+        android:divider="@drawable/divider_horizon_1_54_e6e6e6"
+        android:orientation="horizontal"
+        android:showDividers="middle">
+
+        <LinearLayout
+            android:id="@+id/likeLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <CheckedTextView
+                android:id="@+id/likeStatusTxt"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@drawable/sl_like_big"/>
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:id="@+id/likeCountTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/like"
+                android:textColor="@color/colorGray999999"
+                tools:text="赞(99)"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/commentLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@mipmap/ic_comment_type_2"/>
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:id="@+id/commentCountTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/comment"
+                android:textColor="@color/colorGray999999"
+                tools:text="评论(99)"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/starLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <CheckedTextView
+                android:id="@+id/starStatusTxt"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@drawable/sl_for_star_type_2"/>
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:id="@+id/starCountTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/star"
+                android:textColor="@color/colorGray999999"
+                tools:text="收藏(99)"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:id="@+id/countTxt"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_below="@id/infoLayout"
+        android:background="@color/colorActivityBackground"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:textColor="@color/colorGray666666"
+        android:textSize="12sp"
+        tools:text="50商品"/>
+
+
+</com.a55haitao.wwht.ui.layout.EasyOptHeaderLayout>

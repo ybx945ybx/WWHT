@@ -1,0 +1,846 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorActivityBackground"
+    android:orientation="vertical"
+    tools:activity=".ui.activity.shoppingcart.OrderDetailActivity">
+
+    <!-- 标题 -->
+    <com.a55haitao.wwht.ui.view.DynamicHeaderView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:headerRightImg="@mipmap/ic_service_title"
+        app:headerTitleTxt="订单详情">
+    </com.a55haitao.wwht.ui.view.DynamicHeaderView>
+
+    <com.a55haitao.wwht.ui.view.MultipleStatusView
+        android:id="@+id/msView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/content_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- 订单操作 -->
+            <LinearLayout
+                android:id="@+id/ll_order_action"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/border_top_f5f5f5"
+                android:gravity="right"
+                android:padding="@dimen/padding_medium">
+
+                <!-- 删除订单 -->
+                <com.a55haitao.wwht.ui.view.HaiTextView
+                    android:id="@+id/tv_delete_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:background="@drawable/refund_btn_selecter"
+                    android:text="@string/order_delete"
+                    android:textColor="@color/colorGray666666"
+                    android:textSize="14sp"
+                    android:visibility="gone"/>
+
+                <!--&lt;!&ndash; 申请退款 &ndash;&gt;-->
+                <!--<com.a55haitao.wwht.ui.view.HaiTextView-->
+                    <!--android:id="@+id/tv_back_money"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="@dimen/margin_medium"-->
+                    <!--android:background="@drawable/refund_btn_selecter"-->
+                    <!--android:text="@string/order_back_money"-->
+                    <!--android:textColor="@color/refund_btn_text_coler_selecter"-->
+                    <!--android:textSize="14sp"-->
+                    <!--android:visibility="gone"/>-->
+                <!-- 取消订单（付款后抢单前） -->
+                <com.a55haitao.wwht.ui.view.HaiTextView
+                    android:id="@+id/tv_cancle_buy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:background="@drawable/btn_order_detail_grey"
+                    android:text="取消订单"
+                    android:textColor="@color/colorGray666666"
+                    android:textSize="14sp"
+                    android:visibility="gone"/>
+
+                <!-- 查看物流 -->
+                <com.a55haitao.wwht.ui.view.HaiTextView
+                    android:id="@+id/tv_get_transfer_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:background="@drawable/btn_order_detail_grey"
+                    android:text="查看物流"
+                    android:textColor="@color/colorGray666666"
+                    android:textSize="14sp"
+                    android:visibility="gone"/>
+
+                <!-- 确认收货 -->
+                <com.a55haitao.wwht.ui.view.HaiTextView
+                    android:id="@+id/tv_confirm_received"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:background="@drawable/shape_btn_lemon_big"
+                    android:text="@string/order_confirm_received"
+                    android:textColor="@color/colorGray333333"
+                    android:textSize="14sp"
+                    android:visibility="gone"/>
+
+                <!-- 取消订单 -->
+                <com.a55haitao.wwht.ui.view.HaiTextView
+                    android:id="@+id/tv_cancel_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:background="@drawable/btn_order_detail_grey"
+                    android:text="@string/order_cancel"
+                    android:textColor="@color/colorGray666666"
+                    android:textSize="14sp"
+                    android:visibility="gone"/>
+
+                <!-- 立即支付 -->
+                <com.a55haitao.wwht.ui.view.HaiTextView
+                    android:id="@+id/toPayBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:background="@drawable/btn_order_detail_lemon"
+                    android:text="@string/order_pay_now"
+                    android:textColor="@color/colorGray333333"
+                    android:textSize="14sp"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/ll_order_action"
+                android:scrollbars="none">
+
+                <!-- 容器 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/padding_large">
+
+                    <!-- 提示信息 -->
+                    <com.a55haitao.wwht.ui.view.HaiTextView
+                        android:id="@+id/tv_head_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/orderDetailHeaderInfoBg"
+                        android:lineSpacingMultiplier="1.3"
+                        android:padding="@dimen/padding_medium"
+                        android:textColor="@color/orderDetailHeaderInfoText"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        tools:text="@string/order_detail_header_info_text"/>
+
+                    <!-- 订单号 & 收货信息 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorWhite"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:paddingLeft="14dp">
+
+                        <!-- 订单编号 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border_bottom"
+                            android:paddingBottom="9dp"
+                            android:paddingRight="@dimen/padding_medium"
+                            android:paddingTop="9dp">
+
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="订单编号"
+                                android:textColor="@color/colorGray999999"
+                                android:textSize="14sp"/>
+
+                            <!-- 订单号 -->
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:id="@+id/tv_order_number"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/margin_medium"
+                                android:layout_marginRight="@dimen/margin_medium"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:textColor="#333333"
+                                android:textSize="12sp"
+                                tools:text="23131344"/>
+
+                            <!-- 复制订单号 -->
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:id="@+id/tv_copy"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/btn_grey_ccc"
+                                android:text="复制"
+                                android:textColor="@color/colorGray666666"
+                                android:textSize="12sp"/>
+                        </LinearLayout>
+
+                        <!-- 创建时间 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border_bottom"
+                            android:paddingBottom="12dp"
+                            android:paddingTop="12dp">
+
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="创建时间"
+                                android:textColor="@color/colorGray999999"
+                                android:textSize="14sp"/>
+
+                            <!-- 创建时间 -->
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:id="@+id/tv_order_create_time"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/margin_medium"
+                                android:maxLines="1"
+                                android:textColor="#333333"
+                                android:textSize="12sp"
+                                tools:text="2016-08-22 17:26:11"/>
+
+                        </LinearLayout>
+
+                        <!-- 支付时间 -->
+                        <LinearLayout
+                            android:id="@+id/ll_order_pay_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border_bottom"
+                            android:paddingBottom="12dp"
+                            android:paddingTop="12dp">
+
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="支付时间"
+                                android:textColor="@color/colorGray999999"
+                                android:textSize="14sp"/>
+
+                            <!-- 支付时间 -->
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:id="@+id/tv_order_pay_time"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/margin_medium"
+                                android:maxLines="1"
+                                android:textColor="#333333"
+                                android:textSize="12sp"
+                                tools:text="2016-08-22 17:26:11 微信支付"/>
+
+                        </LinearLayout>
+
+                        <!-- 确认收货 -->
+                        <LinearLayout
+                            android:id="@+id/ll_receive_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border_bottom"
+                            android:paddingBottom="12dp"
+                            android:paddingTop="12dp">
+
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="确认收货"
+                                android:textColor="@color/colorGray999999"
+                                android:textSize="14sp"/>
+
+                            <!-- 确认收货 -->
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:id="@+id/tv_receive_time"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/margin_medium"
+                                android:maxLines="1"
+                                android:textColor="#333333"
+                                android:textSize="12sp"
+                                tools:text="2016-08-22 17:26:11"/>
+
+                        </LinearLayout>
+
+                        <!-- 订单状态 -->
+                        <com.a55haitao.wwht.ui.view.HaiTextView
+                            android:id="@+id/tv_order_status"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border_bottom"
+                            android:paddingBottom="12dp"
+                            android:paddingTop="12dp"
+                            android:textColor="@color/colorGray333333"
+                            android:textSize="14sp"
+                            tools:text="交易完成"/>
+
+                        <!-- 物流信息 -->
+                        <RelativeLayout
+                            android:id="@+id/ll_transfer_info"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="16dp"
+                            android:paddingTop="16dp">
+
+                            <ImageView
+                                android:id="@+id/img_shipping"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="3dp"
+                                android:src="@mipmap/ic_shipping"/>
+
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:id="@+id/tv_transfer_info"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/margin_small"
+                                android:layout_marginRight="35dp"
+                                android:layout_toRightOf="@id/img_shipping"
+                                android:ellipsize="end"
+                                android:maxLines="3"
+                                android:textColor="@color/order_orange"
+                                android:textSize="14sp"
+                                tools:text="包裹1—您的包裹正在配送中，请留意"/>
+
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:id="@+id/tv_transfer_info_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignLeft="@id/tv_transfer_info"
+                                android:layout_below="@id/tv_transfer_info"
+                                android:layout_marginTop="9dp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:textColor="@color/colorGray999999"
+                                android:textSize="14sp"
+                                tools:text="2015-91-24   15:00 "/>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/margin_medium"
+                                android:src="@mipmap/ic_arrow_right_999"/>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <!--查看退款进度-->
+                    <RelativeLayout
+                        android:id="@+id/rlyt_back_money"
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone"
+                        android:background="@color/colorWhite"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="14dp">
+                        <com.a55haitao.wwht.ui.view.HaiTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="查看退款申请进度"
+                            android:textColor="@color/product_status_red"
+                            android:textSize="14sp"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:src="@mipmap/ic_arrow_right_999"/>
+
+                    </RelativeLayout>
+                    <!-- 收货地址 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:background="@color/colorWhite"
+                        android:orientation="vertical"
+                        android:paddingLeft="12dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="12dp"
+                            android:paddingRight="12dp"
+                            android:paddingTop="12dp">
+
+                            <ImageView
+                                android:id="@+id/img_location"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/ic_location"/>
+
+                            <!-- 用户信息 -->
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:id="@+id/tv_user_info"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="17dp"
+                                android:layout_toRightOf="@id/img_location"
+                                android:lineSpacingMultiplier="1.3"
+                                android:textColor="#333333"
+                                tools:text="Dustin    18516535443"/>
+
+                            <!-- 地址 -->
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:id="@+id/tv_address"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignLeft="@id/tv_user_info"
+                                android:layout_below="@id/tv_user_info"
+                                android:layout_marginTop="9dp"
+                                android:gravity="center_vertical|left"
+                                android:lineSpacingMultiplier="1.3"
+                                android:textColor="#333333"
+                                tools:text="上海市"/>
+                        </RelativeLayout>
+
+                        <!-- 备注 -->
+                        <RelativeLayout
+                            android:id="@+id/rl_remark"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border_top"
+                            android:paddingBottom="@dimen/padding_medium"
+                            android:paddingRight="12dp"
+                            android:paddingTop="@dimen/padding_medium">
+
+                            <ImageView
+                                android:id="@+id/img_remark"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/ic_remark"/>
+
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:id="@+id/tv_remark_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginLeft="6dp"
+                                android:layout_toRightOf="@+id/img_remark"
+                                android:text="备注"
+                                android:textColor="@color/colorGray999999"
+                                android:textSize="14sp"/>
+
+                            <!-- 备注文本 -->
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:id="@+id/tv_remark"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignLeft="@id/tv_remark_label"
+                                android:layout_below="@id/tv_remark_label"
+                                android:layout_marginTop="9dp"
+                                android:textColor="@color/colorGray333333"
+                                android:textSize="14sp"
+                                tools:text="记得帮我领小样哦！！！"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/goodsRootLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:background="@color/colorWhite"
+                        android:orientation="vertical"/>
+
+
+                    <!-- 金额容器 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:background="@color/colorWhite"
+                        android:orientation="vertical"
+                        android:paddingLeft="14dp"
+                        android:paddingTop="14dp">
+
+                        <!-- 商品金额 -->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="14dp">
+
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="商品金额"
+                                android:textColor="@color/colorGray999999"
+                                android:textSize="14sp"/>
+
+                            <!-- 商品金额 -->
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:id="@+id/tv_product_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:textColor="@color/colorGray333333"
+                                android:textSize="14sp"
+                                tools:text="￥2908"/>
+
+                        </RelativeLayout>
+
+                        <!-- 官网运费 -->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="14dp"
+                            android:layout_marginTop="@dimen/margin_medium">
+
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="官网运费"
+                                android:textColor="@color/colorGray999999"
+                                android:textSize="14sp"/>
+
+                            <!-- 官网运费 -->
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:id="@+id/tv_shipping_fee_store"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:textColor="@color/colorGray333333"
+                                android:textSize="14sp"
+                                tools:text="￥0"/>
+
+                        </RelativeLayout>
+
+                        <!-- 海外消费税 -->
+                        <RelativeLayout
+                            android:id="@+id/rl_consumption_tax"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="14dp"
+                            android:layout_marginTop="@dimen/margin_medium">
+
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="海外消费税"
+                                android:textColor="@color/colorGray999999"
+                                android:textSize="14sp"/>
+
+                            <!-- 海外消费税 -->
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:id="@+id/tv_consumption_tax"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:textColor="@color/colorGray333333"
+                                android:textSize="14sp"
+                                tools:text="￥0"/>
+
+                        </RelativeLayout>
+
+                        <!-- 预估国际运费 -->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="14dp"
+                            android:layout_marginTop="@dimen/margin_medium">
+
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="预估国际运费"
+                                android:textColor="@color/colorGray999999"
+                                android:textSize="14sp"/>
+
+                            <!-- 预估国际运费 -->
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:id="@+id/tv_shipping_fee_estimate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:drawableRight="@mipmap/ic_question_mark"
+                                android:textColor="@color/colorGray333333"
+                                android:textSize="14sp"
+                                tools:text="￥0"/>
+
+                        </RelativeLayout>
+
+                        <!-- 关税 -->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="14dp"
+                            android:layout_marginTop="@dimen/margin_medium">
+
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="关税"
+                                android:textColor="@color/colorGray999999"
+                                android:textSize="14sp"/>
+
+                            <!-- 关税 -->
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:id="@+id/tv_tax_fee"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:drawableRight="@mipmap/ic_question_mark"
+                                android:textColor="@color/colorGray333333"
+                                android:textSize="14sp"
+                                tools:text="￥0"/>
+
+                        </RelativeLayout>
+
+                        <!-- 活动优惠 -->
+                        <RelativeLayout
+                            android:id="@+id/rl_activity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="14dp"
+                            android:layout_marginTop="@dimen/margin_medium"
+                            android:visibility="gone">
+
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:text="商家优惠"
+                                android:textColor="@color/colorGray999999"
+                                android:textSize="14sp"/>
+
+                            <!-- 优惠 -->
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:id="@+id/tv_activity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:textColor="@color/colorRedEE1741"
+                                android:textSize="14sp"
+                                tools:text="-￥40"/>
+
+                        </RelativeLayout>
+
+                        <!-- 优惠券 -->
+                        <RelativeLayout
+                            android:id="@+id/rl_promote"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="14dp"
+                            android:layout_marginTop="@dimen/margin_medium">
+
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:text="优惠券"
+                                android:textColor="@color/colorGray999999"
+                                android:textSize="14sp"/>
+
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:id="@+id/tv_promote"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:textColor="@color/colorRedEE1741"
+                                android:textSize="14sp"
+                                tools:text="-￥40"/>
+
+                        </RelativeLayout>
+
+                        <!-- 佣金 -->
+                        <RelativeLayout
+                            android:id="@+id/rl_commission"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="14dp"
+                            android:layout_marginTop="@dimen/margin_medium">
+
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="佣金"
+                                android:textColor="@color/colorGray999999"
+                                android:textSize="14sp"/>
+
+                            <!-- 佣金 -->
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:id="@+id/tv_commission"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:textColor="@color/colorRedEE1741"
+                                android:textSize="14sp"
+                                tools:text="-￥20"/>
+
+                        </RelativeLayout>
+
+                        <!-- 运费 -->
+                        <!-- <com.a55haitao.wwht.ui.view.HaiTextView
+                             android:id="@+id/tv_shipping_fee"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_marginRight="12dp"
+                             android:layout_marginTop="4dp"
+                             android:gravity="right"
+                             android:textColor="#999999"
+                             android:textSize="12sp"
+                             tools:text="运费: 官网运费￥0 + 预估国际运费￥0"/>-->
+
+                        <!-- 实付款 -->
+                        <com.a55haitao.wwht.ui.view.HaiTextView
+                            android:id="@+id/tv_total_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:background="@drawable/border_top"
+                            android:gravity="right"
+                            android:padding="14dp"
+                            android:textColor="#333333"
+                            android:textSize="14sp"
+                            tools:text="实付款: ￥22100"/>
+
+                    </LinearLayout>
+
+                    <!-- 支付 -->
+                    <LinearLayout
+                        android:id="@+id/ll_pay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:background="@color/colorWhite"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <!-- 微信支付 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/ic_wx_pay"/>
+
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:paddingLeft="10dp"
+                                android:text="微信支付"
+                                android:textColor="@color/colorTab"
+                                android:textSize="@dimen/size_28"/>
+
+                            <RelativeLayout
+                                android:id="@+id/wxPayLayout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="10dp"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp">
+
+                                <CheckBox
+                                    android:id="@+id/wxPayCheckBox"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:background="@drawable/sl_for_pay"
+                                    android:button="@null"
+                                    />
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="@dimen/margin_medium"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:background="@mipmap/dot_line"/>
+
+                        <!-- 支付宝 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:gravity="center_vertical"
+
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/ic_ali_pay"/>
+
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:paddingLeft="10dp"
+                                android:text="支付宝支付"
+                                android:textColor="@color/colorTab"
+                                android:textSize="@dimen/size_28"/>
+
+
+                            <RelativeLayout
+                                android:id="@+id/aliPayLayout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="10dp"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp">
+
+                                <CheckBox
+                                    android:id="@+id/aliPayCheckBox"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:background="@drawable/sl_for_pay"
+                                    android:button="@null"
+                                    android:checked="false"/>
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+    </com.a55haitao.wwht.ui.view.MultipleStatusView>
+
+
+</LinearLayout>

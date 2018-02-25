@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              tools:activity=".ui.fragment.TestFragment">
+
+    <Button
+        android:id="@+id/btn_test"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Test"/>
+
+    <Button
+        android:id="@+id/btn_product"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Product"/>
+
+    <Button
+        android:id="@+id/btn_shoppingcart"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="ShoppingCart"/>
+
+    <com.a55haitao.wwht.ui.view.PostLikeButton
+        android:id="@+id/like_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </com.a55haitao.wwht.ui.view.PostLikeButton>
+
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:text=" 查看已完成订单，带有物流信息，查看该订单详情，55停止运行，不带物流的订单查看详情正常"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        app:expandTypeface="light"
+        android:text=" 查看已完成订单，带有物流信息，查看该订单详情，55停止运行，不带物流的订单查看详情正常"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        app:expandTypeface="regular"
+        android:text=" 查看已完成订单，带有物流信息，查看该订单详情，55停止运行，不带物流的订单查看详情正常"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        app:expandTypeface="gotham"
+        android:text=" 查看已完成订单，带有物流信息，查看该订单详情，55停止运行，不带物流的订单查看详情正常"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

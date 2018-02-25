@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:paddingLeft="@dimen/padding_medium"
+              android:paddingTop="@dimen/padding_medium">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_medium">
+
+        <!-- 商品图 -->
+        <ImageView
+            android:id="@+id/img_product_pic"
+            android:layout_width="@dimen/product_pic_small_width"
+            android:layout_height="@dimen/product_pic_small_height"
+            tools:src="@mipmap/ic_launcher"/>
+
+        <LinearLayout
+            android:id="@+id/ll_product_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:id="@+id/tv_product_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:lineSpacingMultiplier="1.1"
+                android:textColor="@color/colorGray333333"
+                android:textSize="12sp"
+                tools:text="Rebecca Minkoff Mini MAC\n迷你女士斜挎包"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <!-- 商品价格 -->
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:id="@+id/tv_product_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorGray333333"
+                android:textSize="12sp"
+                tools:text="¥2999"/>
+
+            <!-- 商品个数 -->
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:id="@+id/tv_product_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorGray333333"
+                android:textSize="12sp"
+                tools:text="X1"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 订单状态信息 -->
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:id="@+id/tv_order_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:gravity="right"
+        android:textSize="12sp"
+        tools:text="海外官网物流丢件，退款受理中"/>
+
+    <!-- 分割线 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:background="@color/colorGrayCCCCCC"/>
+
+</LinearLayout>

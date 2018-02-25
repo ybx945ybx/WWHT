@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="3dp"
+    android:paddingTop="5dp">
+
+    <ImageView
+        android:id="@+id/backImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:src="@mipmap/ic_arrow_left_grey"/>
+
+    <TextView
+        android:id="@+id/searchEdt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/shape_radius_px_8"
+        android:drawableLeft="@mipmap/ic_search"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:hint="请输入想搜索的商品名称或品牌"
+        android:padding="8dp"
+        android:textColor="@color/colorGray999999"
+        android:textSize="@dimen/size_28"
+        />
+
+</LinearLayout>

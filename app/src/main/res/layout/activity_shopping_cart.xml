@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_shopping_cart"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:activity="com.a55haitao.wwht.ui.activity.shoppingcart.ShoppingCartActivity"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/shoppingCartFramelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite">
+    </FrameLayout>
+
+</LinearLayout>

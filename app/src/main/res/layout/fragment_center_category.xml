@@ -1,0 +1,120 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/colorWhite"
+              android:orientation="vertical"
+              tools:activity=".ui.fragment.discover.CenterCategoryFragment">
+
+    <LinearLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_64"
+        android:layout_marginBottom="@dimen/px_10"
+        android:layout_marginLeft="@dimen/px_20"
+        android:layout_marginRight="@dimen/px_20"
+        android:layout_marginTop="@dimen/px_10"
+        android:background="@drawable/shape_radius_px_8"
+        android:gravity="center">
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@mipmap/ic_search"
+            android:drawablePadding="@dimen/px_20"
+            android:gravity="center"
+            android:text="搜索品牌，商品或商家"
+            android:textColor="@color/colorGray999999"
+            android:textSize="@dimen/size_24"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/line_divider_m_1_cccccc"/>
+
+    <com.a55haitao.wwht.ui.view.MultipleStatusView
+        android:id="@+id/msv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/content_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/contentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/divider_with_size"
+                android:orientation="vertical"
+                android:showDividers="middle"
+                android:visibility="invisible">
+
+                <LinearLayout
+                    android:id="@+id/easyOptLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="invisible">
+
+                    <RelativeLayout
+                        android:id="@+id/eoTitleLayoout"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp">
+
+                        <com.a55haitao.wwht.ui.view.HaiTextView
+                            android:id="@+id/titleTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/tilteDivider"
+                            android:gravity="center"
+                            android:textColor="@color/colorGray333333"
+                            android:textSize="@dimen/size_32"
+                            app:expandTypeface="regular"
+                            android:text="精 选 草 单"/>
+
+                        <ImageView
+                            android:id="@+id/moreTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@id/tilteDivider"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/px_20"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:src="@mipmap/ic_more_circle"/>
+
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/categoryLayout"
+                    layout="@layout/part_of_category_for_category"/>
+
+                <include
+                    android:id="@+id/brandLayout"
+                    layout="@layout/part_of_category_for_site"/>
+
+                <include
+                    android:id="@+id/sellerLayout"
+                    layout="@layout/part_of_category_for_site"
+                    tools:ignore="DuplicateIncludedIds"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!--<include layout="@layout/line_divider_m_1_cccccc"/>-->
+
+    </com.a55haitao.wwht.ui.view.MultipleStatusView>
+
+</LinearLayout>

@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.a55haitao.wwht">
+
+    <uses-permission android:name="${applicationId}.permission.JPUSH_MESSAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.SET_DEBUG_APP"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+
+    <application
+        android:name=".HaiApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme">
+
+        <!-- 适配三星s8 -->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1"/>
+        <!-- 阿里HotFix -->
+        <!-- App ID -->
+        <meta-data
+            android:name="com.taobao.android.hotfix.IDSECRET"
+            android:value="113823-1"/>
+        <!-- App Secret -->
+        <meta-data
+            android:name="com.taobao.android.hotfix.APPSECRET"
+            android:value="9c2850155a68646c4b349bb20948e158"/>
+        <!-- RSA密钥 -->
+        <meta-data
+            android:name="com.taobao.android.hotfix.RSASECRET"
+            android:value="MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCJLXoEPU2XuzA0zflEQa3JPXdeamIBvVMtXiVpML2B5KtlvDjxcV4Q3AkOaNOLkcckfifffBbR7ObPXw9NgC4dIJFf18QqkZg6pD52pJH0Es570EmI+25dNCOkRdqofkUvw/u1EPYGKBXOXNzAVAGdd6Y1pwGDBsbOzugRJ93zP4ZDJocEkHJUu8p73qIm4q5+HUt6NVDMnMVExf9e0qKUo8O/tJTIGF3oRnre7z331euD/6JKgBlb/TBuCIwYSeh/JfPIOsoNKtmgzIB2IdEzy6Je8BeU+z8DrjRJ+5XjJtDpCNlgXFraOI1mqVGHGBepO1z8nw0yWqUWErqvEdVFAgMBAAECggEAdqBPHg9tZENKAsAESVSK1rZC3fEdY+e3YEpEC91MZGG9HrNQgurIr8e4RS+9kLq1/gbisE785Pj6+GV6NEkel62sSberOizB+iRCqBLU7L6+tS+AB+d2nz8Re2O1HXRknFPc/c33E4fio5yGggOjiesIXulXU1mu3vTqlrtlIo6Jq4H4MTta2mOXfizFppi90zVsoA2n7M43xfWLlHKuPtTEZuABuyJrnNdBVnlxp+J3dFqt1168HkVk1bztDPeqPece32rlpcfII3wMRgI2Po6aAobl5GJL8h7M2ZxWblZ5EQXbfk0vk0VJBqZHrwX1UjOvuqZNqk5d2iKt5HwMmQKBgQDe4Q8R5rJPy6Piqzd9rm3mCVV75CMC+VzTdRNPjL2Rxsl0HMxUrT3h6vHO/n3RHeeTaPuzCvNMDG6iQAF1cBMYdLRxa/uMjdntXTM3y4VL/Fh4D8QQ7klyYzhsTXbjFPI6FjrpI4N41lpmSyMFK/uoZ3rTSIiipFBe2ugqInV3WwKBgQCdkBhTfHmhP9MaJ3zawUKrONMM0mZuDD7UrOtw9hK0YNC6td419FTNkjDufI7peJZ44vwxAeYGe7Mly135o9RO4cGu/tpxEfFJvAOGuLrD9tMvuYIxCuHSwANOL7yJx0pNBFWZ/0kdRuNYlnR/4XM7oEfXoVwTsrEB510C1bAn3wKBgBFuvQUDbFL9dJYYGkEEUag6dqs4Dtz+sBoCAD6qnXE3gS5JylmdK0fuXnd4RFME6cYH4hgA9UKvfj/Gjdanq3awOiTc81HtDmyYa5cjngtxc2IAqa9BVBFUXWdrL69XRhLxBi6SDoh3C58QpW6UIBzt6xd3huhhvb+Nk7cn9tQdAoGBAJoX+JJ9o/59ixmDEOpoI6mMs2tQwfhSZYhdbQ1Wu0hJfxl7EE04HU/G76/thV70HkUvyHCtaKdihvwpfkjNXq+evmtEt6HpaE8yX0h8lbtdQ4DjLl6ERAJ240SuDve4PgRAfu9S6dCGKYXT7y+575aa1GggWQqyscYo3aAOGG+FAoGAEdn4HbLNTqSkdXHFXuruXQoEqlRmS6Aspo194IhW8GcyQBi7DYLILXBx66Ik0KsrUWa7fdXjnSpL415bi+PJR1d2XJGwkVaWFrHSLzxL20kADJvW+MnC5gT0NunVZA+xhgqF5oNwpYqQunmX+dpI8rvuyZgASHaf0ao0p6Wm/7Q="/>
+
+        <!-- 闪屏页 -->
+        <activity
+            android:name=".ui.activity.firstpage.SplashActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <data android:scheme="mw55haitao"/>
+
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <!-- 首页 -->
+        <activity
+            android:name=".ui.activity.firstpage.CenterActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:scheme="new55haitao"/>
+            </intent-filter>
+        </activity>
+        <!-- 闪屏广告页 -->
+        <activity
+            android:name=".ui.activity.firstpage.AdActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- H5 -->
+        <activity
+            android:name=".ui.activity.base.H5Activity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 选择国家 -->
+        <activity
+            android:name=".ui.activity.common.ChooseCountryActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 商品详情 -->
+        <activity
+            android:name=".ui.activity.product.ProductMainActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 购物车 -->
+        <activity
+            android:name=".ui.activity.shoppingcart.ShoppingCartActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 满减活动商品列表 -->
+        <activity
+            android:name=".ui.activity.product.ProductsListActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+
+        <!-- //////////////////////////// 社区 ///////////////////////////// -->
+        <!-- 专题详情 -->
+        <activity
+            android:name=".ui.activity.social.SocialSpecialActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 添加好友 -->
+        <activity
+            android:name=".ui.activity.social.AddFriendsActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 搜索好友 -->
+        <activity
+            android:name=".ui.activity.social.SearchFriendsActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 通讯录 -->
+        <activity
+            android:name=".ui.activity.social.ContactsFriendsActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 晒物详情 -->
+        <activity
+            android:name=".ui.activity.social.PostDetailActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+        <!-- 点赞列表 -->
+        <activity
+            android:name=".ui.activity.social.LikeListActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 评论列表 -->
+        <activity
+            android:name=".ui.activity.social.CommentListActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 编辑帖子 -->
+        <activity
+            android:name=".ui.activity.social.PostEditActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+        <!-- 添加标签 -->
+        <activity
+            android:name=".ui.activity.social.AddTagActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 搜索标签 -->
+        <activity
+            android:name=".ui.activity.social.SearchTagActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+
+        <!-- //////////////////////////// 社区 ///////////////////////////// -->
+
+
+        <!-- /////////////////////////// 个人中心 ///////////////////////////// -->
+        <!-- 个人主页 -->
+        <activity
+            android:name=".ui.activity.myaccount.MyHomePageActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 他人主页 -->
+        <activity
+            android:name=".ui.activity.myaccount.OthersHomePageActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 设置 -->
+        <activity
+            android:name=".ui.activity.myaccount.settings.SettingsActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 手机登录 -->
+        <activity
+            android:name=".ui.activity.myaccount.account.LoginMobileActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 验证码登录 -->
+        <activity
+            android:name=".ui.activity.myaccount.account.LoginVerifyCodeActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 邮箱登录 -->
+        <activity
+            android:name=".ui.activity.myaccount.account.LoginMailActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 注册 -->
+        <activity
+            android:name=".ui.activity.myaccount.account.RegisterActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 注册后引导用户修改昵称 -->
+        <activity
+            android:name=".ui.activity.myaccount.account.RegisterSetUserInfoActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+
+        <!-- 重置密码 -->
+        <activity
+            android:name=".ui.activity.myaccount.account.ResetPasswordActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 重置密码 -->
+        <activity
+            android:name=".ui.activity.myaccount.account.ChangePasswordActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 绑定第三方 -->
+        <activity
+            android:name=".ui.activity.myaccount.account.BindThirdActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 关于我们 -->
+        <activity
+            android:name=".ui.activity.myaccount.settings.AboutUsActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 意见反馈 -->
+        <activity
+            android:name=".ui.activity.myaccount.settings.FeedbackActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 消息 & 通知 -->
+        <activity
+            android:name=".ui.activity.myaccount.MessageActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 关注的商家 & 关注的品牌 -->
+        <activity
+            android:name=".ui.activity.myaccount.BrandAndSellerActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 关注 & 粉丝 -->
+        <activity
+            android:name=".ui.activity.myaccount.FollowAndFansActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 我的订单 -->
+        <activity
+            android:name=".ui.activity.myaccount.OrderListActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 申请退款 -->
+        <activity
+            android:name=".ui.activity.shoppingcart.ApplyRefundActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <!-- 选择受理商品 -->
+        <activity
+            android:name=".ui.activity.shoppingcart.SelectRefundProductActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 申请退款提交 -->
+        <activity
+            android:name=".ui.activity.shoppingcart.RefundCommitResultActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 退款／售后进度列表 -->
+        <activity
+            android:name=".ui.activity.shoppingcart.RefundListActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 申请单详情 -->
+        <activity
+            android:name=".ui.activity.shoppingcart.RefundDetailActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+
+        <!-- 个人信息设置 -->
+        <activity
+            android:name=".ui.activity.myaccount.UserInfoSettingsActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 通知详情 -->
+        <activity
+            android:name=".ui.activity.myaccount.NotificationDetailActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 绑定手机 -->
+        <activity
+            android:name=".ui.activity.myaccount.settings.BindPhoneActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 我的心愿单 -->
+        <activity
+            android:name=".ui.activity.myaccount.MyWishListActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 我的草单 -->
+        <activity
+            android:name=".ui.activity.myaccount.MyEasyoptActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- /////////////////////////// 个人中心 ///////////////////////////// -->
+
+
+        <!-- 极光推送 -->
+        <receiver
+            android:name=".data.receiver.HaiJPushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION"/> <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED"/> <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED"/> <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED"/> <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK"/> <!-- Optional 用户接受Rich Push Javascript 回调函数的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION"/> <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="${applicationId}"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- Glide 配置 -->
+        <meta-data
+            android:name="com.a55haitao.wwht.utils.glide.HaiGlideModule"
+            android:value="GlideModule"/>
+
+        <!-- //////////////////////////// UMENG ///////////////////////////// -->
+        <!-- App Key -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5783795967e58e32890002d8"/>
+        <!-- 推广渠道 -->
+        <!--
+             <meta-data
+             android:name="UMENG_CHANNEL"
+             android:value="${UMENG_CHANNEL_VALUE}"/>
+        -->
+
+
+        <!-- 分享编辑页 -->
+        <!--
+            <activity
+            android:name="com.umeng.socialize.editorpage.ShareActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.UMDefault"/>
+        -->
+        <!-- 微信平台 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <!-- 微博 -->
+        <activity
+            android:name="com.umeng.socialize.media.WBShareCallBackActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+        </activity>
+        <activity
+            android:name="com.sina.weibo.sdk.web.WeiboSdkWebActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+        <activity
+            android:name="com.sina.weibo.sdk.share.WbShareTransActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <!-- QQ完整版 -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="tencent1105730568"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <!-- //////////////////////////// UMENG ///////////////////////////// -->
+        <activity
+            android:name=".ui.activity.firstpage.FavorableSpecialActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.activity.firstpage.NewsFlashActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.activity.firstpage.FlashSaleActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.activity.firstpage.FavorableActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 精选合集 -->
+        <activity
+            android:name=".ui.activity.firstpage.EntriesActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 商品专题 - 单列 -->
+        <activity
+            android:name=".ui.activity.firstpage.EntriesSpecialActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 商家、品牌主页 -->
+        <activity
+            android:name=".ui.activity.discover.SiteActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 专题主页 -->
+        <activity
+            android:name=".ui.activity.discover.CategorySpecialActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 热门标签列表 -->
+        <activity
+            android:name=".ui.activity.social.HotTagActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 标签详情 -->
+        <activity
+            android:name=".ui.activity.social.TagDetailActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 搜索_进入 -->
+        <activity
+            android:name=".ui.activity.discover.SearchWordsActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 搜索_结果 -->
+        <activity
+            android:name=".ui.activity.discover.SearchResultActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+        <!-- 我的积分 -->
+        <activity
+            android:name=".ui.activity.myaccount.MyMembershipPointActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 筛选 -->
+        <activity
+            android:name=".ui.activity.discover.FilterActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <!-- 订单创建 -->
+        <activity
+            android:name=".ui.activity.shoppingcart.OrderCreateActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <!-- 地址管理（地址列表） -->
+        <activity
+            android:name=".ui.activity.discover.AddressListActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 新建地址 -->
+        <activity
+            android:name=".ui.activity.discover.AddressCreateActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 优惠券 -->
+        <activity
+            android:name=".ui.activity.discover.CouponActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 订单详情 -->
+        <activity
+            android:name=".ui.activity.shoppingcart.OrderDetailActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 商详大图预览 -->
+        <activity
+            android:name=".ui.activity.product.PhotoPreviewActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 物流详情 -->
+        <activity
+            android:name=".ui.activity.shoppingcart.TransferDetailActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 支付结果页面 -->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <!-- 支付宝 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"/>
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"/>
+        <!-- 全部分类 -->
+        <activity
+            android:name=".ui.activity.discover.AllCategoryActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 全部商家/品牌 -->
+        <activity
+            android:name=".ui.activity.discover.AllBrandOrSellerActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 引导页 -->
+        <activity
+            android:name=".ui.activity.firstpage.GuideActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 优惠券列表页 -->
+        <activity
+            android:name=".ui.activity.discover.CouponListActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+
+        <!-- //////////////////////////// 草单 ///////////////////////////// -->
+        <!-- 新建草单 -->
+        <activity
+            android:name=".ui.activity.easyopt.EasyoptCreateActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 推荐草单 -->
+        <activity
+            android:name=".ui.activity.easyopt.RecommendEasyOptActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!-- 草单详情 -->
+        <activity
+            android:name=".ui.activity.easyopt.EasyOptDetailActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <!-- 编辑草单 -->
+        <activity
+            android:name=".ui.activity.easyopt.EasyoptEditActivity"
+            android:configChanges="locale|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+
+        <!-- //////////////////////////// mLink ///////////////////////////// -->
+
+
+        <!-- 总的activity，必须注册！！！ -->
+        <activity
+            android:name="cn.magicwindow.common.base.MWActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|navigation"
+            android:exported="true"/>
+        <!-- MW sdk ID 此处跟activity同级，需要放在Application内，MW_APPID（也就是后台的” 魔窗AppKey”）不能更改 -->
+        <meta-data
+            android:name="MW_APPID"
+            android:value="QQZP9UZS6RJ87KQMMRHOFQ8U6J4NTIDO"/>
+        <!-- 渠道名称MW_CHANNEL不能更改 -->
+        <!-- <meta-data android:name="MW_CHANNEL" android:value="您的渠道号" /> -->
+
+
+        <!-- //////////////////////////// mLink ///////////////////////////// -->
+
+        <activity android:name=".ui.activity.myaccount.UserSignatureActivity">
+        </activity>
+
+        <!-- //////////////////////////// 小能客服 ///////////////////////////// -->
+        <activity
+            android:name="cn.xiaoneng.activity.ChatActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity
+            android:name="cn.xiaoneng.activity.LeaveMsgActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity
+            android:name="cn.xiaoneng.activity.ShowCameraActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|navigation|layoutDirection|touchscreen|locale|mnc|mcc|fontScale"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogTopRight">
+        </activity>
+        <activity
+            android:name="cn.xiaoneng.activity.ShowAlbumActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent">
+        </activity>
+        <activity
+            android:name="cn.xiaoneng.activity.ValuationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/valuationdialog">
+        </activity>
+        <activity
+            android:name="cn.xiaoneng.activity.ShowPictureActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+        </activity>
+        <activity
+            android:name="cn.xiaoneng.activity.XNExplorerActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+        </activity>
+        <activity
+            android:name="cn.xiaoneng.video.VideoPreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+        </activity>
+        <activity
+            android:name="cn.xiaoneng.video.RecordVideoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+        </activity>
+        <activity
+            android:name="cn.xiaoneng.video.XNVideoPlayer"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+        </activity>
+
+        <!-- //////////////////////////// 百度定位 ///////////////////////////// -->
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote">
+        </service>
+
+        <!-- 百度定位 AK -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="sEq6UmpZBn4lLKyMaYRv0qCI1wAOOrBG"/>
+
+        <!-- //////////////////////////// 百度定位 ///////////////////////////// -->
+
+        <activity android:name=".ui.activity.shoppingcart.PayResultActivity">
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_item_selectable"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding_medium"
+    android:paddingRight="@dimen/padding_medium">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp">
+
+        <!-- Logo -->
+        <!--<ImageView-->
+        <!--android:id="@+id/img_logo"-->
+        <!--android:layout_width="@dimen/brand_store_logo_width"-->
+        <!--android:layout_height="@dimen/brand_store_logo_height"-->
+        <!--android:scaleType="centerCrop"/>-->
+
+        <RelativeLayout
+            android:id="@+id/rlytsmallCoverImg"
+            android:layout_width="40dp"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:id="@+id/smallCoverImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:id="@+id/smallCoverTex"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorGray26241F"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/size_20"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <!-- 品牌名 -->
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                tools:text="Coach/蔻驰"/>
+
+            <!-- 品牌描述 -->
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:id="@+id/tv_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="#999"
+                android:textSize="12sp"
+                tools:text="美国高端生活方式时尚品牌"/>
+        </LinearLayout>
+
+        <!-- 关注 -->
+        <CheckBox
+            android:id="@+id/chk_follow_brand_store"
+            style="@style/CheckboxFollow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@color/colorWhite"/>
+    </LinearLayout>
+
+    <!-- 分割线 -->
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@mipmap/dot_line"/>
+</LinearLayout>

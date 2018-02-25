@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/colorWhite">
+
+        <ImageView
+            android:id="@+id/headerLeftImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:padding="8dp"
+            android:src="@mipmap/ic_left"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="优惠"
+                android:textColor="@color/colorTab"
+                android:textSize="@dimen/size_36"
+                app:expandTypeface="regular"/>
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="快报"
+                android:textColor="@color/colorOrange"
+                android:textSize="@dimen/size_36"
+                app:expandTypeface="regular"/>
+        </LinearLayout>
+
+
+        <!--<ImageView-->
+        <!--android:id="@+id/headerRightImg"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:layout_marginRight="8dp"-->
+        <!--android:clickable="true"-->
+        <!--android:src="@mipmap/ic_share_grey"/>-->
+
+        <View
+            android:id="@+id/lineDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorDivider"/>
+
+    </RelativeLayout>
+
+    <com.a55haitao.wwht.ui.view.HaiSwipeRefreshLayout
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.a55haitao.wwht.ui.view.MultipleStatusView
+            android:id="@+id/msView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/content_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+        </com.a55haitao.wwht.ui.view.MultipleStatusView>
+    </com.a55haitao.wwht.ui.view.HaiSwipeRefreshLayout>
+
+
+</LinearLayout>

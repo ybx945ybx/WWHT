@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:bind="http://schemas.android.com/apk/res-auto">
+    
+    <data>
+        <import type="android.view.View"/>
+        <variable name="handler" type="com.a55haitao.wwht.utils.DataBindiHp.CategoryHandler"/>
+        <import type="com.a55haitao.wwht.data.model.entity.CategoryBean" />
+        <variable name="bean1" type="CategoryBean"/>
+        <variable name="bean2" type="CategoryBean"/>
+    </data>
+    
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/px_20"
+        android:layout_marginRight="@dimen/px_20"
+        android:layout_marginBottom="@dimen/px_20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include bind:hotBean="@{bean1}" bind:handler="@{handler}" layout="@layout/item_hot_category_layout"/>
+
+        <ImageView android:visibility="@{bean1 == null ? View.INVISIBLE : View.VISIBLE}" style="@style/line_1_200_E5E5E5"/>
+
+        <include bind:hotBean="@{bean2}" bind:handler="@{handler}" layout="@layout/item_hot_category_layout"/>
+
+        <ImageView android:visibility="@{bean2 == null ? View.INVISIBLE : View.VISIBLE}" style="@style/line_1_200_E5E5E5"/>
+
+        <ImageView
+            android:src="@mipmap/ic_category_s_a"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:layout_height="@dimen/px_200"
+            android:onClick="@{() -> handler.onCategoryAllClick()}"
+            />
+
+    </LinearLayout>
+</layout>

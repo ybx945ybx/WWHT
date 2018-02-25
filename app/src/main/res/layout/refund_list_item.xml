@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/colorWhite"
+              android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/colorActivityBackground"/>
+    <!-- 申请单号 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:padding="@dimen/padding_medium">
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/tv_order_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textSize="12sp"
+            tools:text="申请单号: 9646 7474 3420 9841"/>
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/tv_order_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_order_number"
+            android:layout_alignBottom="@+id/tv_order_number"
+            android:layout_toLeftOf="@+id/iv_go"
+            android:textColor="#666"
+            android:textSize="12sp"
+            tools:text="订单状态"/>
+        <ImageView
+            android:id="@+id/iv_go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/ic_arrow_right_999"/>
+
+
+    </RelativeLayout>
+
+    <!-- divider -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#CCCCCC"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <!-- 图片 -->
+        <LinearLayout
+            android:id="@+id/ll_img_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_medium">
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- 申请单信息 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_medium"
+        android:gravity="right">
+
+        <!-- 商品总件数 -->
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/tv_product_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorGray999999"
+            android:textSize="12sp"
+            tools:text="共5件商品"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:activity=".ui.activity.shoppingcart.TransferDetailActivity">
+
+    <!-- 标题 -->
+    <com.a55haitao.wwht.ui.view.DynamicHeaderView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:headerRightImg="@mipmap/ic_service_title"
+        app:headerTitleTxt="物流详情"/>
+
+    <com.a55haitao.wwht.ui.view.MultipleStatusView
+        android:id="@+id/msView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite">
+
+        <LinearLayout
+            android:id="@+id/content_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/expressLayout_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="快递公司："
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/expressNameTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorGray666666"
+                    tools:text="111"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/expressLayout_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="运单号："
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/expressNoTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorGray666666"
+                    tools:text="YUTGFDGHFDGSFDSJDSJ"/>
+
+            </LinearLayout>
+
+            <!--<ListView-->
+            <!--android:id="@+id/listView"-->
+            <!--android:divider="@null"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"/>-->
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabIndicatorColor="@color/colorOrange"
+                app:tabIndicatorHeight="2dp"
+                app:tabMaxWidth="60dp"
+                app:tabMode="scrollable"
+                app:tabSelectedTextColor="@color/colorOrange"
+                app:tabTextColor="#000000">
+
+            </android.support.design.widget.TabLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v4.view.ViewPager>
+        </LinearLayout>
+
+    </com.a55haitao.wwht.ui.view.MultipleStatusView>
+</LinearLayout>

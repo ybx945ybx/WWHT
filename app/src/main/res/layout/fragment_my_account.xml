@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorActivityBackground"
+    android:orientation="vertical">
+
+    <!-- 标题 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/colorWhite"
+        android:paddingLeft="@dimen/padding_large"
+        android:paddingRight="@dimen/padding_large">
+
+        <ImageButton
+            android:id="@+id/ib_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:contentDescription="@string/message"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_message_new"/>
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/my_account_new_title"
+            android:textColor="#333333"
+            android:textSize="@dimen/title_text_size"/>
+
+        <ImageButton
+            android:id="@+id/ib_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:contentDescription="@string/settings"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_settings_new"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/lineDivider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorGrayCCCCCC"/>
+
+    <!--<com.a55haitao.wwht.ui.view.HaiSwipeRefreshLayout
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 头部信息 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+
+                <!-- 个人信息 -->
+                <LinearLayout
+                    android:id="@+id/ll_user_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <!-- 头像 -->
+                    <com.a55haitao.wwht.ui.view.AvatarView
+                        android:id="@+id/img_avatar"
+                        android:layout_width="@dimen/avatar_large"
+                        android:layout_height="@dimen/avatar_large"
+                        android:layout_margin="@dimen/margin_large"
+                        app:border_width="1px"
+                        app:corner_size="@dimen/avatar_corner_large"
+                        app:placeholder="@mipmap/ic_avatar_default_large"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.a55haitao.wwht.ui.view.HaiTextView
+                            android:id="@+id/tv_nickname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="#333333"
+                            android:textSize="16sp"
+                            tools:text="美美的夏夏"/>
+
+                        <com.a55haitao.wwht.ui.view.HaiTextView
+                            android:id="@+id/tv_enter_my_homepage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:text="@string/enter_my_home_page"
+                            android:textColor="#999999"
+                            android:textSize="12sp"/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:src="@mipmap/ic_more_circle"/>
+
+                </LinearLayout>
+
+                <!-- 分割线 -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="8dp"
+                    android:background="@color/colorLvDivider"/>
+
+                <!-- 订单 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipChildren="false"
+                    android:gravity="center_vertical">
+
+                    <!-- 待付款 -->
+                    <com.a55haitao.wwht.ui.view.HaiTextView
+                        android:id="@+id/tv_order_unpay"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_item_selectable"
+                        android:drawablePadding="3dp"
+                        android:drawableTop="@mipmap/ic_order_unpay"
+                        android:gravity="center"
+                        android:padding="@dimen/padding_medium"
+                        android:text="@string/order_unpay"
+                        android:textColor="#666666"
+                        android:textSize="12sp"/>
+
+                    <!-- 待发货 -->
+                    <com.a55haitao.wwht.ui.view.HaiTextView
+                        android:id="@+id/tv_order_undeliver"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_item_selectable"
+                        android:drawablePadding="3dp"
+                        android:drawableTop="@mipmap/ic_order_undeliver"
+                        android:gravity="center"
+                        android:padding="@dimen/padding_medium"
+                        android:text="@string/order_undeliver"
+                        android:textColor="#666666"
+                        android:textSize="12sp"/>
+
+                    <!-- 待收货 -->
+                    <com.a55haitao.wwht.ui.view.HaiTextView
+                        android:id="@+id/tv_order_unreceive"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_item_selectable"
+                        android:drawablePadding="3dp"
+                        android:drawableTop="@mipmap/ic_order_unreceive"
+                        android:gravity="center"
+                        android:padding="@dimen/padding_medium"
+                        android:text="@string/order_unreceive"
+                        android:textColor="#666666"
+                        android:textSize="12sp"/>
+
+                    <!-- 全部订单 -->
+                    <com.a55haitao.wwht.ui.view.HaiTextView
+                        android:id="@+id/tv_order_all"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_item_selectable"
+                        android:drawablePadding="3dp"
+                        android:drawableTop="@mipmap/ic_order_all"
+                        android:gravity="center"
+                        android:padding="@dimen/padding_medium"
+                        android:text="@string/order_all"
+                        android:textColor="#666666"
+                        android:textSize="12sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 优惠券 & 积分 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:background="@color/colorWhite"
+                android:divider="@drawable/divider_solid"
+                android:dividerPadding="@dimen/padding_medium"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <!-- 我的优惠券 -->
+                <RelativeLayout
+                    android:id="@+id/rl_coupon"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_item_selectable"
+                    android:paddingLeft="@dimen/padding_large"
+                    android:paddingRight="@dimen/padding_large">
+
+                    <com.a55haitao.wwht.ui.view.HaiTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@mipmap/ic_item_coupon"
+                        android:drawablePadding="@dimen/padding_medium"
+                        android:gravity="center_vertical"
+                        android:text="@string/my_coupon"
+                        android:textColor="@color/colorDark"
+                        android:textSize="14sp"/>
+
+                    <ImageView
+                        android:id="@+id/img_arrow_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/ic_arrow_right_small"/>
+
+                    <!-- 优惠券数 -->
+                    <com.a55haitao.wwht.ui.view.HaiTextView
+                        android:id="@+id/tv_coupon_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/margin_medium"
+                        android:layout_toLeftOf="@+id/img_arrow_1"
+                        android:textColor="#999999"
+                        android:textSize="14sp"
+                        tools:text="0张可用"/>
+
+                </RelativeLayout>
+
+                <!-- 我的积分 -->
+                <RelativeLayout
+                    android:id="@+id/rl_membership_point"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_item_selectable"
+                    android:paddingLeft="@dimen/padding_large"
+                    android:paddingRight="@dimen/padding_large">
+
+                    <com.a55haitao.wwht.ui.view.HaiTextView
+                        android:id="@+id/haiTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@mipmap/ic_item_membership_point"
+                        android:drawablePadding="@dimen/padding_medium"
+                        android:gravity="center_vertical"
+                        android:text="@string/my_membership_point"
+                        android:textColor="@color/colorDark"
+                        android:textSize="14sp"/>
+
+                    <ImageView
+                        android:id="@+id/img_arrow_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/ic_arrow_right_small"/>
+
+                    <com.a55haitao.wwht.ui.view.HaiTextView
+                        android:id="@+id/tv_membership_point"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/margin_medium"
+                        android:layout_toLeftOf="@id/img_arrow_2"
+                        android:drawableLeft="@mipmap/ic_membership_point_plus"
+                        android:drawablePadding="@dimen/padding_medium"
+                        android:textColor="#999999"
+                        android:textSize="14sp"
+                        tools:text="1234"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- 收藏 & 关注 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:background="@color/colorWhite"
+                android:divider="@drawable/divider_solid"
+                android:dividerPadding="@dimen/padding_medium"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <!-- 心愿单 -->
+                <RelativeLayout
+                    android:id="@+id/rl_wishlist"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_item_selectable"
+                    android:paddingLeft="@dimen/padding_large"
+                    android:paddingRight="@dimen/padding_large">
+
+                    <com.a55haitao.wwht.ui.view.HaiTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@mipmap/ic_item_wishlist"
+                        android:drawablePadding="@dimen/padding_medium"
+                        android:gravity="center_vertical"
+                        android:text="@string/my_wishlist"
+                        android:textColor="@color/colorDark"
+                        android:textSize="14sp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/ic_arrow_right_small"/>
+
+                </RelativeLayout>
+
+                <!-- 我的草单 -->
+                <RelativeLayout
+                    android:id="@+id/rl_my_album"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_item_selectable"
+                    android:paddingLeft="@dimen/padding_large"
+                    android:paddingRight="@dimen/padding_large">
+
+                    <com.a55haitao.wwht.ui.view.HaiTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@mipmap/ic_item_easyopt"
+                        android:drawablePadding="@dimen/padding_medium"
+                        android:gravity="center_vertical"
+                        android:text="@string/my_album"
+                        android:textColor="@color/colorDark"
+                        android:textSize="14sp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/ic_arrow_right_small"/>
+
+                </RelativeLayout>
+
+                <!-- 关注的商家 -->
+                <RelativeLayout
+                    android:id="@+id/rl_following_store"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_item_selectable"
+                    android:paddingLeft="@dimen/padding_large"
+                    android:paddingRight="@dimen/padding_large">
+
+                    <com.a55haitao.wwht.ui.view.HaiTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@mipmap/ic_item_following_store"
+                        android:drawablePadding="@dimen/padding_medium"
+                        android:gravity="center_vertical"
+                        android:text="@string/following_store"
+                        android:textColor="@color/colorDark"
+                        android:textSize="14sp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/ic_arrow_right_small"/>
+
+                </RelativeLayout>
+
+                <!-- 关注的品牌 -->
+                <RelativeLayout
+                    android:id="@+id/rl_following_brand"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_item_selectable"
+                    android:paddingLeft="@dimen/padding_large"
+                    android:paddingRight="@dimen/padding_large">
+
+                    <com.a55haitao.wwht.ui.view.HaiTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@mipmap/ic_item_following_brand"
+                        android:drawablePadding="@dimen/padding_medium"
+                        android:gravity="center_vertical"
+                        android:text="@string/following_brand"
+                        android:textColor="@color/colorDark"
+                        android:textSize="14sp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/ic_arrow_right_small"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:background="@color/colorWhite"
+                android:divider="@drawable/divider_solid"
+                android:dividerPadding="@dimen/padding_medium"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <!-- 邀请好友赚佣金 -->
+                <!--<RelativeLayout-->
+                    <!--android:id="@+id/rl_commission"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="48dp"-->
+                    <!--android:background="@drawable/bg_item_selectable"-->
+                    <!--android:paddingLeft="@dimen/padding_large"-->
+                    <!--android:paddingRight="@dimen/padding_large">-->
+
+                    <!--<com.a55haitao.wwht.ui.view.HaiTextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentLeft="true"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:drawableLeft="@mipmap/ic_item_cash"-->
+                        <!--android:drawablePadding="@dimen/padding_medium"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:text="邀请好友赚佣金"-->
+                        <!--android:textColor="@color/colorDark"/>-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/img_arrow_3"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:src="@mipmap/ic_arrow_right_small"/>-->
+
+                    <!--<com.a55haitao.wwht.ui.view.HaiTextView-->
+                        <!--android:id="@+id/tv_commission"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:layout_marginRight="@dimen/margin_medium"-->
+                        <!--android:layout_toLeftOf="@id/img_arrow_3"-->
+                        <!--android:textColor="#999999"-->
+                        <!--tools:text="@string/invite_friend"/>-->
+
+                <!--</RelativeLayout>-->
+
+                <!-- 联系客服 -->
+                <RelativeLayout
+                    android:id="@+id/rl_contact_service"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_item_selectable"
+                    android:paddingLeft="@dimen/padding_large"
+                    android:paddingRight="@dimen/padding_large">
+
+                    <com.a55haitao.wwht.ui.view.HaiTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@mipmap/ic_item_service"
+                        android:drawablePadding="@dimen/padding_medium"
+                        android:gravity="center_vertical"
+                        android:text="@string/contact_service"
+                        android:textColor="@color/colorDark"
+                        android:textSize="14sp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/ic_arrow_right_small"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+    <!--</com.a55haitao.wwht.ui.view.HaiSwipeRefreshLayout>-->
+
+</LinearLayout>

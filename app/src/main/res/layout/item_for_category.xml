@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="horizontal"
+              android:background="@color/colorWhite"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:paddingTop="10dp"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/categoryDetialImg"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+        <TextView
+            tools:text="女装"
+            android:textSize="@dimen/size_24"
+            android:layout_gravity="center"
+            android:textColor="@color/colorTab"
+            android:id="@+id/categoryDetialNameTxt"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:id="@+id/bottomDividerView"
+            android:background="@color/colorDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1px" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/rightDividerView"
+        android:layout_width="1px"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentRight="true"
+        android:background="@color/colorDivider"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

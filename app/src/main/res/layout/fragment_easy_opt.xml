@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.a55haitao.wwht.ui.view.HaiSwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:activity="com.a55haitao.wwht.ui.fragment.easyopt.EasyOptFragment">
+
+    <com.a55haitao.wwht.ui.view.MultipleStatusView
+        android:id="@+id/msView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:visibility="visible">
+
+        <!--<ListView
+            android:id="@+id/content_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:divider="@null"/>-->
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/content_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </com.a55haitao.wwht.ui.view.MultipleStatusView>
+</com.a55haitao.wwht.ui.view.HaiSwipeRefreshLayout>
+
+
+
+

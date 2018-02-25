@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlur40"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/shape_activity_window"
+        android:orientation="vertical"
+        android:id="@+id/centerView">
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="国际运费收费说明"
+            android:textColor="@color/colorGray26241F"
+            android:gravity="center"
+            android:textSize="@dimen/size_32"
+            android:layout_marginTop="20dp"/>
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="大部分情况我们将按此预估收取国际运费，少数情况遇到商品重量估算错误导致跟实际运费差距较大，我们将会联系您补差价或者退款。"
+            android:textColor="@color/colorGray666666"
+            android:textSize="@dimen/size_24"
+            android:lineSpacingMultiplier="1.5"
+            android:padding="20dp"
+            app:expandTypeface="light"/>
+
+    </LinearLayout>
+
+</LinearLayout>

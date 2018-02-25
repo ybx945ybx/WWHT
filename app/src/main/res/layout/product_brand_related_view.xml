@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="223dp"
+              android:background="@color/colorWhite"
+              android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/leftLin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="2.5dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/leftImage"
+            android:layout_width="wrap_content"
+            android:layout_height="176dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/ic_default_square_large"/>
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/leftTitleTxt"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:textAlignment="center"
+            android:textColor="@color/colorGray333333"
+            android:textSize="@dimen/size_24"
+            app:expandTypeface="regular"
+            tools:text="修身牛仔裤"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:id="@+id/leftRealPriceTxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="3dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:textColor="@color/colorRed"
+                android:textSize="@dimen/size_24"
+                app:expandTypeface="gotham"
+                tools:text="￥5319"/>
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:id="@+id/leftMallPriceTxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="3dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|left"
+                android:textColor="@color/colorGray999999"
+                android:textSize="@dimen/size_24"
+                app:expandTypeface="gotham"
+                tools:text="￥5319"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rightLin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="2.5dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/rightImage"
+            android:layout_width="wrap_content"
+            android:layout_height="176dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/ic_default_square_large"/>
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/rightTitleTxt"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:textAlignment="center"
+            android:textColor="@color/colorGray333333"
+            android:textSize="@dimen/size_24"
+            app:expandTypeface="regular"
+            tools:text="修身牛仔裤"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:id="@+id/rightRealPriceTxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="3dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:textColor="@color/colorRed"
+                android:textSize="@dimen/size_24"
+                app:expandTypeface="gotham"
+                tools:text="￥5319"/>
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:id="@+id/rightMallPriceTxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="3dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|left"
+                android:textColor="@color/colorGray999999"
+                android:textSize="@dimen/size_24"
+                app:expandTypeface="gotham"
+                tools:text="￥5319"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

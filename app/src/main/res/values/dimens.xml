@@ -1,0 +1,125 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- padding -->
+    <dimen name="padding_small">5dp</dimen>
+    <dimen name="padding_medium">10dp</dimen>
+    <dimen name="padding_big">15dp</dimen>
+    <dimen name="padding_large">20dp</dimen>
+
+    <!-- margin -->
+    <dimen name="margin_small">5dp</dimen>
+    <dimen name="margin_medium">10dp</dimen>
+    <dimen name="margin_big">15dp</dimen>
+    <dimen name="margin_large">20dp</dimen>
+
+    <!-- 用户头像四种尺寸 -->
+    <dimen name="avatar_mini">20dp</dimen>
+    <dimen name="avatar_small">24dp</dimen>
+    <dimen name="avatar_medium">28dp</dimen>
+    <dimen name="avatar_big">40dp</dimen>
+    <dimen name="avatar_large">60dp</dimen>
+    <dimen name="avatar_ultra_large">80dp</dimen>
+    <dimen name="avatar_my_homepage">100dp</dimen>
+
+    <!-- 用户头像加V角标 -->
+    <dimen name="avatar_corner_mini">8dp</dimen>
+    <dimen name="avatar_corner_small">10dp</dimen>
+    <dimen name="avatar_corner_medium">12dp</dimen>
+    <dimen name="avatar_corner_big">14dp</dimen>
+    <dimen name="avatar_corner_large">20dp</dimen>
+
+    <!--设计稿尺寸-->
+    <dimen name="px_750">375dp</dimen>
+    <dimen name="px_640">320dp</dimen>
+    <dimen name="px_420">210dp</dimen>
+    <dimen name="px_400">200dp</dimen>
+    <dimen name="px_350">150dp</dimen>
+    <dimen name="px_280">140dp</dimen>
+    <dimen name="px_240">120dp</dimen>
+    <dimen name="px_200">100dp</dimen>
+    <dimen name="px_108">54dp</dimen>
+    <dimen name="px_100">50dp</dimen>
+    <dimen name="px_96">48dp</dimen>
+    <dimen name="px_88">44dp</dimen>
+    <dimen name="px_80">40dp</dimen>
+    <dimen name="px_64">32dp</dimen>
+    <dimen name="px_60">30dp</dimen>
+    <dimen name="px_48">24dp</dimen>
+    <dimen name="px_40">20dp</dimen>
+    <dimen name="px_35">17.5dp</dimen>
+    <dimen name="px_30">15dp</dimen>
+    <dimen name="px_20">10dp</dimen>
+    <dimen name="px_10">8dp</dimen>
+    <dimen name="px_8">4dp</dimen>
+    <dimen name="px_4">2dp</dimen>
+    <dimen name="px_2">1dp</dimen>
+    <dimen name="px_1">0.5dp</dimen>
+
+    <!--字体大小-->
+    <dimen name="size_40">20sp</dimen>
+    <dimen name="size_36">18sp</dimen>
+    <dimen name="size_32">16sp</dimen>
+    <dimen name="size_28">14sp</dimen>
+    <dimen name="size_24">12sp</dimen>
+    <dimen name="size_22">11sp</dimen>
+    <dimen name="size_20">10sp</dimen>
+
+    <!-- 标题文字大小 -->
+    <dimen name="title_text_size">16sp</dimen>
+
+    <!-- ListView分割线-->
+    <dimen name="list_divider_height" format="float" type="dimen">0.5dp</dimen>
+
+    <!-- 标题栏高度 -->
+    <dimen name="title_height">48dp</dimen>
+
+    <!-- 标题栏图标 -->
+    <dimen name="ic_title_width">32dp</dimen>
+    <dimen name="ic_title_height">32dp</dimen>
+
+    <!-- 个人中心 箭头 -->
+    <dimen name="ic_my_account_arrow_width">12dp</dimen>
+    <dimen name="ic_my_account_arrow_height">12dp</dimen>
+
+    <!-- 个人中心 送货 -->
+    <dimen name="my_account_ic_delivery_width">24dp</dimen>
+    <dimen name="my_account_ic_delivery_height">24dp</dimen>
+
+    <dimen name="brand_store_logo_width">40dp</dimen>
+    <dimen name="brand_store_logo_height">40dp</dimen>
+
+
+    <!--  晒物详情 tags 头像margin-->
+    <dimen name="show_detail_avatar_margin">8dp</dimen>
+    <dimen name="username_input_height">20dp</dimen>
+    <dimen name="others_account_header_height">230dp</dimen>
+
+    <!-- 相关晒物 尺寸 -->
+    <dimen name="related_post_width">170dp</dimen>
+    <dimen name="related_post_pic_width">160dp</dimen>
+    <dimen name="related_post_pic_height">160dp</dimen>
+    <dimen name="related_post_text_width">160dp</dimen>
+    <dimen name="related_post_text_height">60dp</dimen>
+
+    <!-- 社区 - 热门标签尺寸 -->
+    <dimen name="hot_tag_pic_size">100dp</dimen>
+
+    <!-- 社区专题 - 商品图尺寸 -->
+    <dimen name="special_product_pic_size">60dp</dimen>
+
+
+    <!-- 个人中心 - 消息 - 晒物尺寸 -->
+    <dimen name="message_post_size">48dp</dimen>
+
+    <!-- 登录 & 注册按钮高度 -->
+    <dimen name="btn_login_height">44dp</dimen>
+
+    <!-- 添加商品到草单 toast Logo尺寸-->
+    <dimen name="dlg_toast_add_to_easyopt_logo_size">30dp</dimen>
+    <dimen name="product_pic_small_width">48dp</dimen>
+    <dimen name="product_pic_small_height">48dp</dimen>
+
+</resources>

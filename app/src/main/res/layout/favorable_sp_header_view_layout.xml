@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_scrollFlags="scroll|snap"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/bigCoverImg"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"/>
+
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:id="@+id/descTxt"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/colorGray666666"
+        android:textSize="@dimen/size_28"
+        android:lineSpacingExtra="2.5dp"
+        android:layout_marginTop="10dp"
+        tools:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:text="编辑推荐"
+        app:layout_scrollFlags="scroll"
+        android:gravity="center_vertical"
+        android:background="@color/colorActivityBackground"
+        android:paddingLeft="10dp"
+        android:textSize="@dimen/size_28"
+        tools:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:id="@+id/textView"/>
+</LinearLayout>

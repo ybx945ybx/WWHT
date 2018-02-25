@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckBox xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:drawableTop="@drawable/sl_pray_button"
+    android:text="心愿单"
+    android:textSize="@dimen/size_20"
+    android:gravity="center_horizontal"
+    android:button="@null"
+    android:drawablePadding="5dp"
+    android:background="@color/colorClear"
+    android:checked="false"
+    android:id="@+id/likeProductBtn"
+/>

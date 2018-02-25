@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <com.a55haitao.wwht.ui.view.DynamicHeaderView
+        android:id="@+id/headView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        app:headerTitleTxt="优惠券"/>
+
+    <com.a55haitao.wwht.ui.view.MultipleStatusView
+        android:id="@+id/msView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorActivityBackground">
+
+        <RelativeLayout
+            android:id="@+id/content_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- 不适用优惠券 -->
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:id="@+id/tv_do_not_use_coupon"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/border_top_f5f5f5"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="@string/donnot_use_coupon"
+                android:textColor="@color/colorGray333333"/>
+
+            <!--<ListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/cancleCouponUsedTxt"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:dividerHeight="10dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:scrollbars="none"/>-->
+
+            <!-- 优惠券列表 -->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_contnet"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/tv_do_not_use_coupon">
+
+            </android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+
+    </com.a55haitao.wwht.ui.view.MultipleStatusView>
+
+</LinearLayout>

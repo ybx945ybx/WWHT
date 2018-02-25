@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="110dp"
+                android:layout_height="@dimen/hot_tag_pic_size"
+                android:paddingLeft="@dimen/padding_medium">
+
+    <!-- 标签图 -->
+    <ImageView
+        android:id="@+id/img_pic"
+        android:layout_width="@dimen/hot_tag_pic_size"
+        android:layout_height="@dimen/hot_tag_pic_size"/>
+
+    <!-- 蒙版 -->
+    <View
+        android:layout_width="@dimen/hot_tag_pic_size"
+        android:layout_height="@dimen/hot_tag_pic_size"
+        android:background="@drawable/bg_tag_blur"/>
+
+    <!-- 标签名 -->
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:id="@+id/tv_tag_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:textColor="@color/colorWhite"
+        android:textSize="12sp"
+        tools:text="#风衣控"/>
+</RelativeLayout>

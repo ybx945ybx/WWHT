@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	android:id="@+id/sortRootLayout"
+	android:layout_width="match_parent"
+	android:layout_height="@dimen/px_100"
+	android:orientation="horizontal"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<RadioButton
+		android:id="@+id/hotRadioBtn"
+		android:checked="true"
+		android:button="@null"
+		android:layout_width="0dp"
+		android:textColor="@color/color_sort_txt"
+		android:layout_height="match_parent"
+		android:textSize="@dimen/size_28"
+		android:layout_weight="1"
+		android:gravity="center"
+		android:background="@color/colorWhite"
+		android:text="热门"/>
+
+	<RadioButton
+		android:id="@+id/saleRadioBtn"
+		android:button="@null"
+		android:textColor="@color/color_sort_txt"
+		android:layout_width="0dp"
+		android:background="@color/colorWhite"
+		android:layout_height="match_parent"
+		android:layout_weight="1"
+		android:textSize="@dimen/size_28"
+		android:gravity="center"
+		android:text="折扣"/>
+
+
+	<LinearLayout
+		android:id="@+id/priceLayout"
+		android:layout_height="match_parent"
+		android:orientation="horizontal"
+		android:gravity="center"
+		android:layout_weight="1"
+		android:layout_width="0dp">
+
+		<CheckedTextView
+			android:id="@+id/priceCheckTV"
+			android:layout_width="wrap_content"
+			android:gravity="center"
+			android:background="@color/colorWhite"
+			android:textColor="@color/color_sort_txt"
+			android:textSize="@dimen/size_28"
+			android:layout_height="match_parent"
+			android:text="价格"/>
+
+		<ImageView
+			android:id="@+id/priceImgView"
+			android:layout_marginLeft="8dp"
+			android:src="@drawable/price_sort_level_list"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+
+	</LinearLayout>
+
+	<View
+		android:background="@color/colorHint"
+		android:layout_width="1px"
+		android:layout_height="match_parent"/>
+
+	<LinearLayout
+		android:id="@+id/filterLayout"
+		android:layout_height="match_parent"
+		android:orientation="horizontal"
+		android:gravity="center"
+		android:layout_weight="1"
+		android:layout_width="0dp">
+
+		<CheckedTextView
+			android:layout_width="wrap_content"
+			android:gravity="center"
+			android:button="@null"
+			android:clickable="false"
+			android:background="@color/colorWhite"
+			android:textColor="@color/color_sort_txt"
+			android:textSize="@dimen/size_28"
+			android:drawablePadding="8dp"
+			android:drawableRight="@mipmap/ic_filter"
+			android:layout_height="match_parent"
+			android:text="筛选"
+			android:id="@+id/checkedTextView"/>
+
+	</LinearLayout>
+
+</LinearLayout>

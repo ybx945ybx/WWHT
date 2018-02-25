@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="46dp"
+              android:orientation="vertical">
+
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:text="¥0 - ¥100"
+        android:textColor="@color/colorGray666666"
+        android:textSize="14sp"
+        app:expandTypeface="gotham"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorGrayE6E6E6"/>
+
+</LinearLayout>

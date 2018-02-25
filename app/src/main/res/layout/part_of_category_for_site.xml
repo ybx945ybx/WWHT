@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.a55haitao.wwht.ui.layout.ImageSiteCell xmlns:android="http://schemas.android.com/apk/res/android"
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            xmlns:tools="http://schemas.android.com/tools"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical">
+
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:id="@+id/titleTxtView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_88"
+        android:gravity="center"
+        android:textColor="@color/colorTab"
+        android:textSize="16sp"
+        tools:text="人气品牌"/>
+
+    <android.support.v7.widget.GridLayout
+        android:id="@+id/girdLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:columnCount="7"
+        app:rowCount="3">
+
+        <android.support.v4.widget.Space app:layout_columnWeight="2"/>
+
+        <ImageView
+            android:layout_width="@dimen/px_200"
+            android:layout_height="@dimen/px_200"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/strike_rect_e5e5e5_bg_white"
+            android:padding="@dimen/px_40"
+            tools:src="@mipmap/ic_launcher"/>
+
+        <android.support.v4.widget.Space app:layout_columnWeight="1"/>
+
+        <ImageView
+            android:layout_width="@dimen/px_200"
+            android:layout_height="@dimen/px_200"
+            android:background="@drawable/strike_rect_e5e5e5_bg_white"
+            android:padding="@dimen/px_40"
+            tools:src="@mipmap/ic_launcher"/>
+
+        <android.support.v4.widget.Space app:layout_columnWeight="1"/>
+
+        <ImageView
+            android:layout_width="@dimen/px_200"
+            android:layout_height="@dimen/px_200"
+            android:background="@drawable/strike_rect_e5e5e5_bg_white"
+            android:padding="@dimen/px_40"
+            tools:src="@mipmap/ic_launcher"/>
+
+        <android.support.v4.widget.Space app:layout_columnWeight="2"/>
+
+        <android.support.v4.widget.Space app:layout_columnWeight="2"/>
+
+        <ImageView
+            android:layout_width="@dimen/px_200"
+            android:layout_height="@dimen/px_200"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/strike_rect_e5e5e5_bg_white"
+            android:padding="@dimen/px_40"
+            tools:src="@mipmap/ic_launcher"/>
+
+        <android.support.v4.widget.Space app:layout_columnWeight="1"/>
+
+        <ImageView
+            android:layout_width="@dimen/px_200"
+            android:layout_height="@dimen/px_200"
+            android:background="@drawable/strike_rect_e5e5e5_bg_white"
+            android:padding="@dimen/px_40"
+            tools:src="@mipmap/ic_launcher"/>
+
+        <android.support.v4.widget.Space app:layout_columnWeight="1"/>
+
+        <ImageView
+            android:layout_width="@dimen/px_200"
+            android:layout_height="@dimen/px_200"
+            android:background="@drawable/strike_rect_e5e5e5_bg_white"
+            android:padding="@dimen/px_40"
+            tools:src="@mipmap/ic_launcher"/>
+
+        <android.support.v4.widget.Space app:layout_columnWeight="2"/>
+
+        <android.support.v4.widget.Space app:layout_columnWeight="2"/>
+
+        <ImageView
+            android:layout_width="@dimen/px_200"
+            android:layout_height="@dimen/px_200"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/strike_rect_e5e5e5_bg_white"
+            android:padding="@dimen/px_40"
+            tools:src="@mipmap/ic_launcher"/>
+
+        <android.support.v4.widget.Space app:layout_columnWeight="1"/>
+
+        <ImageView
+            android:layout_width="@dimen/px_200"
+            android:layout_height="@dimen/px_200"
+            android:background="@drawable/strike_rect_e5e5e5_bg_white"
+            android:padding="@dimen/px_40"
+            tools:src="@mipmap/ic_launcher"/>
+
+        <android.support.v4.widget.Space app:layout_columnWeight="1"/>
+
+        <ImageView
+            android:layout_width="@dimen/px_200"
+            android:layout_height="@dimen/px_200"
+            android:padding="@dimen/px_40"
+            tools:background="@mipmap/ic_seller_s_a"/>
+
+        <android.support.v4.widget.Space app:layout_columnWeight="2"/>
+
+    </android.support.v7.widget.GridLayout>
+
+
+</com.a55haitao.wwht.ui.layout.ImageSiteCell>

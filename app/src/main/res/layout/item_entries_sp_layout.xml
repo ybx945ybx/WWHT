@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:paddingTop="20dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:id="@+id/lblDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relTopic"
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="2.5dp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/relPrice"
+        android:layout_marginTop="20dp"
+        android:background="@mipmap/dot_line"/>
+
+    <ImageView
+        android:id="@+id/imgMain"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_below="@+id/lblDesc"
+        android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+        android:id="@+id/relTopic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            tools:text="1"
+            android:id="@+id/haiFlag"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:textColor="@color/colorWhite"
+            android:paddingLeft="@dimen/px_20"
+            android:background="@mipmap/ic_number_bg"
+            android:gravity="center_vertical"/>
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/lblTopic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_toRightOf="@+id/haiFlag"
+            android:singleLine="true"
+            android:textColor="#333"
+            android:textSize="16sp"
+            tools:text="千朋 红帽子曲奇礼盒"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/imgMain"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/lblPriceCurrent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            app:expandTypeface="gotham"
+            android:textColor="#333"
+            android:textSize="16sp"
+            tools:text="￥123"/>
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/lblPriceOriginal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dp"
+            app:expandTypeface="gotham"
+            android:layout_toRightOf="@+id/lblPriceCurrent"
+            android:textColor="@color/colorGray666666"
+            android:textSize="14sp"
+            tools:text="￥123"/>
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/lblBuyNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_btn_round_corner_tiny"
+            android:text="立即购买"
+            android:textColor="#333"
+            android:textSize="12sp"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

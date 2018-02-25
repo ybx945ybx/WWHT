@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <!-- 新建草单 -->
+    <LinearLayout
+        android:id="@+id/rl_create_easyopt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/padding_medium"
+        android:paddingTop="@dimen/padding_medium">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_easyopt_create"/>
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_weight="1"
+            android:text="新建草单"
+            android:textColor="#333333"
+            android:textSize="14sp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_arrow_right_grey"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorDivider"/>
+
+    <!-- 我的心愿单 -->
+    <LinearLayout
+        android:id="@+id/rl_wishlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/padding_medium"
+        android:paddingTop="@dimen/padding_medium">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_my_wishlist"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="我的心愿单"
+                android:textColor="#333333"
+                android:textSize="14sp"/>
+
+            <!-- 单品数 -->
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:id="@+id/tv_wishlist_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="#B3B3B3"
+                android:textSize="12sp"
+                tools:text="商品 50"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--<com.a55haitao.wwht.ui.view.ItemAddToMyEasyopt
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:checked="false"
+        app:easyopt_count="50"
+        app:easyopt_name="我的心愿单"
+        app:logo="@mipmap/ic_my_wishlist">
+
+    </com.a55haitao.wwht.ui.view.ItemAddToMyEasyopt>-->
+</LinearLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/px_20"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/px_20">
+
+    <ImageView
+        android:id="@+id/smallCoverImg"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginLeft="@dimen/px_20"
+        android:background="@color/colorActivityBackground"
+        tools:src="@color/colorAccent"/>
+
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:id="@+id/countryTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_alignBottom="@id/nameTxt"
+        android:layout_toRightOf="@id/nameTxt"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:textSize="12sp"
+        tools:text="美国"/>
+
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:id="@+id/nameTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/px_20"
+        android:layout_toEndOf="@id/smallCoverImg"
+        android:layout_toRightOf="@id/smallCoverImg"
+        android:gravity="center_vertical"
+        android:textColor="@color/colorGray333333"
+        android:textSize="@dimen/size_28"
+        tools:text="Coach/蔻驰"
+        />
+
+    <ImageView
+        android:id="@+id/jumpImgView"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/px_20"
+        android:padding="4dp"
+        android:src="@mipmap/ic_more_circle"/>
+
+    <LinearLayout
+        android:id="@+id/productParentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/smallCoverImg"
+        android:layout_marginBottom="@dimen/px_40"
+        android:layout_marginTop="@dimen/px_40"
+        android:orientation="horizontal">
+
+        <include
+            android:id="@+id/productLayout01"
+            layout="@layout/item_product_brief_200_binding_layout"/>
+
+        <include
+            android:id="@+id/productLayout02"
+            layout="@layout/item_product_brief_200_binding_layout"/>
+
+        <include
+            android:id="@+id/productLayout03"
+            layout="@layout/item_product_brief_200_binding_layout"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_20"
+        android:layout_below="@id/productParentLayout"
+        android:background="@color/colorActivityBackground"/>
+
+</RelativeLayout>

@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:activity=".ui.activity.discover.FilterActivity">
+
+    <com.a55haitao.wwht.ui.view.DynamicHeaderView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="2dp"
+        app:headerLeftImg="@mipmap/ic_delete_bar"
+        app:headerRightTxt="重置"
+        app:headerTitleTxt="筛选"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/leftRootLayout"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorGrayF3F3F9"
+            android:orientation="vertical">
+
+            <com.a55haitao.wwht.ui.view.CondicationItemView
+                android:id="@+id/item01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:txt="分类"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorGrayCCCCCC"/>
+
+            <com.a55haitao.wwht.ui.view.CondicationItemView
+                android:id="@+id/item02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:txt="品牌"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorGrayCCCCCC"/>
+
+            <com.a55haitao.wwht.ui.view.CondicationItemView
+                android:id="@+id/item03"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:txt="商家"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorGrayCCCCCC"/>
+
+            <com.a55haitao.wwht.ui.view.CondicationItemView
+                android:id="@+id/item04"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:txt="价格"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorGrayCCCCCC"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite">
+
+            <!--分类部分-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rycv_category"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <!--品牌部分-->
+            <RelativeLayout
+                android:id="@+id/rlyt_brand"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <com.a55haitao.wwht.ui.view.PinnedHeaderListView
+                    android:id="@+id/sortItemListView_brand"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="25dp"
+                    android:divider="@null"
+                    android:dividerHeight="0dp"
+                    android:scrollbars="none"/>
+
+                <com.a55haitao.wwht.ui.view.EasyRecyclerViewSidebar
+                    android:id="@+id/section_sidebar_brand"
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center|end"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginTop="24dp"
+                    app:easySidebarFontColor="@color/colorGray26241F"/>
+
+                <TextView
+                    android:id="@+id/section_floating_tv_brand"
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/img_show_float_bg"
+                    android:gravity="center"
+                    android:text="1212"
+                    android:textColor="#ff444444"
+                    android:textSize="23sp"
+                    android:visibility="invisible"
+                    />
+
+            </RelativeLayout>
+
+            <!--商家部分-->
+            <RelativeLayout
+                android:id="@+id/rlyt_seller"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <com.a55haitao.wwht.ui.view.PinnedHeaderListView
+                    android:id="@+id/sortItemListView_seller"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="25dp"
+                    android:divider="@null"
+                    android:dividerHeight="0dp"
+                    android:scrollbars="none"/>
+
+                <com.a55haitao.wwht.ui.view.EasyRecyclerViewSidebar
+                    android:id="@+id/section_sidebar_seller"
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center|end"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginTop="24dp"
+                    app:easySidebarFontColor="@color/colorGray26241F"/>
+
+                <TextView
+                    android:id="@+id/section_floating_tv_seller"
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/img_show_float_bg"
+                    android:gravity="center"
+                    android:text="1212"
+                    android:textColor="#ff444444"
+                    android:textSize="23sp"
+                    android:visibility="invisible"
+                    />
+
+            </RelativeLayout>
+
+            <!--价格部分-->
+            <ScrollView
+                android:id="@+id/scrollView_price"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rycv_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="17dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3dp"
+                                android:text="自定义价格区间（"
+                                android:textColor="@color/colorGray666666"
+                                android:textSize="14sp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="¥"
+                                android:textColor="@color/colorGray666666"
+                                android:textSize="14sp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="）"
+                                android:textColor="@color/colorGray666666"
+                                android:textSize="14sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="21dp"
+                            android:gravity="center_vertical">
+
+                            <EditText
+                                android:id="@+id/etv_price_from"
+                                android:layout_width="100dp"
+                                android:layout_height="30dp"
+                                android:background="@drawable/bg_filter_price"
+                                android:gravity="center"
+                                android:hint="最低价"
+                                android:inputType="number"
+                                android:maxLength="6"
+                                android:textColor="@color/colorGray666666"
+                                android:textColorHint="@color/colorGrayCCCCCC"
+                                android:textSize="12sp"/>
+
+                            <View
+                                android:layout_width="8dp"
+                                android:layout_height="1dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                android:background="@color/colorGray999999"/>
+
+                            <EditText
+                                android:id="@+id/etv_price_to"
+                                android:layout_width="100dp"
+                                android:layout_height="30dp"
+                                android:background="@drawable/bg_filter_price"
+                                android:gravity="center"
+                                android:hint="最高价"
+                                android:inputType="number"
+                                android:maxLength="6"
+                                android:textColor="@color/colorGray666666"
+                                android:textColorHint="@color/colorGrayCCCCCC"
+                                android:textSize="12sp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </ScrollView>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/strike_rect_e5e5e5">
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/ensureTxt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="@dimen/px_20"
+            android:background="@drawable/shape_concern_blue_bg"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

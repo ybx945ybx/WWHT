@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.a55haitao.wwht.ui.view.DynamicHeaderView
+        android:id="@+id/headerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:headerTitleTxt="申请退款">
+
+    </com.a55haitao.wwht.ui.view.DynamicHeaderView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerInParent="true">
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/refund_commited"/>
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="申请已提交，等待客服受理"
+            android:textSize="14sp"
+            android:textColor="@color/colorGray666666"/>
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="预计需要1工作日"
+            android:textSize="14sp"
+            android:textColor="@color/colorGray666666"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp">
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:id="@+id/tv_goto_order_detail"
+                android:layout_width="90dp"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:text="返回订单详情"
+                android:background="@drawable/btn_boder_999"
+                android:textSize="12sp"
+                android:textColor="@color/colorGray666666"/>
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:id="@+id/tv_goto_apply_detail"
+                android:layout_width="90dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="查看申请单"
+                android:background="@drawable/btn_solid_e6"
+                android:textSize="12sp"
+                android:textColor="@color/colorGray666666"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

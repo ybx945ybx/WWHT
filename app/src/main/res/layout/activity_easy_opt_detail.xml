@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.a55haitao.wwht.ui.view.MultipleStatusView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/msView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/content_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorWhite">
+
+        <!--<ImageView-->
+        <!--android:id="@+id/groundImgView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:scaleType="centerCrop"/>-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/backgroundImgView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:scaleType="centerCrop"-->
+        <!--android:src="#55000000"/>-->
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/gridView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:id="@+id/iv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:visibility="invisible"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:background="@mipmap/img_blur_bar"/>
+        <include
+            android:id="@+id/floatingHeaderLayout"
+            layout="@layout/site_nagivation_layout"/>
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/deleteBottomTxt"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:text="删除0个商品"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</com.a55haitao.wwht.ui.view.MultipleStatusView>

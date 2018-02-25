@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_item_selectable"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:paddingLeft="@dimen/padding_medium"
+    android:paddingRight="@dimen/padding_medium">
+
+    <!-- 头像 -->
+    <com.a55haitao.wwht.ui.view.AvatarView
+        android:id="@+id/img_avatar"
+        android:layout_width="@dimen/avatar_medium"
+        android:layout_height="@dimen/avatar_medium"
+        android:layout_marginTop="@dimen/margin_large"
+        app:border_width="1px"
+        app:corner_size="@dimen/avatar_corner_medium"
+        app:placeholder="@mipmap/ic_avatar_default_medium"/>
+
+    <!-- 用户名 -->
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:id="@+id/tv_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_toRightOf="@+id/img_avatar"
+        android:text="深深深Hana"
+        android:textColor="#333333"/>
+
+    <!-- 评论时间 -->
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_nickname"
+        android:layout_below="@+id/tv_nickname"
+        android:layout_marginTop="3dp"
+        android:textColor="#CCC"
+        android:textSize="12sp"
+        tools:text="2天前"/>
+
+    <!-- 评论内容 -->
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:id="@+id/tv_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_time"
+        android:layout_below="@+id/tv_time"
+        android:layout_marginBottom="@dimen/margin_large"
+        android:layout_marginTop="9dp"
+        android:text="感觉很好看啊，话说买的时候多少钱呢？"
+        android:textColor="#666666"/>
+
+    <!-- 点赞按钮 -->
+    <com.varunest.sparkbutton.SparkButton
+        android:id="@+id/sb_like"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/tv_nickname"
+        app:sparkbutton_activeImage="@mipmap/ic_post_like_selected"
+        app:sparkbutton_iconSize="18dp"
+        app:sparkbutton_inActiveImage="@mipmap/ic_post_like_normal"
+        app:sparkbutton_primaryColor="@color/spark_button_primary_color"
+        app:sparkbutton_secondaryColor="@color/spark_button_secondary_color"/>
+
+    <!-- 点赞数 -->
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:id="@+id/tv_like_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:layout_marginTop="22dp"
+        android:layout_toLeftOf="@id/sb_like"
+        android:textColor="#666"
+        tools:text="1234"/>
+
+    <!-- 分割线 -->
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_below="@id/tv_desc"
+        android:background="@mipmap/dot_line"/>
+</RelativeLayout>

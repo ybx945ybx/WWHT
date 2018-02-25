@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  xmlns:tools="http://schemas.android.com/tools"
+			  android:layout_width="match_parent"
+			  android:layout_height="match_parent"
+			  android:orientation="vertical"
+			  android:background="@color/colorWhite"
+			  tools:activity="com.a55haitao.wwht.ui.fragment.discover.RelateSiteFragment">
+
+	<include layout="@layout/line_divider_m_1_cccccc"/>
+
+	<com.a55haitao.wwht.ui.view.HaiTextView
+		android:id="@+id/nullTxt"
+		android:textSize="@dimen/size_24"
+		android:textColor="@color/colorGray999999"
+		android:gravity="center"
+		android:visibility="gone"
+		android:background="@color/colorActivityBackground"
+		android:layout_width="match_parent"
+		android:layout_height="100dp"/>
+
+	<android.support.v7.widget.RecyclerView
+		android:id="@+id/contentRecyclerView"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		/>
+
+</LinearLayout>

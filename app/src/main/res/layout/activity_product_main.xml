@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/activity_product_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPurple"
+                tools:activity="com.a55haitao.wwht.ui.activity.product.ProductMainActivity">
+
+    <com.a55haitao.wwht.ui.view.MultipleStatusView
+        android:id="@+id/msv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="48dp">
+
+        <RelativeLayout
+            android:id="@+id/content_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--商品内容-->
+            <com.a55haitao.wwht.ui.view.ObservableScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/llyt_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <!--商品详情-->
+                    <LinearLayout
+                        android:id="@+id/llyt_product_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <!--上半部分-->
+                        <!--<FrameLayout-->
+                            <!--android:id="@+id/contentLin"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:background="@color/colorWhite"-->
+                            <!--android:orientation="vertical">-->
+
+                        <!--</FrameLayout>-->
+                        <include layout="@layout/activity_product_first_page"/>
+                        <!--第二页导航栏-->
+                        <View
+                            android:id="@+id/viewline"
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:background="@color/colorPurple"/>
+
+                        <RadioGroup
+                            android:id="@+id/tabRadioGroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:background="@color/colorWhite"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <RadioButton
+                                android:id="@+id/tuwenTab"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/sl_follow_activity_band"
+                                android:button="@null"
+                                android:checked="true"
+                                android:gravity="center"
+                                android:text="图文详情"
+                                android:textColor="@color/sl_product_tab_txt_color"/>
+
+                            <RadioButton
+                                android:id="@+id/queryTab"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/sl_follow_activity_store"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="常见问题"
+                                android:textColor="@color/sl_product_tab_txt_color"/>
+
+                        </RadioGroup>
+                        <!--下半部分-->
+                        <com.a55haitao.wwht.ui.view.WrapContentHeightViewPager
+                            android:id="@+id/secondFragmentViewPager"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorPurple"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.a55haitao.wwht.ui.view.ObservableScrollView>
+            <!--商品下架-->
+            <LinearLayout
+                android:id="@+id/llyt_product_recom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rycv_recommend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"/>
+            </LinearLayout>
+
+            <!--底部悬浮导航栏-->
+            <LinearLayout
+                android:id="@+id/bottomBar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <com.a55haitao.wwht.ui.view.HaiTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/colorGrayCCCCCC"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorWhite"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <!-- 客服 -->
+                    <com.a55haitao.wwht.ui.view.HaiTextView
+                        android:id="@+id/tv_service"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:drawableTop="@mipmap/ic_service_big"
+                        android:gravity="center"
+                        android:paddingTop="7dp"
+                        android:text="@string/service"
+                        android:textColor="@color/colorIcService"
+                        android:textSize="10sp"/>
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorGrayCCCCCC"/>
+
+                    <!-- 草单 -->
+                    <com.a55haitao.wwht.ui.view.HaiTextView
+                        android:id="@+id/tv_easyopt"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:drawableTop="@mipmap/ic_easyopt"
+                        android:gravity="center"
+                        android:paddingTop="7dp"
+                        android:text="@string/easyopt"
+                        android:textColor="#999"
+                        android:textSize="10sp"/>
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorGrayCCCCCC"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.a55haitao.wwht.ui.view.HaiTextView
+                            android:id="@+id/addCartBtn"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="6dp"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="6dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_btn_black"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:text="加入购物车"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/size_28"/>
+
+                        <com.a55haitao.wwht.ui.view.HaiTextView
+                            android:id="@+id/payBtn"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="6dp"
+                            android:layout_marginRight="6dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_btn_lemon"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:text="立即购买"
+                            android:textColor="@color/colorGray26241F"
+                            android:textSize="@dimen/size_28"/>
+
+                        <Button
+                            android:id="@+id/noStockBtn"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="6dp"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="6dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_btn_gray"
+                            android:clickable="false"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:text="暂时缺货"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/size_32"
+                            android:visibility="gone"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </com.a55haitao.wwht.ui.view.MultipleStatusView>
+
+    <!--导航栏-->
+    <LinearLayout
+        android:id="@+id/navigationLin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:orientation="vertical">
+        <!--顶部导航栏-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#ffff"
+            android:baselineAligned="false"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/navBackLin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="left|center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@mipmap/ic_left"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.a55haitao.wwht.ui.view.HaiTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="3dp"
+                    android:text="商品详情"
+                    android:textSize="@dimen/size_36"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:gravity="center|right"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_shopping_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_big"
+                    android:background="@mipmap/ic_shopping_cart"/>
+
+                <ImageView
+                    android:id="@+id/navShareBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@mipmap/ic_share_grey"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/colorDivider"/>
+
+        <!--第二页导航栏， 平时隐藏，划到该版块后显示固定在顶部-->
+        <RadioGroup
+            android:id="@+id/tabRadioGroup_hide"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/colorWhite"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <RadioButton
+                android:id="@+id/tuwenTab_hide"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/sl_follow_activity_band"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="图文详情"
+                android:textColor="@color/sl_product_tab_txt_color"/>
+
+            <RadioButton
+                android:id="@+id/queryTab_hide"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/sl_follow_activity_store"
+                android:button="@null"
+                android:gravity="center"
+                android:text="常见问题"
+                android:textColor="@color/sl_product_tab_txt_color"/>
+
+        </RadioGroup>
+    </LinearLayout>
+
+</RelativeLayout>

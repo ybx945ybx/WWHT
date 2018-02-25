@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/colorWhite"
+              android:orientation="vertical">
+
+    <!-- title -->
+    <com.a55haitao.wwht.ui.view.DynamicHeaderView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:headerTitleTxt="官网特卖"/>
+
+    <include layout="@layout/line_divider_m_1_e5e5e5"/>
+
+    <com.a55haitao.wwht.ui.view.MultipleStatusView
+        android:id="@+id/msView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorWhite">
+
+        <FrameLayout
+            android:id="@+id/content_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+        <!--<LinearLayout-->
+        <!--android:id="@+id/content_view"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<android.support.design.widget.TabLayout-->
+        <!--android:id="@+id/tabLayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--app:tabBackground="@drawable/sl_with_grey_and_dark"-->
+        <!--app:tabIndicatorColor="@null"-->
+        <!--app:tabMinWidth="80dp"-->
+        <!--app:tabMode="scrollable"-->
+        <!--app:tabSelectedTextColor="@color/colorWhite"-->
+        <!--app:tabTextAppearance="@style/MyCustomTextAppearance"-->
+        <!--app:tabTextColor="@color/colorGray333333"/>-->
+
+        <!--<android.support.v4.view.ViewPager-->
+        <!--android:id="@+id/viewPager"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"/>-->
+        <!--</LinearLayout>-->
+
+    </com.a55haitao.wwht.ui.view.MultipleStatusView>
+
+</LinearLayout>

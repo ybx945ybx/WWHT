@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/container"
+              android:layout_width="wrap_content"
+              android:layout_height="32dp"
+              android:background="@drawable/shape_post_detail_like_button_normal"
+              android:clipChildren="false"
+              android:clipToPadding="false"
+              android:gravity="center_vertical"
+              android:orientation="horizontal">
+
+    <!-- 点赞按钮 -->
+    <com.varunest.sparkbutton.SparkButton
+        android:id="@+id/sb_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-20dp"
+        android:layout_marginRight="-16dp"
+        app:sparkbutton_activeImage="@mipmap/ic_heart_light_red"
+        app:sparkbutton_iconSize="20dp"
+        app:sparkbutton_inActiveImage="@mipmap/ic_heart_light_grey"
+        app:sparkbutton_primaryColor="@color/spark_button_primary_color"
+        app:sparkbutton_secondaryColor="@color/spark_button_secondary_color"/>
+
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:id="@+id/tv_like_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="赞"
+        android:textSize="12sp"/>
+
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:id="@+id/tv_like_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:text="1"
+        android:textSize="12sp"/>
+
+</LinearLayout>

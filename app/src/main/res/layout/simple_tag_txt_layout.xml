@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.a55haitao.wwht.ui.view.HaiTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="2dp"
+    android:paddingBottom="2dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginBottom="12dp"
+    android:textSize="@dimen/size_28"
+    android:textColor="@color/colorGray999999"
+    android:background="@drawable/shape_radius_px_8"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>

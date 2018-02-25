@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/colorBlur40"
+              android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/shape_activity_window"
+        android:orientation="vertical"
+        android:id="@+id/centerView">
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="关税补贴"
+            android:textColor="@color/colorGray26241F"
+            android:gravity="center"
+            android:textSize="@dimen/size_40"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp">
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:textSize="@dimen/size_24"
+                android:layout_marginTop="4dp"
+                android:text="补贴"
+                android:background="@drawable/shape_btn_red"
+                android:textColor="@color/colorWhite"
+                android:gravity="center"
+                android:layout_marginRight="5dp"
+                android:lineSpacingMultiplier="1.2"
+                android:id="@+id/subsidyIcon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="本商品原关税XX，55海淘为您补贴YY，小意思啦；）"
+                android:textColor="@color/colorGray999999"
+                android:textSize="@dimen/size_24"
+                android:layout_gravity="center"
+                android:id="@+id/subsidyTxt"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

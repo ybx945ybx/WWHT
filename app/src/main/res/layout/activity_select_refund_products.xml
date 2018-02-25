@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/colorActivityBackground"
+              android:orientation="vertical">
+
+    <com.a55haitao.wwht.ui.view.DynamicHeaderView
+        android:id="@+id/headerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:headerRightTxt="全选"
+        app:headerTitleTxt="选择受理商品">
+
+    </com.a55haitao.wwht.ui.view.DynamicHeaderView>
+
+       <com.a55haitao.wwht.ui.view.MultipleStatusView
+            android:id="@+id/msView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           android:layout_weight="1">
+           <android.support.v4.widget.SwipeRefreshLayout
+               android:id="@+id/content_view"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1">
+
+
+           <ExpandableListView
+                android:id="@+id/content_view_exp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:longClickable="true"/>
+            <!--<android.support.v7.widget.RecyclerView-->
+                <!--android:id="@+id/content_view"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/headerView">-->
+
+            <!--</android.support.v7.widget.RecyclerView>-->
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+        </com.a55haitao.wwht.ui.view.MultipleStatusView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhite"
+        android:padding="10dp">
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/tv_commit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_btn_black"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/colorWhite"/>
+    </LinearLayout>
+</LinearLayout>

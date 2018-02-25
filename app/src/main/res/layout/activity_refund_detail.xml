@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorActivityBackground"
+    android:orientation="vertical">
+
+    <!-- 标题 -->
+    <com.a55haitao.wwht.ui.view.DynamicHeaderView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:headerTitleTxt="申请单">
+    </com.a55haitao.wwht.ui.view.DynamicHeaderView>
+
+    <com.a55haitao.wwht.ui.view.MultipleStatusView
+        android:id="@+id/msView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/content_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- 取消申请 -->
+            <LinearLayout
+                android:id="@+id/ll_order_action"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/border_top_f5f5f5"
+                android:gravity="right"
+                android:padding="@dimen/padding_medium">
+
+                <!-- 申请退款 -->
+                <com.a55haitao.wwht.ui.view.HaiTextView
+                    android:id="@+id/tv_refund_cancle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:background="@drawable/btn_order_detail_grey"
+                    android:text="取消申请"
+                    android:textColor="@color/colorGray333333"
+                    android:textSize="14sp"
+                    android:visibility="visible"/>
+
+
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/ll_order_action"
+                android:scrollbars="none">
+
+                <!-- 容器 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/padding_large">
+
+                    <!-- 单号 & 联系信息 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorWhite"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:paddingLeft="14dp">
+
+                        <!-- 订单编号 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border_bottom"
+                            android:paddingBottom="9dp"
+                            android:paddingRight="@dimen/padding_medium"
+                            android:paddingTop="9dp">
+
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="申请单号"
+                                android:textColor="@color/colorGray999999"
+                                android:textSize="14sp"/>
+
+                            <!-- 订单号 -->
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:id="@+id/tv_order_number"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/margin_medium"
+                                android:layout_marginRight="@dimen/margin_medium"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:textColor="#333333"
+                                android:textSize="12sp"
+                                tools:text="23131344"/>
+
+                            <!-- 复制订单号 -->
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:id="@+id/tv_copy"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/btn_grey_ccc"
+                                android:text="复制"
+                                android:textColor="@color/colorGray666666"
+                                android:textSize="12sp"/>
+                        </LinearLayout>
+
+                        <!-- 提交时间 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border_bottom"
+                            android:paddingBottom="12dp"
+                            android:paddingTop="12dp">
+
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="提交时间"
+                                android:textColor="@color/colorGray999999"
+                                android:textSize="14sp"/>
+
+                            <!-- 创提交时间 -->
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:id="@+id/tv_order_create_time"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/margin_medium"
+                                android:maxLines="1"
+                                android:textColor="#333333"
+                                android:textSize="12sp"
+                                tools:text="2016-08-22 17:26:11"/>
+
+                        </LinearLayout>
+
+                        <!-- 联系方式 -->
+                        <LinearLayout
+                            android:id="@+id/ll_order_contact_info"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border_bottom"
+                            android:paddingBottom="12dp"
+                            android:paddingTop="12dp">
+
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="联系方式"
+                                android:textColor="@color/colorGray999999"
+                                android:textSize="14sp"/>
+
+                            <!-- 支付时间 -->
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:id="@+id/tv_order_contact"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/margin_medium"
+                                android:maxLines="1"
+                                android:textColor="#333333"
+                                android:textSize="12sp"
+                                tools:text="2016-08-22 17:26:11 微信支付"/>
+
+                        </LinearLayout>
+
+                        <!-- 申请状态 -->
+                        <RelativeLayout
+                            android:id="@+id/ll_stat_info"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="16dp"
+                            android:paddingTop="16dp">
+
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:id="@+id/tv_stat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/margin_small"
+                                android:ellipsize="end"
+                                android:textColor="@color/order_orange"
+                                android:textSize="14sp"
+                                tools:text="包裹1—您的包裹正在配送中，请留意"/>
+
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:id="@+id/tv_stat_info"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignLeft="@+id/tv_stat"
+                                android:layout_below="@id/tv_stat"
+                                android:layout_marginTop="9dp"
+                                android:textColor="@color/colorGray999999"
+                                android:textSize="14sp"
+                                tools:text="2015-91-24   15:00 "/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llyt_refund_products"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorWhite"
+                        android:orientation="vertical"
+                        android:paddingLeft="20dp">
+
+                        <RelativeLayout
+                            android:id="@+id/rlyt_go_to_select"
+                            android:layout_width="match_parent"
+                            android:background="@drawable/border_bottom"
+
+                            android:layout_height="48dp">
+
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="受理的商品"
+                                android:textColor="@color/colorGray26241F"
+                                android:textSize="14sp"/>
+
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:id="@+id/tv_products_num"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:paddingRight="20dp"
+                                android:text="共3件商品"
+                                android:textColor="@color/colorGray999999"
+                                android:textSize="14sp"/>
+
+                        </RelativeLayout>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rycv_selected_products"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginTop="16dp">
+
+                        </android.support.v7.widget.RecyclerView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llyt_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorWhite"
+                        android:orientation="vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingBottom="20dp">
+
+                        <com.a55haitao.wwht.ui.view.HaiTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginTop="16dp"
+                            android:text="问题描述"
+                            android:textColor="@color/colorGray26241F"
+                            android:textSize="14sp"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.25dp"
+                            android:background="@color/colorGrayCCCCCC"/>
+
+                        <com.a55haitao.wwht.ui.view.HaiTextView
+                            android:id="@+id/tv_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="20dp"
+                            android:textColor="@color/colorGray999999"
+                            android:textSize="12sp"/>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rycv_imgs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="80dp"
+                            android:visibility="visible">
+
+                        </android.support.v7.widget.RecyclerView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+    </com.a55haitao.wwht.ui.view.MultipleStatusView>
+
+
+</LinearLayout>
+

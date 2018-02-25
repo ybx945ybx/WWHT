@@ -1,0 +1,234 @@
+package com.a55haitao.wwht.data.model.result;
+
+import com.a55haitao.wwht.data.model.entity.UserListBean;
+import com.google.gson.annotations.SerializedName;
+
+import java.io.Serializable;
+import java.util.List;
+
+/**
+ * 添加好友 - 搜索好友
+ *
+ * @author 陶声
+ * @since 2016-11-03
+ */
+
+public class SearchUserResult implements Serializable {
+    public int count;
+
+    public int page;
+
+    public int allpage;
+
+    @SerializedName("user_list")
+    public List<UserListBean> userlist;
+
+
+}
+/*
+{
+        "count":11,
+        "page":1,
+        "user_list":[
+            {
+                "username":"goxMan",
+                "following_count":16,
+                "post_count":9,
+                "ucenter_token":"6573e74a19fbe97.22313758",
+                "id":1326739,
+                "membership_point":0,
+                "is_operation":0,
+                "sex":1,
+                "like_count":1,
+                "is_following":false,
+                "location":"",
+                "signature":"",
+                "follower_count":5,
+                "head_img":"http://st-prod.b0.upaiyun.com/avatar/2016/07/06/cd1e066b171e57aee2823a74e647e1e2",
+                "nickname":"mark",
+                "email":"ios_developer_mg@sina.com"
+            },
+            {
+                "username":"wangjin0107",
+                "following_count":0,
+                "post_count":0,
+                "ucenter_token":"",
+                "id":5054232,
+                "membership_point":0,
+                "is_operation":0,
+                "sex":2,
+                "like_count":0,
+                "is_following":false,
+                "location":"",
+                "signature":"",
+                "follower_count":0,
+                "head_img":"http://st-prod.b0.upaiyun.com/avatar/2016/06/09/6cbb85a42a7674019338c78f4e4dbe7b",
+                "nickname":"summer",
+                "email":"475554318@qq.com"
+            },
+            {
+                "username":"ht1698",
+                "following_count":7,
+                "post_count":4,
+                "ucenter_token":"6573d7bf37d23b5.75677372",
+                "id":5948704,
+                "membership_point":0,
+                "is_operation":0,
+                "sex":2,
+                "like_count":9,
+                "is_following":false,
+                "location":"",
+                "signature":"",
+                "follower_count":5,
+                "head_img":"http://st-prod.b0.upaiyun.com/avatar/2016/05/19/e1e41aa64c81c14bc06c1e77c132a764",
+                "nickname":"一只test喵瞄mm",
+                "email":""
+            },
+            {
+                "username":"ht_11002100016",
+                "following_count":0,
+                "post_count":6,
+                "ucenter_token":"3574ff9bc4159f5.97859014",
+                "id":5951391,
+                "membership_point":0,
+                "is_operation":0,
+                "sex":0,
+                "like_count":6,
+                "is_following":false,
+                "location":"",
+                "signature":"",
+                "follower_count":1,
+                "head_img":"http://st-prod.b0.upaiyun.com/fake_account/40751854b8711136902e5e92f334659c.jpg",
+                "nickname":"MissAn",
+                "email":"11002100016@ent.baijie.in"
+            },
+            {
+                "username":"ht_11002100030",
+                "following_count":0,
+                "post_count":2,
+                "ucenter_token":"257481502c06981.64111727",
+                "id":5951875,
+                "membership_point":20,
+                "is_operation":0,
+                "sex":0,
+                "like_count":2,
+                "is_following":false,
+                "location":"",
+                "signature":"",
+                "follower_count":3,
+                "head_img":"http://st-prod.b0.upaiyun.com/fake_account/c173520030c0cc10bd8d24f707280060.jpg",
+                "nickname":"Mr.空空",
+                "email":"11002100030@ent.baijie.in"
+            },
+            {
+                "username":"ht2330",
+                "following_count":0,
+                "post_count":0,
+                "ucenter_token":"35753c82c3642f2.49178027",
+                "id":5957070,
+                "membership_point":0,
+                "is_operation":0,
+                "sex":0,
+                "like_count":0,
+                "is_following":false,
+                "location":"",
+                "signature":"",
+                "follower_count":0,
+                "head_img":"http://wx.qlogo.cn/mmopen/coTrIia3GInvxzPiciaEDOicuUKNtAZSdJBiaibGv26vK2dQChrnN1GLovlyjF26awfphQoreicic1VoSgBEK78anUoVTD1icWPHYBNna/0",
+                "nickname":"MEI",
+                "email":""
+            },
+            {
+                "username":"ht2362",
+                "following_count":0,
+                "post_count":0,
+                "ucenter_token":"2575ce08141dcf9.78101489",
+                "id":5959049,
+                "membership_point":0,
+                "is_operation":0,
+                "sex":0,
+                "like_count":0,
+                "is_following":false,
+                "location":"",
+                "signature":"",
+                "follower_count":0,
+                "head_img":"http://wx.qlogo.cn/mmopen/ajNVdqHZLLBXqia2k6nVKBKZUh9qjhlt9Qnv6K8W5kgKzgw2Mr0ZUMCpq6icuszfFdUu4YvGQOxib2QDPbUcY0Wag/0",
+                "nickname":"^_^Amy^_^",
+                "email":""
+            },
+            {
+                "username":"ht2368",
+                "following_count":0,
+                "post_count":0,
+                "ucenter_token":"5575d7517472e41.91575742",
+                "id":5959284,
+                "membership_point":0,
+                "is_operation":0,
+                "sex":0,
+                "like_count":0,
+                "is_following":false,
+                "location":"",
+                "signature":"",
+                "follower_count":0,
+                "head_img":"http://wx.qlogo.cn/mmopen/hIz3ylFIYS8XwIN4cFudicnw6dqgEOboCj2uiak3FcyNYPJbp5dr9EZbRjmk5NZBbia1cVKJelCYY9IssbSEuxzJA/0",
+                "nickname":"DIAMONDSOURCE",
+                "email":""
+            },
+            {
+                "username":"55haitao_us_10",
+                "following_count":0,
+                "post_count":2,
+                "ucenter_token":"3576572ab05b911.53980355",
+                "id":5980953,
+                "membership_point":0,
+                "is_operation":0,
+                "sex":2,
+                "like_count":4,
+                "is_following":false,
+                "location":"",
+                "signature":"",
+                "follower_count":1,
+                "head_img":"http://st-prod.b0.upaiyun.com/avatar/2016/06/19/6b383458ecbcbdc1e4af8c6ec96d3e20",
+                "nickname":"MoMo妈",
+                "email":"11002200010@us.55haitao.com"
+            },
+            {
+                "username":"ht2421",
+                "following_count":0,
+                "post_count":0,
+                "ucenter_token":"10576517921b5e33.23791268",
+                "id":5981192,
+                "membership_point":0,
+                "is_operation":0,
+                "sex":2,
+                "like_count":0,
+                "is_following":false,
+                "location":"",
+                "signature":"",
+                "follower_count":0,
+                "head_img":"http://st-prod.b0.upaiyun.com/avatar/2016/06/18/70ad71b48a0031975c027e30289d83b0",
+                "nickname":"mm",
+                "email":""
+            },
+            {
+                "username":"ht2468",
+                "following_count":1,
+                "post_count":3,
+                "ucenter_token":"757694a6b1ea304.67196256",
+                "id":5982193,
+                "membership_point":0,
+                "is_operation":0,
+                "sex":2,
+                "like_count":80,
+                "is_following":true,
+                "location":"北京",
+                "signature":"",
+                "follower_count":29,
+                "head_img":"http://st-prod.b0.upaiyun.com/avatar/2016/06/21/3a98d25b66a31d2abb476ac4d28357bb",
+                "nickname":"I_am-Michelle",
+                "email":""
+            }
+        ],
+        "allpage":1
+    }
+*/

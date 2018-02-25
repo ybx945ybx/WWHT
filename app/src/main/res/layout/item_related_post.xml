@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/related_post_width"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding_medium">
+
+    <ImageView
+        android:id="@+id/img_pic"
+        android:layout_width="@dimen/related_post_pic_width"
+        android:layout_height="@dimen/related_post_pic_height"
+        android:background="#FFF"
+        android:scaleType="centerCrop"/>
+
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:id="@+id/tv_desc"
+        android:layout_width="@dimen/related_post_text_width"
+        android:layout_height="@dimen/related_post_text_height"
+        android:background="#FFF"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+        android:lineSpacingMultiplier="1.2"
+        android:maxLines="2"
+        android:padding="@dimen/padding_medium"
+        android:textColor="#666666"
+        android:textSize="12sp"
+        tools:text="@string/realted_post_content"/>
+
+</LinearLayout>

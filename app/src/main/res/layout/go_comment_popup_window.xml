@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/colorBlur40">
+
+    <LinearLayout
+        android:id="@+id/centerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="38dp"
+        android:layout_marginRight="38dp"
+        android:background="@drawable/shape_activity_window"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_go_comment"/>
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Hi~用的怎样？"
+            android:textColor="@color/colorGray333333"
+            android:textSize="16sp"/>
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="55海淘的成长需要您的支持，"
+            android:textColor="@color/colorGray999999"
+            android:textSize="14sp"/>
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+            android:text="全体工作人员在此热情打滚求好评！"
+            android:textColor="@color/colorGray999999"
+            android:textSize="14sp"/>
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/tv_go_like"
+            android:layout_width="260dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/go_comment_bg"
+            android:gravity="center"
+            android:text="赞！去好评"
+            android:textColor="@color/colorGray26241F"
+            android:textSize="14sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:id="@+id/tv_go_vomit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="去吐槽"
+                android:textColor="@color/colorGray26241F"
+                android:textSize="14sp"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="17dp"
+                android:background="@color/colorGray999999"/>
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:id="@+id/tv_dismiss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="我就不"
+                android:textColor="@color/colorGray999999"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

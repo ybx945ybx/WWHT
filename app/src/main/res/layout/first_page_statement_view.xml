@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/statmentLin"
+    android:layout_width="match_parent"
+    android:layout_height="88dp"
+    android:layout_weight="1"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/statmentImage1"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        android:src="@mipmap/ic_default_square_tiny" />
+
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:id="@+id/statmentTxt1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="官网特卖"
+        android:textColor="@color/colorGray23231E"
+        android:textSize="@dimen/size_24" />
+
+</LinearLayout>

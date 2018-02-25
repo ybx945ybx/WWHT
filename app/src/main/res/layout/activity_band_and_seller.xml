@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorActivityBackground"
+    android:orientation="vertical">
+
+    <!-- 标题 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/shape_bg_title">
+
+        <!-- 返回键 -->
+        <ImageButton
+            android:id="@+id/ib_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:background="@null"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_arrow_left_grey"/>
+
+        <RadioGroup
+            android:id="@+id/rgp_bandAndStore_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rdo_bandAndStore_band"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sl_follow_activity_band"
+                android:button="@null"
+                android:checked="true"
+                android:paddingBottom="4dp"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:paddingTop="4dp"
+                android:text="品牌"
+                android:textColor="@drawable/sl_follow_radiobutton_textcolor"
+                android:textSize="12sp"/>
+
+            <RadioButton
+                android:id="@+id/rdo_bandAndStore_store"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sl_follow_activity_store"
+                android:button="@null"
+                android:paddingBottom="4dp"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:paddingTop="4dp"
+                android:text="商家"
+                android:textColor="@drawable/sl_follow_radiobutton_textcolor"
+                android:textSize="12sp"/>
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <!-- content -->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_bandAndStore_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v4.view.ViewPager>
+
+
+</LinearLayout>

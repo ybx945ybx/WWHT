@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.a55haitao.wwht.ui.view.HaiTextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_tag_hot"
+    android:textColor="#FFF">
+
+</com.a55haitao.wwht.ui.view.HaiTextView>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlur80"
+    android:id="@+id/specMain">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorClear"
+        android:layout_weight="2"
+        android:clickable="true"
+        android:id="@+id/clearZoneLinear"
+        ></View>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorClear"
+        android:layout_weight="8"
+        android:orientation="vertical">
+        
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/colorClear">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:background="@color/colorClear"></LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorWhite">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="112dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <com.a55haitao.wwht.ui.view.HaiTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:text="¥ 597.0"
+                            android:textColor="@color/colorRed"
+                            android:textSize="@dimen/size_40"
+                            android:gravity="center"
+                            android:id="@+id/priceTxt"/>
+
+                        <!-- 核价 -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:paddingLeft="20dp"
+                            android:gravity="bottom"
+                            android:id="@+id/productRTLin">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/ic_loading_orange"
+                                android:id="@+id/productRTImage"/>
+
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="10dp"
+                                android:text="更新价格中..."
+                                android:textColor="@color/colorGray999999"
+                                android:textSize="@dimen/size_24"
+                                android:gravity="center"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="20dp"
+                        android:scrollbars="none">
+
+                        <com.a55haitao.wwht.ui.view.HaiTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="已选择"
+                            android:textSize="@dimen/size_28"
+                            android:textColor="@color/colorGray333333"
+                            android:gravity="center"
+                            android:fadeScrollbars="true"
+                            android:scrollbarSize="1dp"
+                            android:id="@+id/selectedTxt"/>
+
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="16dp"
+                android:background="@color/colorGrayCCCCCC">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:background="@color/colorWhite"
+                    android:layout_margin="1dp"
+                    android:src="@mipmap/ic_default_square_tiny"
+                    android:id="@+id/imageCover">
+                </ImageView>
+
+            </LinearLayout>
+
+
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorGrayCCCCCC"
+                android:layout_marginTop="99dp"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+
+            <!-- 单一规格 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/colorWhite"
+                android:orientation="vertical"
+                android:id="@+id/singleLin"
+                android:visibility="gone">
+                
+                <com.a55haitao.wwht.ui.view.HaiTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="规格"
+                    android:layout_marginLeft="22dp"
+                    android:textColor="@color/colorGray333333"
+                    android:textSize="@dimen/size_28"
+                    android:layout_marginTop="10dp"/>
+
+                <com.a55haitao.wwht.ui.view.HaiTextView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginRight="6dp"
+                    android:background="@drawable/shape_btn_spec_select"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/size_24"
+                    android:textColor="@color/colorGray26241F"
+                    android:text="均码"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:minWidth="60dp"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <!-- 规格选择 -->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:background="@color/colorWhite">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/specZoneLinear">
+
+                </LinearLayout>
+            </ScrollView>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@drawable/shape_btn_black"
+                android:text="确定"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/size_32"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_gravity="bottom"
+                android:id="@+id/buttonOK"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

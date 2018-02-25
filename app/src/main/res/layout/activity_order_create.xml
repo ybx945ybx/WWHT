@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/colorWhite"
+              android:orientation="vertical"
+              tools:activity="com.a55haitao.wwht.ui.activity.shoppingcart.OrderCreateActivity">
+
+    <com.a55haitao.wwht.ui.view.DynamicHeaderView
+        android:id="@+id/headView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:headerRightImg="@mipmap/ic_service_title"
+        app:headerTitleTxt="订单确认"/>
+
+    <include layout="@layout/line_divider_m_1_e5e5e5"/>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/shippingLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:clickable="true"
+                android:descendantFocusability="blocksDescendants">
+
+                <ImageView
+                    android:id="@+id/noAddressImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_address"/>
+
+                <ImageView
+                    android:id="@+id/arrImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/ic_arrow_right_grey"
+                    android:visibility="invisible"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toLeftOf="@id/arrImg"
+                    android:layout_toRightOf="@+id/noAddressImg"
+                    android:orientation="vertical">
+
+                    <com.a55haitao.wwht.ui.view.HaiTextView
+                        android:id="@+id/defaultTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:paddingTop="10dp"
+                        android:text="[默认]"
+                        android:textColor="@color/colorTextYellow"
+                        android:visibility="invisible"/>
+
+                    <com.a55haitao.wwht.ui.view.HaiTextView
+                        android:id="@+id/nameAndPhoneTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/defaultTxt"
+                        android:textColor="@color/colorTab"
+                        android:textSize="14sp"
+                        android:visibility="invisible"
+                        tools:text="dfsdfsdfdsf"/>
+
+                    <com.a55haitao.wwht.ui.view.HaiTextView
+                        android:id="@+id/addressTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/nameAndPhoneTxt"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="6dp"
+                        android:lineSpacingMultiplier="1.2"
+                        android:textColor="@color/colorGray333333"
+                        android:textSize="@dimen/size_28"
+                        android:visibility="invisible"
+                        tools:text="fdsfdsfsd"/>
+                </RelativeLayout>
+
+
+                <com.a55haitao.wwht.ui.view.HaiTextView
+                    android:id="@+id/noAddressTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_toRightOf="@id/noAddressImg"
+                    android:text="请选择收货地址"
+                    android:textColor="@color/colorGray999999"
+                    android:textSize="@dimen/size_28"
+                    android:visibility="invisible"/>
+
+            </RelativeLayout>
+
+            <include layout="@layout/divider_m8"/>
+
+            <LinearLayout
+                android:id="@+id/sellerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+            <include layout="@layout/divider_m8"/>
+
+            <LinearLayout
+                android:id="@+id/toCouponLayout"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
+                <com.a55haitao.wwht.ui.view.HaiTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="优惠券"
+                    android:textColor="@color/colorTab"
+                    android:textSize="@dimen/size_28"/>
+
+                <com.a55haitao.wwht.ui.view.HaiTextView
+                    android:id="@+id/couponTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择优惠券"
+                    android:textColor="@color/colorRed"
+                    android:textSize="@dimen/size_28"/>
+
+                <ImageView
+                    android:id="@+id/couponImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/ic_arrow_right_grey"/>
+
+
+            </LinearLayout>
+
+            <include layout="@layout/divider_m8"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
+                <com.a55haitao.wwht.ui.view.HaiTextView
+                    android:id="@+id/commissionTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="使用佣金"
+                    android:textColor="@color/colorTab"
+                    android:textSize="@dimen/size_28"/>
+
+                <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/switchBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="4dp"
+                    app:kswAnimationDuration="300"
+                    app:kswBackDrawable="@drawable/ios_back_drawable"
+                    app:kswBackMeasureRatio="1.4"
+                    app:kswThumbDrawable="@drawable/ios_thumb_selector"
+                    app:kswThumbMarginBottom="-8dp"
+                    app:kswThumbMarginLeft="-5dp"
+                    app:kswThumbMarginRight="-5dp"
+                    app:kswThumbMarginTop="-2.5dp"/>
+
+            </LinearLayout>
+
+            <include layout="@layout/divider_m8"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_wx_pay"/>
+
+                <com.a55haitao.wwht.ui.view.HaiTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:text="微信支付"
+                    android:textColor="@color/colorTab"
+                    android:textSize="@dimen/size_28"/>
+
+                <RelativeLayout
+                    android:id="@+id/wxPayLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <CheckBox
+                        android:id="@+id/wxPayCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/sl_for_pay"
+                        android:button="@null"
+                        android:checked="true"/>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_ali_pay"/>
+
+                <com.a55haitao.wwht.ui.view.HaiTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:text="支付宝支付"
+                    android:textColor="@color/colorTab"
+                    android:textSize="@dimen/size_28"/>
+
+                <RelativeLayout
+                    android:id="@+id/aliPayLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <CheckBox
+                        android:id="@+id/aliPayCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/sl_for_pay"
+                        android:button="@null"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <include layout="@layout/divider_m8"/>
+
+            <LinearLayout
+                android:id="@+id/llyt_achat_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.a55haitao.wwht.ui.view.HaiTextView
+                    android:id="@+id/tv_achat_note"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:lineSpacingExtra="3dp"
+                    android:textColor="@color/colorGray666666"
+                    android:textSize="12sp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="10dp">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_aggress"
+                            android:layout_width="110dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/btn_black_gray_boder_selecter"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:textColor="@color/aschate_text_color_selecter"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_reject"
+                            android:layout_width="110dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/btn_black_gray_boder_selecter"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:textColor="@color/aschate_text_color_selecter"/>
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="110dp"
+                            android:layout_height="30dp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/iv_agree"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="8dp"
+                                android:src="@mipmap/ic_selected_orange"
+                                android:visibility="gone"/>
+
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:id="@+id/tv_agree"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:enabled="false"
+                                android:text="同意"
+                                android:textColor="@color/aschate_text_color_selecter"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="110dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/iv_reject"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="8dp"
+                                android:src="@mipmap/ic_selected_orange"
+                                android:visibility="gone"/>
+
+                            <com.a55haitao.wwht.ui.view.HaiTextView
+                                android:id="@+id/tv_reject"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:enabled="false"
+                                android:text="不同意"
+                                android:textColor="@color/aschate_text_color_selecter"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <include layout="@layout/divider_m8"/>
+            </LinearLayout>
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="20dp"
+                android:text="留言"
+                android:textColor="@color/colorGray23231E"
+                android:textSize="@dimen/size_28"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="14dp">
+
+                <com.a55haitao.wwht.ui.view.MyLinearLayout
+                    android:id="@+id/llyt_et_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fadingEdge="none"
+                    android:scrollbars="none"
+                    android:visibility="visible">
+
+                    <EditText
+                        android:id="@+id/extEdt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_radius_px_8"
+                        android:gravity="start"
+                        android:hint="有什么特殊需求可以在这里填写"
+                        android:maxLength="300"
+                        android:minHeight="100dp"
+                        android:padding="10dp"
+                        android:textColor="@color/colorGray333333"
+                        android:textColorHint="@color/colorGray999999"
+                        android:textSize="14sp"/>
+                </com.a55haitao.wwht.ui.view.MyLinearLayout>
+
+                <com.a55haitao.wwht.ui.view.HaiTextView
+                    android:id="@+id/tv_desc_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="0/300"
+                    android:textColor="@color/colorGray999999"
+                    android:textSize="12sp"/>
+            </RelativeLayout>
+
+            <!--<EditText-->
+            <!--android:id="@+id/extEdt"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/px_108"-->
+            <!--android:layout_marginTop="@dimen/margin_small"-->
+            <!--android:background="@color/colorWhite"-->
+            <!--android:gravity="start"-->
+            <!--android:hint="有什么特殊需求可以再这里填写"-->
+            <!--android:imeOptions="actionDone"-->
+            <!--android:inputType="text"-->
+            <!--android:paddingLeft="10dp"-->
+            <!--android:textSize="@dimen/size_24"/>-->
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/strike_rect_e5e5e5"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingRight="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal">
+
+                <com.a55haitao.wwht.ui.view.HaiTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="应付金额"
+                    android:textColor="@color/colorTab"
+                    android:textSize="12sp"/>
+
+                <com.a55haitao.wwht.ui.view.HaiTextView
+                    android:id="@+id/payment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/colorRedMyAccount"
+                    android:textSize="12sp"
+                    app:expandTypeface="gotham"
+                    tools:text="20121"/>
+
+            </LinearLayout>
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:id="@+id/productTotleCountTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:gravity="right"
+                android:textColor="@color/colorGray999999"
+                android:textSize="10sp"
+                tools:text="1件商品"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/toPayBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_weight="1"
+            android:background="@color/colorBanana"
+            android:text="前往支付"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.a55haitao.wwht.ui.layout.FirstPageSubTitleLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="62dp">
+
+	<View
+		android:id="@+id/tilteDivider"
+		android:layout_width="match_parent"
+		android:layout_height="12dp"
+		android:background="@color/colorActivityBackground"/>
+
+	<com.a55haitao.wwht.ui.view.HaiTextView
+		android:id="@+id/titleTxt"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@id/tilteDivider"
+		android:gravity="center"
+		android:textColor="@color/colorGray333333"
+		android:textSize="@dimen/size_32"
+		app:expandTypeface="regular"
+		tools:text="分类"/>
+
+	<ImageView
+		android:id="@+id/moreTxt"
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:layout_alignParentRight="true"
+		android:layout_below="@id/tilteDivider"
+		android:layout_centerVertical="true"
+		android:layout_marginRight="@dimen/px_20"
+		android:clickable="true"
+		android:gravity="center"
+		android:src="@mipmap/ic_more_circle"/>
+
+	<!--<View-->
+	<!--android:id="@+id/rightLine"-->
+	<!--android:layout_toLeftOf="@id/moreTxt"-->
+	<!--android:layout_marginRight="@dimen/px_20"-->
+	<!--android:layout_centerVertical="true"-->
+	<!--android:background="@color/colorGrayE6E6E6"-->
+	<!--android:layout_width="@dimen/px_4"-->
+	<!--android:layout_height="@dimen/px_30"/>-->
+
+	<View
+		android:id="@+id/bottomLine"
+		android:layout_width="@dimen/px_60"
+		android:layout_height="@dimen/px_4"
+		android:layout_alignParentBottom="true"
+		android:layout_centerHorizontal="true"
+		android:background="@color/colorGray26241F"/>
+
+</com.a55haitao.wwht.ui.layout.FirstPageSubTitleLayout>

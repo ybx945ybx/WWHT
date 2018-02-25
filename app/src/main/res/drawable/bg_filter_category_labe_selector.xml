@@ -1,0 +1,5 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true" android:drawable="@drawable/bg_filter_category_labe_selected"/>
+    <item android:state_selected="false" android:drawable="@drawable/bg_filter_price"/>
+    <item android:drawable="@drawable/bg_filter_price"/>
+</selector>

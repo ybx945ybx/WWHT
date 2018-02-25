@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="#CC000000"
+              android:gravity="center_vertical"
+              android:orientation="horizontal"
+              android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="@dimen/dlg_toast_add_to_easyopt_logo_size"
+        android:layout_height="@dimen/dlg_toast_add_to_easyopt_logo_size"
+        android:layout_marginRight="8dp"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/has_add_to_easyopt"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp"/>
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/tv_easyopt_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:textColor="#B3B3B3"
+            android:textSize="10sp"
+            tools:text="口红合集"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="2dp"
+        android:src="@mipmap/ic_arrow_right_white"/>
+
+</LinearLayout>

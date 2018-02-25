@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="com.a55haitao.wwht.data.model.annotation.UpaiPictureLevel"/>
+        <import type="com.a55haitao.wwht.data.model.annotation.PageType"/>
+        <variable name="hotBean" type="com.a55haitao.wwht.data.model.entity.CategoryBean"/>
+        <variable name="handler" type="com.a55haitao.wwht.utils.DataBindiHp.CategoryHandler"/>
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:onClick="@{(view) -> handler.onItemClick(PageType.CATEGORY,hotBean.name,hotBean.query)}"
+        android:background="@color/colorWhite"
+        android:layout_height="@dimen/px_200">
+
+        <ImageView
+            android:id="@+id/bigCoverImg"
+            tools:src="@mipmap/ic_launcher"
+            app:imgUrl="@{hotBean.image}"
+            app:size="@{UpaiPictureLevel.TRIBBLE}"
+            android:layout_marginTop="@dimen/px_20"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/px_100"/>
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:text="@{hotBean.name}"
+            android:id="@+id/categoryNameTxt"
+            android:textSize="@dimen/size_24"
+            android:textColor="@color/colorGray333333"
+            android:layout_marginTop="@dimen/px_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</layout>

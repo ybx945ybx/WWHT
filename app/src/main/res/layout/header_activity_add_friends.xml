@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_add_friends_header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:divider="@drawable/divider_solid"
+    android:orientation="vertical"
+    android:showDividers="middle">
+
+    <!-- 通讯录好友 -->
+    <LinearLayout
+        android:id="@+id/ll_invite_contacts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_item_selectable"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:padding="10dp">
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/ic_telephone"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:text="通讯录好友"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_arrow_right_grey"/>
+    </LinearLayout>
+
+    <!-- 微博好友 -->
+    <LinearLayout
+        android:id="@+id/ll_invite_weibo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_item_selectable"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:padding="10dp">
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/ic_share_weibo_small"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:text="邀请微博好友"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_arrow_right_grey"/>
+    </LinearLayout>
+
+    <!-- 微信好友 -->
+    <LinearLayout
+        android:id="@+id/ll_invite_wechat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_item_selectable"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:padding="10dp">
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/ic_share_wechat_small"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:text="邀请微信好友"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_arrow_right_grey"/>
+    </LinearLayout>
+
+    <!-- QQ好友 -->
+    <LinearLayout
+        android:id="@+id/ll_invite_qq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_item_selectable"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:padding="10dp">
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/ic_share_qq_small"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:text="邀请QQ好友"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_arrow_right_grey"/>
+    </LinearLayout>
+
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F3F3F9"
+        android:paddingBottom="@dimen/padding_small"
+        android:paddingLeft="@dimen/padding_medium"
+        android:paddingTop="@dimen/padding_small"
+        android:text="推荐用户"
+        android:textColor="#666666"
+        android:textSize="12sp"/>
+</LinearLayout>

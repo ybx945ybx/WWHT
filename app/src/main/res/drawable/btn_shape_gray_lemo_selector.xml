@@ -1,0 +1,5 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false" android:drawable="@drawable/shape_btn_gray"/>
+    <item android:state_enabled="true" android:drawable="@mipmap/ic_btn_lemon"/>
+    <item android:drawable="@mipmap/ic_btn_lemon"/>
+</selector>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              xmlns:zhy="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical">
+
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:id="@+id/tv_null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorActivityBackground"
+        android:drawablePadding="20dp"
+        android:drawableTop="@mipmap/pic_expired"
+        android:gravity="center"
+        android:padding="50dp"
+        android:text="商品过期不存在，先看看别的吧~"
+        android:textColor="@color/colorGray999999"
+        android:textSize="14sp"/>
+
+    <LinearLayout
+        android:id="@+id/llyt_recom_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="换个词搜搜"
+            android:textSize="14sp"
+            android:textColor="@color/colorGray666666"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="16dp"/>
+        <com.zhy.view.flowlayout.TagFlowLayout
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="16dp"
+            android:id="@+id/tflyt_recom"
+            zhy:max_select="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.zhy.view.flowlayout.TagFlowLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/colorActivityBackground"/>
+    </LinearLayout>
+
+</LinearLayout>

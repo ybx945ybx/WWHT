@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/colorWhite"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="36dp"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <CheckBox
+                android:id="@+id/itemCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="24dp"
+                android:button="@null"
+                android:checked="true"
+                android:drawableBottom="@drawable/shape_clear_44_24"
+                android:drawableLeft="@drawable/shape_clear_14_36"
+                android:drawableRight="@drawable/shape_clear_14_36"
+                android:drawableTop="@drawable/sl_shoppingcart_checkbox"/>
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:id="@+id/itemInvalid"
+                android:layout_width="24dp"
+                android:layout_height="18dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/shape_btn_gray"
+                android:gravity="center"
+                android:text="失效"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/size_20"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/itemLin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorGrayCCCCCC"
+                android:padding="1dp"
+                android:layout_gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@color/colorWhite"
+                    android:padding="1dp">
+
+                    <ImageView
+                        android:id="@+id/itemImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/ic_default_square_tiny"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
+
+                <com.a55haitao.wwht.ui.view.HaiTextView
+                    android:id="@+id/itemTitleTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textColor="@color/colorGray333333"
+                    android:textSize="@dimen/size_24"
+                    tools:text="Rebecca Minkoff Mini MAC 迷你女士斜挎包\n\n颜色：红色\n尺码：11-D"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <com.a55haitao.wwht.ui.view.HaiTextView
+                        android:id="@+id/itemOldPriceTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorGray333333"
+                        android:textSize="@dimen/size_24"
+                        app:expandTypeface="gotham"
+                        tools:text="￥2999\nX1"/>
+
+                    <com.a55haitao.wwht.ui.view.StrikeThruTextView
+                        android:id="@+id/itemOldPriceTxtStrike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorGray333333"
+                        android:textSize="@dimen/size_24"
+                        app:expandTypeface="gotham"
+                        tools:text="￥2999\nX1"/>
+
+                    <com.a55haitao.wwht.ui.view.HaiTextView
+                        android:id="@+id/tv_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="->"
+                        android:textColor="@color/colorGray333333"
+                        android:textSize="@dimen/size_24"
+                        android:layout_marginLeft="5dp"
+                        android:visibility="gone"/>
+
+                    <com.a55haitao.wwht.ui.view.HaiTextView
+                        android:id="@+id/itemNowPriceTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorRed"
+                        android:textSize="@dimen/size_24"
+                        android:layout_marginLeft="5dp"
+                        android:visibility="gone"
+                        app:expandTypeface="gotham"
+                        tools:text="￥2999\nX1"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+

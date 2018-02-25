@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <ViewStub
+        android:id="@+id/siteViewStub"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_96"
+        android:layout="@layout/title_with_cart_count_layout"/>
+
+    <ViewStub
+        android:id="@+id/searchViewStub"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_96"
+        android:layout="@layout/header_search_style_layout"/>
+
+    <include layout="@layout/line_divider_m_1_cccccc"/>
+
+    <LinearLayout
+        android:id="@+id/sortConditionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_100"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/hotRadioBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorWhite"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="热门"
+            android:textColor="@color/color_sort_txt"
+            android:textSize="@dimen/size_28"/>
+
+        <RadioButton
+            android:id="@+id/saleRadioBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorWhite"
+            android:button="@null"
+            android:gravity="center"
+            android:text="折扣"
+            android:textColor="@color/color_sort_txt"
+            android:textSize="@dimen/size_28"/>
+
+
+        <LinearLayout
+            android:id="@+id/priceLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <CheckedTextView
+                android:id="@+id/priceCheckTV"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhite"
+                android:gravity="center"
+                android:text="价格"
+                android:textColor="@color/color_sort_txt"
+                android:textSize="@dimen/size_28"/>
+
+            <ImageView
+                android:id="@+id/priceImgView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/price_sort_level_list"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/colorHint"/>
+
+        <LinearLayout
+            android:id="@+id/filterLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <CheckedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhite"
+                android:button="@null"
+                android:clickable="false"
+                android:drawablePadding="8dp"
+                android:drawableRight="@mipmap/ic_filter"
+                android:gravity="center"
+                android:text="@string/filter"
+                android:textColor="@color/color_sort_txt"
+                android:textSize="@dimen/size_28"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/line_divider_m_1_cccccc"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/filterCondictionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/px_20"
+            android:paddingRight="10dp"
+            android:paddingTop="@dimen/px_20"
+            android:visibility="gone">
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center_vertical"
+                android:text="已选择:"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rycv_selected_labels"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/tv_result_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:padding="16dp"
+            android:textColor="@color/colorGray333333"
+            android:textSize="12sp"
+            android:visibility="gone"
+            tools:text="系统可以为“COAAH”提供同义词匹配，试一试获取更多结果。"/>
+    </LinearLayout>
+
+    <com.a55haitao.wwht.ui.view.MultipleStatusView
+        android:id="@+id/msView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/content_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rycv_product"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recommendGoodsListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </com.a55haitao.wwht.ui.view.MultipleStatusView>
+
+
+    <!--<ScrollView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content">-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/recommendRootLayout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical"-->
+    <!--android:visibility="gone">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/textView4"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="100dp"-->
+    <!--android:gravity="center"-->
+    <!--android:text="没有搜索到相关商品"/>-->
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="10dp"-->
+    <!--android:background="@color/colorLvDivider"/>-->
+
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center"-->
+    <!--android:paddingBottom="15dp"-->
+    <!--android:paddingTop="15dp"-->
+    <!--android:text="大 家 都 在 买"-->
+    <!--android:textColor="@color/colorTab"-->
+    <!--android:textSize="@dimen/size_28"/>-->
+
+    <!--</LinearLayout>-->
+
+    <!--<android.support.v7.widget.RecyclerView-->
+    <!--android:id="@+id/recommendGoodsListView"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="10dp"-->
+    <!--android:layout_marginLeft="@dimen/px_20"-->
+    <!--android:layout_marginRight="@dimen/px_20"-->
+    <!--android:scrollbars="none"/>-->
+
+    <!--</LinearLayout>-->
+
+    <!--</ScrollView>-->
+
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_popup_triangle"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:text="预计1-5个工作日内到账，请及时查看"
+        android:textColor="#202020"
+        android:textSize="12sp"/>
+
+</LinearLayout>

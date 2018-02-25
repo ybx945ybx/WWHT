@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/container"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_item_selectable"
+              android:gravity="center_vertical"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_medium">
+
+        <!-- 头像 -->
+        <com.a55haitao.wwht.ui.view.AvatarView
+            android:id="@+id/img_avatar"
+            android:layout_width="@dimen/avatar_big"
+            android:layout_height="@dimen/avatar_big"
+            app:border_width="1px"
+            app:corner_size="@dimen/avatar_corner_big"
+            app:placeholder="@mipmap/ic_avatar_default_small"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- 用户名 -->
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:id="@+id/tv_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="#26241F"
+                tools:text="用户名ID"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center_vertical">
+
+                <!-- 晒物数 -->
+                <com.a55haitao.wwht.ui.view.HaiTextView
+                    android:id="@+id/tv_post_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#999999"
+                    android:textSize="12sp"
+                    tools:text="4篇晒物"/>
+
+                <!-- 分割线 -->
+                <ImageView
+                    android:layout_width="1dp"
+                    android:layout_height="17dp"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:background="#999"
+                    android:textColor="#999999"/>
+
+                <!-- 赞数 -->
+                <com.a55haitao.wwht.ui.view.HaiTextView
+                    android:id="@+id/tv_like_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#999999"
+                    android:textSize="12sp"
+                    tools:text="收获78个赞"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 关注按钮 -->
+        <CheckBox
+            android:id="@+id/chk_follow_user"
+            style="@style/CheckboxFollow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@color/colorWhite"
+            android:clickable="true"/>
+    </LinearLayout>
+
+    <!-- 分割线 -->
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:background="@mipmap/dot_line"/>
+
+</LinearLayout>

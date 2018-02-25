@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.a55haitao.wwht.ui.view.MultipleStatusView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/msView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/content_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/appBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:backgroundTint="#0fff">
+
+                <include layout="@layout/site_header_layout"/>
+
+                <include layout="@layout/line_divider_vertical_m_8_cccccc"/>
+
+                <android.support.design.widget.CollapsingToolbarLayout
+                    android:id="@+id/collapsingBarLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                    <android.support.v7.widget.Toolbar
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:background="@color/colorWhite"
+                        android:paddingBottom="7dp"
+                        app:layout_collapseMode="pin">
+
+                        <RadioGroup
+                            android:id="@+id/fixLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/productRadioBtn"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:button="@null"
+                                android:checked="true"
+                                android:gravity="center"
+                                android:text="商品"
+                                android:textColor="@color/sl_tab_txt_color"
+                                android:textSize="14sp"/>
+
+                            <RadioButton
+                                android:id="@+id/relateBrandRadiobtn"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:textColor="@color/sl_tab_txt_color"
+                                android:textSize="14sp"
+                                tools:text="相关品牌"/>
+
+                        </RadioGroup>
+
+                    </android.support.v7.widget.Toolbar>
+
+                </android.support.design.widget.CollapsingToolbarLayout>
+
+            </android.support.design.widget.AppBarLayout>
+
+            <FrameLayout
+                android:id="@+id/framLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+        </android.support.design.widget.CoordinatorLayout>
+
+        <include layout="@layout/site_nagivation_layout"/>
+
+    </FrameLayout>
+</com.a55haitao.wwht.ui.view.MultipleStatusView>

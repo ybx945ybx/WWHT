@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/quertTextLin"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <!-- 占位 -->
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPurple"
+        android:gravity="center_horizontal|bottom"
+        android:text="\n别拉了，我是有底线的\n"
+        android:textColor="@color/colorGray999999"
+        android:textSize="@dimen/size_24">
+    </com.a55haitao.wwht.ui.view.HaiTextView>
+
+
+
+</LinearLayout>

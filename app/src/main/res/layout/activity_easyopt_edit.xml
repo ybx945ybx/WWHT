@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_easyopt_create"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorActivityBackground"
+    android:orientation="vertical"
+    tools:activity="com.a55haitao.wwht.ui.activity.easyopt.EasyoptEditActivity">
+
+    <!-- 标题 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@drawable/shape_bg_title">
+
+        <!-- 添加好友 -->
+        <ImageButton
+            android:id="@+id/ib_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:background="@null"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_left"/>
+
+        <!-- 标题名 -->
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_easyopt_edit"
+            android:textColor="#333"
+            android:textSize="16sp"/>
+
+        <!-- 添加晒物 -->
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/tv_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:background="@drawable/shape_btn_yellow"
+            android:gravity="center"
+            android:text="@string/title_sure"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp"/>
+    </RelativeLayout>
+
+    <include layout="@layout/header_easyopt_create_edit"/>
+
+    <!-- 删除草单 -->
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:id="@+id/tv_delete_easyopt"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:background="@color/colorWhite"
+        android:gravity="center"
+        android:text="@string/delete"
+        android:textColor="@color/colorDeleteButton"
+        android:textSize="14sp"/>
+</LinearLayout>

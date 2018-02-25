@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="@dimen/px_200"
+	android:layout_height="wrap_content"
+	android:layout_marginLeft="@dimen/px_10"
+	android:layout_marginRight="@dimen/px_10">
+
+	<LinearLayout
+		android:id="@+id/llyt_pd"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal"
+		android:orientation="vertical">
+
+		<com.a55haitao.wwht.ui.view.HaiImageView
+			android:id="@+id/pdMainImg"
+			app:viewAspectRatio="1"
+			android:layout_width="@dimen/px_200"
+			android:layout_height="wrap_content"
+			tools:src="@mipmap/ic_launcher"/>
+
+		<com.a55haitao.wwht.ui.view.HaiTextView
+			android:id="@+id/pdBrandTxt"
+			style="@style/text_one_line"
+			android:layout_marginTop="8dp"
+			android:textColor="@color/colorGray333333"
+			android:textSize="@dimen/size_24"
+			tools:text="pdBrandTxt"/>
+
+		<com.a55haitao.wwht.ui.view.HaiTextView
+			android:id="@+id/pdNameTxt"
+			style="@style/text_one_line"
+			android:textColor="@color/colorGray999999"
+			android:textSize="@dimen/size_24"
+			tools:text="Denim outwear"/>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="4dp"
+			android:gravity="center"
+			android:orientation="horizontal">
+
+			<com.a55haitao.wwht.ui.view.HaiTextView
+				android:id="@+id/realPriceTxt"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginRight="3dp"
+				android:gravity="right"
+				android:textColor="@color/colorRed"
+				android:textSize="@dimen/size_24"
+				app:expandTypeface="gotham"
+				tools:text="\uffe5298"/>
+
+			<com.a55haitao.wwht.ui.view.StrikeThruTextView
+				android:id="@+id/mallPriceTxt"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="3dp"
+				android:textColor="@color/colorGray999999"
+				android:textSize="@dimen/size_22"
+				app:expandTypeface="gotham"
+				tools:text="\uffe5298"/>
+
+		</LinearLayout>
+
+	</LinearLayout>
+	<com.a55haitao.wwht.ui.view.HaiImageView
+		android:id="@+id/iv_more"
+		app:viewAspectRatio="1"
+		android:layout_width="@dimen/px_200"
+		android:layout_height="wrap_content"
+		tools:src="@mipmap/ic_launcher"
+		android:visibility="gone"/>
+
+	<com.a55haitao.wwht.ui.view.HaiImageView
+		android:id="@+id/smallCoverImg"
+		android:layout_width="50dp"
+		android:layout_height="50dp"/>
+
+</RelativeLayout>

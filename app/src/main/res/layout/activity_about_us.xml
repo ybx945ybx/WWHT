@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorActivityBackground">
+
+    <!-- 标题栏 -->
+    <com.a55haitao.wwht.ui.view.DynamicHeaderView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:headerTitleTxt="关于我们">
+
+    </com.a55haitao.wwht.ui.view.DynamicHeaderView>
+
+    <!-- 应用图标 -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:src="@mipmap/ic_about_us_logo"/>
+
+    <!-- 版本号 -->
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:id="@+id/tv_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        tools:text="55海淘 v1.1"/>
+
+
+    <!-- Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_version"
+        android:layout_marginTop="16dp"
+        android:background="#fff"
+        android:orientation="vertical">
+
+        <!-- 用户协议 -->
+        <RelativeLayout
+            android:id="@+id/rl_user_agreement"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackground"
+            android:padding="8dp">
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="用户协议"
+                android:textColor="#333"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_arrow_right_grey"/>
+        </RelativeLayout>
+
+        <!-- 分割线 -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="8dp"
+            android:background="@color/colorLvDivider"/>
+
+        <!-- 用户协议 -->
+        <RelativeLayout
+            android:id="@+id/rl_privacy_policy"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackground"
+            android:padding="8dp">
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="隐私声明"
+                android:textColor="#333"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_arrow_right_grey"/>
+        </RelativeLayout>
+
+        <!-- 分割线 -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="8dp"
+            android:background="@color/colorLvDivider"/>
+
+        <!-- 用户协议 -->
+        <RelativeLayout
+            android:id="@+id/rl_settings_checkVersion"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackground"
+            android:padding="8dp">
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="检查更新"
+                android:textColor="#333"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_arrow_right_grey"/>
+        </RelativeLayout>
+        <!-- 亲，给个好评吧！ -->
+        <!--<RelativeLayout
+            android:id="@+id/rl_aboutUs_rateUs"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/colorItemBackground"
+            android:padding="8dp">
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="亲，给个好评吧！"
+                android:textColor="@color/colorSettingsItem"/>
+
+            <ImageView
+                android:layout_width="@dimen/item_icon_width"
+                android:layout_height="@dimen/item_icon_height"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/icon_right_arrow"/>
+        </RelativeLayout>-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llyt_secret"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Copyright&#169;2015-2016"
+            android:textColor="#ccc"
+            android:textSize="12sp"/>
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="五五海淘(上海)科技股份有限公司"
+            android:textColor="#ccc"
+            android:textSize="12sp"/>
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="违法和不良信息举报电话：021-61910511 转 8012"
+            android:textColor="#ccc"
+            android:textSize="12sp"/>
+    </LinearLayout>
+</RelativeLayout>

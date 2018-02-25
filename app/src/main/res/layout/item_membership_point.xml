@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingLeft="27dp"
+                android:paddingRight="27dp"
+                android:paddingTop="18dp">
+
+    <!-- 内容 -->
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:id="@+id/tv_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#666"
+        android:textSize="14sp"
+        tools:text="发布了一个晒单"/>
+
+    <!-- 时间戳 -->
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_desc"
+        android:layout_marginTop="3dp"
+        android:textColor="#999"
+        android:textSize="12sp"
+        tools:text="2016-04-08 15：01：57"/>
+
+    <!-- 积分数 -->
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:id="@+id/tv_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:drawablePadding="@dimen/margin_small"
+        android:drawableRight="@mipmap/ic_membership_point_plus"
+        android:textColor="#FFAA00"
+        android:textSize="16sp"
+        tools:text="+20"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_below="@id/tv_time"
+        android:layout_marginTop="18dp"
+        android:background="@mipmap/dot_line"/>
+
+</RelativeLayout>

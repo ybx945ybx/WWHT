@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFF">
+
+    <!-- back button -->
+    <ImageButton
+        android:id="@+id/ib_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/margin_large"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_cancel_cross"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:orientation="horizontal">
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已有账号？ 去"
+            android:textColor="#999"
+            android:textSize="14sp"/>
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/tv_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="登录"
+            android:textColor="#333333"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/ib_cancel"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/padding_large"
+        android:paddingRight="@dimen/padding_large">
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_logo_login"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/username_input_height"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginTop="70dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- 国家 -->
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:id="@+id/tv_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:minWidth="32dp"
+                android:text="+86"
+                android:textColor="#333"/>
+
+            <!-- 手机号输入框 -->
+            <EditText
+                android:id="@+id/et_mobile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_small"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="输入手机号"
+                android:inputType="phone"
+                android:maxLength="12"
+                android:textColorHint="#CCCCCC"
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:id="@+id/img_clear_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_clear_input"
+                android:visibility="invisible"/>
+        </LinearLayout>
+
+        <!-- divider -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorDivider"/>
+
+        <!-- 密码输入框 -->
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/username_input_height"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginTop="25dp"
+            android:background="@null"
+            android:hint="输入6-18位密码"
+            android:inputType="textPassword"
+            android:maxLength="18"
+            android:textColorHint="#CCCCCC"
+            android:textSize="14sp"/>
+
+        <!-- divider -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorDivider"/>
+
+        <!-- 验证码 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/username_input_height"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginTop="25dp"
+            android:gravity="center_vertical">
+
+            <!-- 验证码输入框 -->
+            <EditText
+                android:id="@+id/et_verify_code"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="输入验证码"
+                android:inputType="number"
+                android:maxLength="6"
+                android:textColorHint="#CCCCCC"
+                android:textSize="14sp"/>
+
+            <!-- 发送验证码 -->
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:id="@+id/tv_send_verify_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="2dp"
+                android:text="发送验证码"
+                android:textColor="@color/colorTextYellow"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <!-- divider -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorDivider"/>
+
+
+        <!-- 注册按钮 -->
+        <Button
+            android:id="@+id/btn_register"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/shape_btn_black"
+            android:gravity="center"
+            android:text="注册"
+            android:textColor="#FFF"
+            android:textSize="16sp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp">
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="点击“注册” 即表示您同意55海淘"
+                android:textColor="#999"
+                android:textSize="12sp"/>
+
+            <!-- 用户协议 -->
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:id="@+id/tv_user_agreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 用户协议 "
+                android:textColor="#999"
+                android:textSize="12sp"/>
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="和"
+                android:textColor="#999"
+                android:textSize="12sp"/>
+
+            <!-- 隐私声明 -->
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:id="@+id/tv_private_policy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 隐私声明"
+                android:textColor="#999"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

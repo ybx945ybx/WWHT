@@ -1,0 +1,312 @@
+package com.a55haitao.wwht.data.model.result;
+
+import com.a55haitao.wwht.data.model.entity.CommentBean;
+
+import java.util.List;
+
+/**
+ * class description here
+ *
+ * @author 陶声
+ * @since 2016-11-09
+ */
+
+public class getCommentListResult {
+    public int               count;
+    public int               page;
+    public int               allpage;
+    public List<CommentBean> reply_list;
+}
+
+/*
+{
+        "count":7,
+        "page":1,
+        "reply_list":[
+            {
+                "create_dt":1476935079,
+                "is_liked":false,
+                "content":"这么好",
+                "user_info":{
+                    "username":"ht3060",
+                    "following_count":2,
+                    "post_count":3,
+                    "ucenter_token":"657a19dcf94a5c8.93025283",
+                    "id":5954590,
+                    "membership_point":532,
+                    "is_operation":0,
+                    "sex":1,
+                    "nickname":"w2",
+                    "like_count":2,
+                    "is_following":false,
+                    "location":"",
+                    "signature":"",
+                    "follower_count":0,
+                    "head_img":"http://st-prod.b0.upaiyun.com/avatar/2016/08/04/507ece3c5fd3cbac830f4c4bd3341500",
+                    "user_title":[
+
+                    ],
+                    "email":""
+                },
+                "like_count":0,
+                "at_user_info":null,
+                "id":1408
+            },
+            {
+                "create_dt":1473677444,
+                "is_liked":false,
+                "content":"阿德发的顺丰",
+                "user_info":{
+                    "username":"ht1689",
+                    "following_count":18,
+                    "post_count":17,
+                    "ucenter_token":"7573d223c97b172.73341473",
+                    "id":5948320,
+                    "membership_point":1164,
+                    "is_operation":0,
+                    "sex":2,
+                    "nickname":"top",
+                    "like_count":9,
+                    "is_following":false,
+                    "location":"指尖",
+                    "signature":"?润肺止咳糖浆?",
+                    "follower_count":3,
+                    "head_img":"http://st-prod.b0.upaiyun.com/avatar/2016/08/04/0f10b494aa952a5410a4a385a3ac6a44",
+                    "user_title":[
+
+                    ],
+                    "email":""
+                },
+                "like_count":0,
+                "at_user_info":null,
+                "id":1403
+            },
+            {
+                "create_dt":1468894625,
+                "is_liked":false,
+                "content":"这么好！再买的时候带我一个吧",
+                "user_info":{
+                    "username":"ht2486",
+                    "following_count":4,
+                    "post_count":31,
+                    "ucenter_token":"5576bbb5e395f59.36228091",
+                    "id":5982790,
+                    "membership_point":7860,
+                    "is_operation":0,
+                    "sex":2,
+                    "nickname":"喜喜YSJ",
+                    "like_count":642,
+                    "is_following":false,
+                    "location":"中国",
+                    "signature":"新浪微博：喜喜YSJ",
+                    "follower_count":55,
+                    "head_img":"http://tva4.sinaimg.cn/crop.0.1.750.750.180/687564aejw8epn3kujz6nj20ku0kwtam.jpg",
+                    "user_title":[
+
+                    ],
+                    "email":""
+                },
+                "like_count":0,
+                "at_user_info":{
+                    "username":"ht2518",
+                    "following_count":3,
+                    "post_count":14,
+                    "ucenter_token":"5576e83fc3dd7d1.63130550",
+                    "id":5983607,
+                    "membership_point":1840,
+                    "is_operation":0,
+                    "sex":2,
+                    "nickname":"蜜丝小妞",
+                    "like_count":100,
+                    "is_following":false,
+                    "location":"",
+                    "signature":"share&love",
+                    "follower_count":40,
+                    "head_img":"http://wx.qlogo.cn/mmopen/ia2q5TG4PGY1t0CKKsiasaMFWQ0Ca1MkBoribcAiaal0gpUyDMNf2KM0IUrs15g57GPTbXUwzHztQ1kf1lGiayL8SGUWyhbiaEqEcG/0",
+                    "user_title":[
+
+                    ],
+                    "email":""
+                },
+                "id":1353
+            },
+            {
+                "create_dt":1468862873,
+                "is_liked":false,
+                "content":"闺蜜在法国巴黎春天CL专柜帮买的，原价，也就是85欧～",
+                "user_info":{
+                    "username":"ht2518",
+                    "following_count":3,
+                    "post_count":14,
+                    "ucenter_token":"5576e83fc3dd7d1.63130550",
+                    "id":5983607,
+                    "membership_point":1840,
+                    "is_operation":0,
+                    "sex":2,
+                    "nickname":"蜜丝小妞",
+                    "like_count":100,
+                    "is_following":false,
+                    "location":"",
+                    "signature":"share&love",
+                    "follower_count":40,
+                    "head_img":"http://wx.qlogo.cn/mmopen/ia2q5TG4PGY1t0CKKsiasaMFWQ0Ca1MkBoribcAiaal0gpUyDMNf2KM0IUrs15g57GPTbXUwzHztQ1kf1lGiayL8SGUWyhbiaEqEcG/0",
+                    "user_title":[
+
+                    ],
+                    "email":""
+                },
+                "like_count":0,
+                "at_user_info":{
+                    "username":"ht2486",
+                    "following_count":4,
+                    "post_count":31,
+                    "ucenter_token":"5576bbb5e395f59.36228091",
+                    "id":5982790,
+                    "membership_point":7860,
+                    "is_operation":0,
+                    "sex":2,
+                    "nickname":"喜喜YSJ",
+                    "like_count":642,
+                    "is_following":false,
+                    "location":"中国",
+                    "signature":"新浪微博：喜喜YSJ",
+                    "follower_count":55,
+                    "head_img":"http://tva4.sinaimg.cn/crop.0.1.750.750.180/687564aejw8epn3kujz6nj20ku0kwtam.jpg",
+                    "user_title":[
+
+                    ],
+                    "email":""
+                },
+                "id":1347
+            },
+            {
+                "create_dt":1468850126,
+                "is_liked":false,
+                "content":"你找代购买的吗？几钱",
+                "user_info":{
+                    "username":"ht2486",
+                    "following_count":4,
+                    "post_count":31,
+                    "ucenter_token":"5576bbb5e395f59.36228091",
+                    "id":5982790,
+                    "membership_point":7860,
+                    "is_operation":0,
+                    "sex":2,
+                    "nickname":"喜喜YSJ",
+                    "like_count":642,
+                    "is_following":false,
+                    "location":"中国",
+                    "signature":"新浪微博：喜喜YSJ",
+                    "follower_count":55,
+                    "head_img":"http://tva4.sinaimg.cn/crop.0.1.750.750.180/687564aejw8epn3kujz6nj20ku0kwtam.jpg",
+                    "user_title":[
+
+                    ],
+                    "email":""
+                },
+                "like_count":1,
+                "at_user_info":{
+                    "username":"ht2518",
+                    "following_count":3,
+                    "post_count":14,
+                    "ucenter_token":"5576e83fc3dd7d1.63130550",
+                    "id":5983607,
+                    "membership_point":1840,
+                    "is_operation":0,
+                    "sex":2,
+                    "nickname":"蜜丝小妞",
+                    "like_count":100,
+                    "is_following":false,
+                    "location":"",
+                    "signature":"share&love",
+                    "follower_count":40,
+                    "head_img":"http://wx.qlogo.cn/mmopen/ia2q5TG4PGY1t0CKKsiasaMFWQ0Ca1MkBoribcAiaal0gpUyDMNf2KM0IUrs15g57GPTbXUwzHztQ1kf1lGiayL8SGUWyhbiaEqEcG/0",
+                    "user_title":[
+
+                    ],
+                    "email":""
+                },
+                "id":1344
+            },
+            {
+                "create_dt":1468845193,
+                "is_liked":false,
+                "content":"除了001以外我觉得230也不错的～",
+                "user_info":{
+                    "username":"ht2518",
+                    "following_count":3,
+                    "post_count":14,
+                    "ucenter_token":"5576e83fc3dd7d1.63130550",
+                    "id":5983607,
+                    "membership_point":1840,
+                    "is_operation":0,
+                    "sex":2,
+                    "nickname":"蜜丝小妞",
+                    "like_count":100,
+                    "is_following":false,
+                    "location":"",
+                    "signature":"share&love",
+                    "follower_count":40,
+                    "head_img":"http://wx.qlogo.cn/mmopen/ia2q5TG4PGY1t0CKKsiasaMFWQ0Ca1MkBoribcAiaal0gpUyDMNf2KM0IUrs15g57GPTbXUwzHztQ1kf1lGiayL8SGUWyhbiaEqEcG/0",
+                    "user_title":[
+
+                    ],
+                    "email":""
+                },
+                "like_count":0,
+                "at_user_info":{
+                    "username":"ht2486",
+                    "following_count":4,
+                    "post_count":31,
+                    "ucenter_token":"5576bbb5e395f59.36228091",
+                    "id":5982790,
+                    "membership_point":7860,
+                    "is_operation":0,
+                    "sex":2,
+                    "nickname":"喜喜YSJ",
+                    "like_count":642,
+                    "is_following":false,
+                    "location":"中国",
+                    "signature":"新浪微博：喜喜YSJ",
+                    "follower_count":55,
+                    "head_img":"http://tva4.sinaimg.cn/crop.0.1.750.750.180/687564aejw8epn3kujz6nj20ku0kwtam.jpg",
+                    "user_title":[
+
+                    ],
+                    "email":""
+                },
+                "id":1338
+            },
+            {
+                "create_dt":1468838369,
+                "is_liked":false,
+                "content":"我也想买 纠结买啥颜色",
+                "user_info":{
+                    "username":"ht2486",
+                    "following_count":4,
+                    "post_count":31,
+                    "ucenter_token":"5576bbb5e395f59.36228091",
+                    "id":5982790,
+                    "membership_point":7860,
+                    "is_operation":0,
+                    "sex":2,
+                    "nickname":"喜喜YSJ",
+                    "like_count":642,
+                    "is_following":false,
+                    "location":"中国",
+                    "signature":"新浪微博：喜喜YSJ",
+                    "follower_count":55,
+                    "head_img":"http://tva4.sinaimg.cn/crop.0.1.750.750.180/687564aejw8epn3kujz6nj20ku0kwtam.jpg",
+                    "user_title":[
+
+                    ],
+                    "email":""
+                },
+                "like_count":0,
+                "at_user_info":null,
+                "id":1329
+            }
+        ],
+        "allpage":1
+    }
+*/

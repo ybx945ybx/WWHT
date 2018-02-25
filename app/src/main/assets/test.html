@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>调用Android组件测试</title>
+    <script type="text/javascript">
+    function show(info){
+        document.getElementById("shows").innerHTML = info;
+    }
+
+    // 商详主页
+    function openProductDetail(spuid) {
+		var param={
+			type:0,
+			spuid:spuid
+		};
+		window.AppModel && window.AppModel.postMessage(JSON.stringify(param));
+	}
+
+	// 商家和品牌主页
+	function openSellerBrandDetail(type, name, imgCover, logo) {
+	    var inData = {
+	        type:type,
+	        name:name,
+	        imgCover:imgCover,
+	        logo:logo
+	    }
+		var param={
+			type:1,
+			data:inData
+		};
+		window.AppModel && window.AppModel.postMessage(JSON.stringify(param));
+	}
+
+	// 我的优惠券列表
+	// { type:2 }
+	function openGouponList() {
+		var param={
+			type:2
+		};
+		window.AppModel && window.AppModel.postMessage(JSON.stringify(param));
+	}
+
+	// 控制title的名称
+	// { type:3,  title:Title名称}
+	function setTitle(title) {
+		var param={
+			type:3,
+			title:title
+		};
+		window.AppModel && window.AppModel.postMessage(JSON.stringify(param));
+	}
+
+	// 控制两侧的按钮
+	// { type:4, l:0,  r1:0,  r2:0}
+	function setLRButton(l, r1, r2, r1txt, r2txt) {
+		var param={
+			type:4,
+			l:l,
+			r1:r1,
+			r2:r2,
+			r1txt:r1txt,
+			r2txt:r1txt
+		};
+		window.AppModel && window.AppModel.postMessage(JSON.stringify(param));
+	}
+
+	// 分享,传share model
+	// { type:5, title:null,  icon:null,  desc:null, url:null, amount:0.0, canEarnMemberShipPoint:false}
+	function setShareModel(title, icon, desc, url, amount, canEarnMemberShipPoint) {
+		var param={
+			type:5,
+			title:title,
+			icon:icon,
+			desc:desc,
+			url:url,
+			amount:amount,
+			canEarnMemberShipPoint:canEarnMemberShipPoint
+		};
+		window.AppModel && window.AppModel.postMessage(JSON.stringify(param));
+	}
+
+    // 加载/停止加载动画
+    // { type:6, data:{start:true, message:null}}
+    function startLoading(start, message) {
+
+        var inData = {
+            start:start,
+            message:message
+        }
+		var param={
+			type:6,
+			data:inData
+		};
+		window.AppModel && window.AppModel.postMessage(JSON.stringify(param));
+	}
+
+    // 弹窗吐司
+    // { type:7, data:{type:1, message:null}}
+    function toast(type, message) {
+        var inData = {
+            type:type,
+            message:message
+        }
+		var param={
+			type:7,
+			data:inData
+		};
+		window.AppModel && window.AppModel.postMessage(JSON.stringify(param));
+	}
+
+    // 直接弹出登录
+    // { type:8 }
+    function promptLoginDirectly() {
+		var param={
+			type:8
+		};
+		window.AppModel && window.AppModel.postMessage(JSON.stringify(param));
+	}
+
+    // 过期弹出登录
+    // { type:9 }
+    function promptLoginExpired() {
+		var param={
+			type:9
+		};
+		window.AppModel && window.AppModel.postMessage(JSON.stringify(param));
+	}
+
+    // 被人踢弹出登录
+    // { type:10 }
+    function promptLoginKikoff() {
+		var param={
+			type:10
+		};
+		window.AppModel && window.AppModel.postMessage(JSON.stringify(param));
+	}
+
+    // H5 Web
+    // { type:11, url:www.baidu.com}
+    function openH5(url, title) {
+		var param={
+			type:11,
+			url:url,
+            title:title
+		};
+		window.AppModel && window.AppModel.postMessage(JSON.stringify(param));
+	}
+
+    // 官网特卖（双列）
+    // { type:12, special_id:111}
+    function openProductSpecialDouble(special_id) {
+		var param={
+			type:12,
+			special_id:special_id
+		};
+		window.AppModel && window.AppModel.postMessage(JSON.stringify(param));
+	}
+
+    // 商品专题（单列）
+    // { type:13, special_id:222, special_name:xxx}
+    function openProductSpecialSingle(special_id, special_name) {
+		var param={
+			type:13,
+			special_id:special_id,
+			special_name:special_name
+		};
+		window.AppModel && window.AppModel.postMessage(JSON.stringify(param));
+	}
+
+    // 社区专题
+    // { type:14, special_id:222}
+    function openSocialSpecial(special_id) {
+		var param={
+			type:14,
+			special_id:special_id
+		};
+		window.AppModel && window.AppModel.postMessage(JSON.stringify(param));
+	}
+
+    // 商品列表 (带筛选条件)
+    // { type:15, query:xxx, brand:xxx, seller:xxx, category:xxx}
+    function openSearchResult(query, brand, seller, category) {
+		var param={
+			type:15,
+			query:query,
+			brand:brand,
+			seller:seller,
+			category:category
+		};
+		window.AppModel && window.AppModel.postMessage(JSON.stringify(param));
+	}
+
+
+    </script>
+</head>
+
+<body>
+<b>测试</b>
+<br/>
+<button onClick="window.AppModel.javaMethod('param')">启动hello world Activity</button>
+<br/>
+<hr color="#99FF00"/>
+<button onClick="window.AppModel.showAndroid()">显示android内容</button>
+<br/>
+<textarea id="shows" cols="30" rows="10"> 暂无记录 </textarea>
+<br/>
+
+
+<button onClick="openProductDetail('583963491e154b7c05aa0f0f1cb4f8d2')">商详主页</button>
+<br/>
+<button onClick="openSellerBrandDetail(0,'Adidas','','')">商家和品牌主页</button>
+<br/>
+<button onClick="openGouponList()">我的优惠券列表</button>
+<br/>
+<button onClick="setTitle('Test Title')">控制title的名称</button>
+<br/>
+<button onClick="setLRButton(1, 8, 0, '', '')">控制两侧的按钮</button>
+<br/>
+<button onClick="setShareModel('Test', 'http://cdn.55haitao.com/bbs/data/attachment/55ht/2015/10/23/ccc233b29d72c41d2a4b0ce2e2321124.png', 'Desc', 'http://www.sina.com', 1000, false)">分享,传share model</button>
+<br/>
+<button onClick="startLoading(true, 'Loading')">加载加载动画</button>
+<br/>
+<button onClick="startLoading(false, null)">停止加载动画</button>
+<br/>
+<button onClick="toast(1, 'Toasting...')">弹窗吐司</button>
+<br/>
+<button onClick="promptLoginDirectly()">直接弹出登录</button>
+<br/>
+<button onClick="promptLoginExpired()">过期弹出登录</button>
+<br/>
+<button onClick="promptLoginKikoff()">被人踢弹出登录</button>
+<br/>
+<button onClick="openH5('https://www.baidu.com','Baidu')">H5 Web</button>
+<br/>
+<button onClick="openProductSpecialDouble(72)">官网特卖（双列）</button>
+<br/>
+<button onClick="openProductSpecialSingle(87, 'Ecco专场')">商品专题（单列）</button>
+<br/>
+<button onClick="openSocialSpecial(579)">社区专题</button>
+<br/>
+<button onClick="openSearchResult('Nike', 'Nike', '', '')">商品列表 (带筛选条件)</button>
+<br/>
+<br/>
+
+</body>
+</html>

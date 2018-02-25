@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.a55haitao.wwht.ui.layout.ImageWithTxtVerticalCell
+	android:orientation="vertical"
+	android:gravity="center_horizontal"
+	android:background="@color/colorWhite"
+	android:layout_height="wrap_content"
+	android:layout_width="0dp"
+	android:layout_weight="1"
+	android:paddingTop="10dp"
+	android:paddingBottom="10dp"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<com.a55haitao.wwht.ui.view.HaiImageView
+		android:id="@+id/bigCoverImg"
+		tools:src="@mipmap/ic_launcher"
+		app:viewAspectRatio="1"
+		android:layout_width="wrap_content"
+		android:layout_height="@dimen/px_100"/>
+
+	<com.a55haitao.wwht.ui.view.HaiTextView
+		android:id="@+id/categoryNameTxt"
+		tools:text="钱包"
+		android:textSize="@dimen/size_24"
+		android:textColor="@color/colorGray333333"
+		android:layout_marginTop="@dimen/px_20"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"/>
+</com.a55haitao.wwht.ui.layout.ImageWithTxtVerticalCell>

@@ -1,0 +1,93 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/colorBlur40"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/centerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/shape_activity_window"
+        android:orientation="vertical">
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="关税说明"
+            android:textColor="@color/colorGray26241F"
+            android:textSize="@dimen/size_40"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:id="@+id/tariffRateTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="left|center"
+                android:text="本商品适用税率30%"
+                android:textColor="@color/colorGray666666"
+                android:textSize="@dimen/size_24"
+                app:expandTypeface="light"/>
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:id="@+id/seeMoreTariffBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="left|center"
+                android:text="查看税率表"
+                android:textColor="@color/colorBlue"
+                android:textSize="@dimen/size_24"
+                app:expandTypeface="light"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:id="@+id/subsidyIcon"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/shape_btn_red"
+                android:gravity="center"
+                android:lineSpacingMultiplier="1.2"
+                android:text="补贴"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/size_24"/>
+
+            <TextView
+                android:id="@+id/subsidyTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:gravity="left|top"
+                android:text="本商品原关税XX，55海淘为您补贴YY，小意思啦；）"
+                android:textColor="@color/colorGray999999"
+                android:textSize="@dimen/size_24"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

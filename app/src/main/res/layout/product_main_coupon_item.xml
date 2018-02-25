@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fl_coupon_container"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="16dp"
+    android:background="@mipmap/product_main_coupon">
+
+    <ImageView
+        android:id="@+id/couponStatusImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:src="@mipmap/coupon_get"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/couponInsideLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/colorOrange"
+                android:textSize="18sp"
+                android:paddingRight="12dp"
+                android:maxLines="3"
+                android:ellipsize="end"
+                tools:text="90元+关税补贴"/>
+
+            <!--<com.a55haitao.wwht.ui.view.HaiTextView-->
+                <!--android:id="@+id/smallSizeTxt"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:gravity="center"-->
+                <!--android:textColor="@color/colorOrange"-->
+                <!--android:textSize="12sp"-->
+                <!--tools:text="满799元使用"/>-->
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="3dp"
+            android:background="@mipmap/bg_vertical_dash_line"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:paddingLeft="18dp">
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:id="@+id/tv_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/colorGray333333"
+                android:textSize="14sp"
+                tools:text="618大促活动"/>
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorGray999999"
+                android:textSize="12sp"
+                tools:text="全场满29可用"/>
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:id="@+id/tv_sub_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/colorGray999999"
+                android:textSize="12sp"
+                app:expandTypeface="light"
+                tools:text="适用范围：自营商品除外"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/llyt_coupon_recived">
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@mipmap/bg_vertical_dash_line"/>
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:id="@+id/tv_get_coupon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="center_vertical"
+                android:textSize="14sp"
+                android:textColor="@color/colorOrange"
+                android:text="立即领取"
+                android:maxEms="1"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>

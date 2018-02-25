@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="172dp"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:background="@color/colorWhite">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorGrayE6E6E6"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:id="@+id/viewline"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/viewline"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/iv_goods"
+            android:layout_width="140dp"
+            android:layout_height="140dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp">
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:lineSpacingExtra="5dp"
+                android:text="好身心啊身心啊身心啊"
+                android:textColor="@color/colorGray333333"
+                android:textSize="16sp"/>
+
+            <com.a55haitao.wwht.ui.view.StrikeThruTextView
+                android:id="@+id/tv_origin_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="市场价1234"
+                android:textColor="@color/colorGray999999"
+                android:textSize="10sp"
+                app:expandTypeface="gotham"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/llyt_discount"
+                android:layout_above="@+id/tv_origin_price"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_vertical">
+                <com.a55haitao.wwht.ui.view.HaiTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="¥"
+                    android:textColor="@color/colorRedED1A3A"
+                    android:textSize="20sp"
+                    app:expandTypeface="gotham"/>
+                <com.a55haitao.wwht.ui.view.HaiTextView
+                    android:id="@+id/tv_discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="123456"
+                    android:textColor="@color/colorRedED1A3A"
+                    android:textSize="20sp"
+                    app:expandTypeface="gotham"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/llyt_discount"
+                android:layout_marginBottom="32dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_flag"
+                    android:layout_width="17dp"
+                    android:layout_height="12dp"
+                    android:src="@mipmap/ic_launcher"/>
+
+                <com.a55haitao.wwht.ui.view.HaiTextView
+                    android:id="@+id/tv_site"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:expandTypeface="regular"
+                    android:text="¥123456"
+                    android:textColor="@color/colorGray999999"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_buy"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="4dp"
+                android:text="马上抢"
+                android:textSize="14sp"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/llyt_discount"
+                style="@style/ShapBtn"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:id="@+id/rlyt_timer">
+
+        <ImageView
+            android:id="@+id/iv_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_timer_red"/>
+
+
+        <com.a55haitao.wwht.ui.view.CountDownTimerView
+            android:id="@+id/tv_timer"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"/>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorActivityBackground"
+    android:orientation="vertical"
+    tools:activity="com.a55haitao.wwht.ui.activity.discover.AddressCreateActivity">
+
+    <com.a55haitao.wwht.ui.view.DynamicHeaderView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:headerRightTxt="@string/save"
+        app:headerRightTxtColor="@color/colorGray999999"
+        app:headerTitleTxt="新增收货地址"/>
+
+    <com.a55haitao.wwht.ui.view.MultipleStatusView
+        android:id="@+id/msv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorActivityBackground">
+
+        <ScrollView
+            android:id="@+id/content_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    android:orientation="vertical">
+
+                    <RelativeLayout style="@style/addressItemStyle">
+
+                        <com.a55haitao.wwht.ui.view.HaiTextView
+                            android:layout_width="56dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@string/set_as_default"
+                            android:textColor="@color/colorGray999999"
+                            android:textSize="14sp"/>
+
+                        <com.kyleduo.switchbutton.SwitchButton
+                            android:id="@+id/isDefaultBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:paddingBottom="4dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="4dp"
+                            app:kswAnimationDuration="300"
+                            app:kswBackDrawable="@drawable/ios_back_drawable"
+                            app:kswBackMeasureRatio="1.4"
+                            app:kswThumbDrawable="@drawable/ios_thumb_selector"
+                            app:kswThumbMarginBottom="-8dp"
+                            app:kswThumbMarginLeft="-5dp"
+                            app:kswThumbMarginRight="-5dp"
+                            app:kswThumbMarginTop="-2.5dp"/>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@mipmap/dot_line"/>
+
+                    <LinearLayout style="@style/addressItemStyle">
+
+                        <com.a55haitao.wwht.ui.view.HaiTextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="收货人姓名"
+                            android:textColor="@color/colorGray999999"
+                            android:textSize="14sp"/>
+
+                        <EditText
+                            android:id="@+id/nameEdt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorWhite"
+                            android:hint="请与身份证姓名保持一致"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@mipmap/dot_line"/>
+
+                    <LinearLayout style="@style/addressItemStyle">
+
+                        <com.a55haitao.wwht.ui.view.HaiTextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/phone"
+                            android:textColor="@color/colorGray999999"
+                            android:textSize="14sp"/>
+
+                        <EditText
+                            android:id="@+id/phoneEdt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorWhite"
+                            android:imeOptions="actionNext"
+                            android:inputType="phone"
+                            android:maxLength="11"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@mipmap/dot_line"/>
+
+                    <LinearLayout style="@style/addressItemStyle">
+
+                        <com.a55haitao.wwht.ui.view.HaiTextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ID_CARD"
+                            android:textColor="@color/colorGray999999"
+                            android:textSize="14sp"/>
+
+                        <EditText
+                            android:id="@+id/cardEdt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorWhite"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:textColorHint="@color/colorGray999999"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@mipmap/dot_line"/>
+
+                    <LinearLayout style="@style/addressItemStyle">
+
+                        <com.a55haitao.wwht.ui.view.HaiTextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/district"
+                            android:textColor="@color/colorGray999999"
+                            android:textSize="14sp"/>
+
+                        <EditText
+                            android:id="@+id/areaEdt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorWhite"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:textColorHint="@color/colorHint"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@mipmap/dot_line"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="72dp"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp">
+
+                        <com.a55haitao.wwht.ui.view.HaiTextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:text="@string/address"
+                            android:textColor="@color/colorGray999999"
+                            android:textSize="14sp"/>
+
+                        <EditText
+                            android:id="@+id/addressEdt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:background="@color/colorWhite"
+                            android:gravity="start"
+                            android:inputType="textMultiLine"
+                            android:lines="2"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 身份证照片 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:background="@color/colorWhite"
+                    android:orientation="vertical"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="15dp">
+
+                    <com.a55haitao.wwht.ui.view.HaiTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/ID_CARD_pic"
+                        android:textColor="@color/colorGray666666"
+                        android:textSize="12sp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="150dp"
+                            android:layout_height="100dp">
+
+                            <ImageView
+                                android:id="@+id/aImg"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:clickable="true"
+                                android:src="@mipmap/ic_card_default"/>
+
+                            <ImageView
+                                android:id="@+id/aWaterMarkImg"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:src="@mipmap/bg_water_mark_new"
+                                android:visibility="invisible"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="150dp"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="5dp">
+
+                            <ImageView
+                                android:id="@+id/bImg"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerInParent="true"
+                                android:clickable="true"
+                                android:src="@mipmap/ic_card_default"/>
+
+                            <ImageView
+                                android:id="@+id/bWaterMarkImg"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:src="@mipmap/bg_water_mark_new"
+                                android:visibility="invisible"/>
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <com.a55haitao.wwht.ui.view.HaiTextView
+                            android:layout_width="147dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/pic_front_side"
+                            android:textColor="@color/colorGray666666"
+                            android:textSize="12sp"/>
+
+                        <com.a55haitao.wwht.ui.view.HaiTextView
+                            android:layout_width="147dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/pic_back_side"
+                            android:textColor="@color/colorGray666666"
+                            android:textSize="12sp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- 身份证信息 -->
+                <com.a55haitao.wwht.ui.view.HaiTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_big"
+                    android:layout_marginRight="@dimen/margin_big"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:lineSpacingMultiplier="1.3"
+                    android:text="@string/address_info"
+                    android:textColor="#999"
+                    android:textSize="11sp"/>
+
+                <!-- 删除地址 -->
+                <Button
+                    android:id="@+id/delBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/colorWhite"
+                    android:gravity="center"
+                    android:text="@string/delete_address"
+                    android:textColor="@color/colorTextYellow"
+                    android:textSize="14sp"
+                    android:visibility="gone"/>
+            </LinearLayout>
+        </ScrollView>
+
+    </com.a55haitao.wwht.ui.view.MultipleStatusView>
+</LinearLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding_medium"
+                android:paddingRight="@dimen/padding_medium"
+                android:paddingTop="@dimen/padding_large">
+
+    <!-- 头像 -->
+    <com.a55haitao.wwht.ui.view.AvatarView
+        android:id="@+id/img_avatar"
+        android:layout_width="@dimen/avatar_big"
+        android:layout_height="@dimen/avatar_big"
+        android:layout_marginRight="@dimen/margin_medium"
+        app:border_width="1px"
+        app:corner_size="@dimen/avatar_corner_big"
+        app:placeholder="@mipmap/ic_avatar_default_big"/>
+
+    <!-- 用户名 -->
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:id="@+id/tv_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/img_avatar"
+        android:textColor="@color/colorDark"
+        tools:text="用户名ID"/>
+
+    <!-- 晒物&赞数 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_nickname"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@id/img_avatar">
+
+        <!-- 晒物数 -->
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/tv_post_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#999999"
+            tools:text="4篇晒物"/>
+
+        <!-- 分割线 -->
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="17dp"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:background="#999"
+            android:textColor="#999999"/>
+
+        <!-- 赞数 -->
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/tv_like_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#999999"
+            tools:text="收获78个赞"/>
+
+    </LinearLayout>
+
+    <!-- 帖子图片 -->
+    <LinearLayout
+        android:id="@+id/ll_post_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_avatar"
+        android:layout_marginTop="@dimen/margin_large"
+        android:orientation="horizontal">
+
+        <!-- 图1 -->
+        <ImageView
+            android:id="@+id/img_pic1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"/>
+
+        <!-- 图2 -->
+        <ImageView
+            android:id="@+id/img_pic2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:scaleType="centerCrop"/>
+
+        <!-- 图3 -->
+        <ImageView
+            android:id="@+id/img_pic3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:scaleType="centerCrop"/>
+
+        <!-- 图4 -->
+        <ImageView
+            android:id="@+id/img_pic4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:scaleType="centerCrop"/>
+    </LinearLayout>
+
+    <!-- 关注按钮 -->
+    <CheckBox
+        android:id="@+id/chk_follow_user"
+        style="@style/CheckboxFollow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorWhite"/>
+
+    <!-- 分割线 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_below="@id/ll_post_container"
+        android:layout_marginTop="@dimen/margin_large"
+        android:background="@drawable/divider_solid"/>
+</RelativeLayout>

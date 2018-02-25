@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFF"
+                tools:activity="com.a55haitao.wwht.ui.activity.myaccount.account.LoginVerifyCodeActivity">
+
+    <!-- 取消 -->
+    <ImageButton
+        android:id="@+id/ib_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/margin_large"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_cancel_cross"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ib_cancel"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp">
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_logo_login"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/username_input_height"
+            android:layout_marginTop="70dp">
+
+            <!-- 国家 -->
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:id="@+id/tv_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:minWidth="32dp"
+                android:text="@string/default_country_code"
+                android:textColor="#333"
+                android:textSize="14sp"/>
+
+            <!-- 手机号 -->
+            <EditText
+                android:id="@+id/et_mobile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_small"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/input_phone"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:maxLines="1"
+                android:textColorHint="@color/colorHint"
+                android:textSize="14sp"/>
+
+            <!-- 清空输入 -->
+            <ImageView
+                android:id="@+id/img_clear_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="4dp"
+                android:src="@mipmap/ic_clear_input"
+                android:visibility="invisible"/>
+
+
+        </LinearLayout>
+
+        <!-- 分割线 -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorDivider"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/username_input_height"
+            android:layout_marginTop="25dp"
+            android:gravity="center_vertical">
+
+            <!-- 密码 -->
+            <EditText
+                android:id="@+id/et_verify_code"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/input_verify_code"
+                android:inputType="number"
+                android:maxLength="6"
+                android:maxLines="1"
+                android:textColorHint="@color/colorHint"
+                android:textSize="14sp"/>
+
+            <!-- 发送验证码 -->
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:id="@+id/tv_send_verify_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginRight="4dp"
+                android:text="@string/send_verify_code"
+                android:textColor="#FFAA00"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <!-- 分割线 -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorDivider"/>
+
+        <!-- 登录 -->
+        <Button
+            android:id="@+id/btn_login"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_login_height"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/shape_btn_black"
+            android:gravity="center"
+            android:text="@string/login"
+            android:textColor="#FFF"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:id="@+id/tv_pwd_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:text="@string/password_login"
+        android:textColor="#333333"
+        android:textSize="14sp"/>
+</RelativeLayout>

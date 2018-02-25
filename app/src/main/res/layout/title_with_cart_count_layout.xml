@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:src="@mipmap/ic_left"
+        android:padding="8dp"
+        android:clickable="true"
+        android:id="@+id/backImg"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        tools:text="全部品牌"
+        android:textSize="@dimen/title_text_size"
+        android:id="@+id/titleTxt"
+        android:textColor="@color/colorTab"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:src="@mipmap/ic_shopping_cart"
+        android:padding="8dp"
+        android:clickable="true"
+        android:id="@+id/toShopCarImg"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        tools:text="3"
+        style="@style/cart_count"
+        android:id="@+id/carCountTxt"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_alignParentRight="true"
+        />
+
+</RelativeLayout>

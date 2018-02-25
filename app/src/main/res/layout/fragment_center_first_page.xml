@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_64"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_radius_px_8"
+        android:gravity="center">
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@mipmap/ic_search"
+            android:drawablePadding="@dimen/px_20"
+            android:gravity="center"
+            android:text="搜索品牌，商品或商家"
+            android:textColor="@color/colorGray999999"
+            android:textSize="@dimen/size_24"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/line_divider_m_1_cccccc"/>
+
+    <com.a55haitao.wwht.ui.view.MultipleStatusView
+        android:id="@+id/msView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/content_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                app:tabPaddingStart="0dp"
+                app:tabPaddingEnd="0dp"
+                app:tabIndicatorHeight="0dp"
+                app:tabMaxWidth="65dp"
+                app:tabMode="scrollable"/>
+
+            <!--<android.support.design.widget.TabLayout-->
+                <!--android:id="@+id/tabLayout"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@color/colorWhite"-->
+                <!--app:tabPaddingStart="0dp"-->
+                <!--app:tabPaddingEnd="0dp"-->
+                <!--app:tabIndicatorHeight="0dp"-->
+                <!--app:tabMaxWidth="0dp"-->
+                <!--app:tabGravity="fill"-->
+                <!--app:tabMode="scrollable"/>-->
+
+            <com.a55haitao.wwht.ui.view.DisableViewPage
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+    </com.a55haitao.wwht.ui.view.MultipleStatusView>
+
+</LinearLayout>

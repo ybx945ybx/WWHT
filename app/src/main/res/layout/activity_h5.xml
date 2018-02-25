@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/h5RootLin"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:activity=".ui.activity.base.H5Activity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <com.a55haitao.wwht.ui.view.DynamicHeaderView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:headerTitleTxt="Header">
+
+        </com.a55haitao.wwht.ui.view.DynamicHeaderView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginLeft="40dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/iv_close"
+            android:visibility="gone"
+            android:src="@mipmap/ic_delete_bar"/>
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/h5ProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorGrayF5F5F5"
+        android:max="100"/>
+
+</LinearLayout>

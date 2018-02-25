@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:paddingBottom="@dimen/px_20"
+	android:paddingLeft="@dimen/px_20"
+	android:paddingRight="@dimen/px_20"
+	tools:background="@color/colorAccent"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<com.a55haitao.wwht.ui.view.HaiImageView
+		android:id="@+id/coverImg"
+		app:viewAspectRatio="1.875"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"/>
+
+	<com.a55haitao.wwht.ui.view.HaiImageView
+		android:id="@+id/smallCoverImg"
+		android:layout_width="50dp"
+		android:layout_height="50dp"/>
+
+</RelativeLayout>

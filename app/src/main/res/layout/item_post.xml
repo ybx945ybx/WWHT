@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/ll_socialItem_container"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="#FFF"
+              android:orientation="vertical"
+              android:padding="@dimen/padding_medium">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/ll_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 头像 -->
+        <com.a55haitao.wwht.ui.view.AvatarView
+            android:id="@+id/img_avatar"
+            android:layout_width="@dimen/avatar_medium"
+            android:layout_height="@dimen/avatar_medium"
+            android:layout_gravity="center_vertical"
+            app:border_width="1px"
+            app:corner_size="@dimen/avatar_corner_medium"/>
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#333"
+            tools:text="桑小茜"/>
+
+        <!-- 关注按钮 -->
+        <CheckBox
+            android:id="@+id/chk_follow_user"
+            style="@style/CheckboxFollow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@color/colorWhite"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium">
+
+        <!-- Pic -->
+        <ImageView
+            android:id="@+id/img_pic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"/>
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/tv_img_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/img_pic"
+            android:layout_alignRight="@id/img_pic"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:background="@drawable/bg_grey_transparency"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            tools:text="9张"/>
+    </RelativeLayout>
+
+
+    <!-- one word -->
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_big"
+        android:maxLines="1"
+        android:textColor="#333333"
+        android:textSize="14sp"
+        tools:text="微微一笑很倾城"/>
+
+    <!-- text content -->
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:id="@+id/tv_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:ellipsize="end"
+        android:lineSpacingMultiplier="1.2"
+        android:maxLines="3"
+        android:textColor="#666666"
+        android:textSize="14sp"
+        tools:text="微微一笑很倾城"/>
+
+    <!-- tags -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/ll_tag_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- divider -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/margin_big"
+        android:background="@mipmap/dot_line"
+        android:scaleType="centerCrop"/>
+
+    <!-- 点赞评论 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:paddingLeft="8dp">
+
+        <!-- 评论点赞数 -->
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/tv_comment_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="#999"
+            android:textSize="14sp"
+            tools:text="评论 5"/>
+
+        <!-- 评论点赞数 -->
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/tv_like_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_toRightOf="@id/tv_comment_count"
+            android:textColor="#999"
+            android:textSize="14sp"
+            tools:text="赞 12"/>
+
+
+        <!-- 点赞按钮 -->
+        <com.varunest.sparkbutton.SparkButton
+            android:id="@+id/sb_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="-4dp"
+            app:sparkbutton_activeImage="@mipmap/ic_heart_light_red"
+            app:sparkbutton_iconSize="20dp"
+            app:sparkbutton_inActiveImage="@mipmap/ic_heart_light_grey"
+            app:sparkbutton_primaryColor="@color/spark_button_primary_color"
+            app:sparkbutton_secondaryColor="@color/spark_button_secondary_color"/>
+
+
+        <!-- 评论图标 -->
+        <ImageButton
+            android:id="@+id/ib_comment"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/sb_like"
+            android:layout_toStartOf="@+id/sb_like"
+            android:background="@null"
+            android:padding="2dp"
+            android:src="@mipmap/ic_comment"/>
+
+        <!-- 分享图标 -->
+        <ImageButton
+            android:id="@+id/ib_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ib_comment"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="2dp"
+            android:layout_toLeftOf="@+id/ib_comment"
+            android:background="@null"
+            android:src="@mipmap/ic_post_share"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:background="@color/colorGrayE6E6E6"/>
+
+</LinearLayout>

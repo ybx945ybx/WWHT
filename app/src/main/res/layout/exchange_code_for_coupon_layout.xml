@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.a55haitao.wwht.ui.view.ExchangeCouponLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/centerView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_activity_window"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:id="@+id/titleTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="@string/input_exchange_code_for_coupon"
+        android:textColor="@color/colorGray333333"
+        android:textSize="@dimen/size_32"/>
+
+    <EditText
+        android:id="@+id/exchangeCouponTxt"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/shape_exchange_coupon_edit_text"
+        android:gravity="center"
+        android:hint="@string/input_exchange_code"
+        android:imeOptions="actionDone"
+        android:maxLines="1"
+        android:textColor="@color/colorGray666666"
+        android:textSize="14sp"/>
+
+    <RelativeLayout
+        android:id="@+id/exchangeCouponLayout"
+        android:layout_width="200dp"
+        android:layout_height="85dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_exchange_coupon_bg"/>
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/exchangeCouponTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textColor="@color/colorOrange"
+            android:textSize="@dimen/size_28"
+            tools:text="限时全场包关税"/>
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/exchangeCouponSubTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:gravity="center"
+            android:textColor="@color/colorGray666666"
+            android:textSize="@dimen/size_24"
+            tools:text="全场满29可用"/>
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/exchangeCouponDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="58dp"
+            android:gravity="center"
+            android:textColor="@color/colorGray999999"
+            android:textSize="@dimen/size_24"
+            tools:text="2014.12.12-2016.01.20"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/exchangeCouponBtn"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/shape_btn_black"
+        android:text="@string/confirm_exchange"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/size_28"/>
+
+    <com.a55haitao.wwht.ui.view.HaiTextView
+        android:id="@+id/exchangeCouponErrMsgTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorJacinth"
+        android:textSize="@dimen/size_24"
+        android:visibility="gone"
+        tools:text="兑换码错误，请重新输入"/>
+
+</com.a55haitao.wwht.ui.view.ExchangeCouponLayout>

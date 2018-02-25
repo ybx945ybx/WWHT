@@ -1,0 +1,22 @@
+<com.a55haitao.wwht.ui.view.MultipleStatusView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ms_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <com.a55haitao.wwht.ui.view.HaiSwipeRefreshLayout
+        android:id="@+id/content_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="blocksDescendants">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"/>
+
+    </com.a55haitao.wwht.ui.view.HaiSwipeRefreshLayout>
+</com.a55haitao.wwht.ui.view.MultipleStatusView>
+

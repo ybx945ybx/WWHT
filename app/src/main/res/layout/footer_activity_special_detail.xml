@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/colorWhite"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="20dp"
+        android:background="@mipmap/dot_line"/>
+
+    <!-- 点赞 -->
+    <com.a55haitao.wwht.ui.view.PostLikeButton
+        android:id="@+id/like_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large">
+
+    </com.a55haitao.wwht.ui.view.PostLikeButton>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_divider_show_detail"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="-6dp">
+
+        <!-- avatars -->
+        <LinearLayout
+            android:id="@+id/ll_avator_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:gravity="center"
+            android:orientation="horizontal">
+        </LinearLayout>
+
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/tv_no_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="还没有人点赞"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_medium"
+        android:background="@color/colorActivityBackground"/>
+
+    <!-- 评论列表 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <!-- 评论数 -->
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/tv_comment_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="16dp"
+            android:textColor="#666666"
+            tools:text="评论 (3)"/>
+
+        <!-- 评论列表 -->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_divider_height"
+            android:layout_marginTop="8dp"
+            android:background="#e6e6e6"/>
+
+        <!-- 查看全部评论 -->
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/tv_show_all_comments"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="查看全部评论"
+            android:textColor="#409FFF"
+            android:visibility="gone"/>
+
+        <!-- 还木有人评论呢 -->
+        <com.a55haitao.wwht.ui.view.HaiTextView
+            android:id="@+id/tv_no_comments"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="还木有人评论呢"
+            android:textColor="#ccc"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,249 @@
+<resources>
+    <string name="app_name" translatable="false">55海淘</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--tools:text-->
+    <string name="show_detail_content">年底去hk大扫荡的时候拍的啦现在家里蹲，假装在旅行哈哈哈去希慎广场必去地就是这家line啦，在3楼，很容易找到，超级多人在这里合影，妹子们就没断过……来了就是拍照的哈哈 Tiffany家虽然以那个蓝色为标志，但是我确实hold不住那个颜色，试的时候实在觉得难看，还是这个浅粉色适合我！
+\n\n香奈儿5号EDP，有多少人的第一款香是它。 亲戚去法国旅游带回来的，35ml。 这款香浓浓哒，留香很持久，正如官网给它的描述：优雅、妩媚与现代气息的经典女人香。其实我自己是不太爱这味道，觉得更适合成熟女性。香水我还是爱用EDT这类，淡香水，味道淡淡不会给人压迫感。</string>
+    <string name="realted_post_content">夏天也要好气味！甜甜的~非常适合夏天的气味不会像老外身边那种呛死人的味道。简直太适合我了，做工不错，滑轮很流畅。就是比较单薄，回来就</string>
+
+    <!-- text -->
+    <string name="settings_feedback_title">感谢反馈</string>
+    <string name="settings_feedback_content">我会加倍努力的!</string>
+    <string name="settings_feedback_btn">不用谢</string>
+    <string name="settings_share_app_text">数千万全球正品好货，超人气种草社区，加入55海淘，立得1080元新人礼包！</string>
+    <string name="settings_share_app_title">您的好友送您1080元现金，快来领取吧！</string>
+    <string name="social_add_friends_title">添加好友</string>
+    <string name="social_contacts_friends_title">通讯录好友</string>
+
+    <string name="alert_feedback_quit" translatable="false">是否退出编辑</string>
+    <string name="txt_loading">正在加载...</string>
+
+    <!-- Toast -->
+    <string name="toast_publish_post_content_not_empty">内容不能为空</string>
+    <string name="toast_publish_post_content_too_short">内容不能少于20字</string>
+    <string name="toast_publish_post_img_not_empty">图片不能为空</string>
+    <string name="toast_publish_post_tag_not_empty">标签不能为空</string>
+    <string name="toast_publish_post_country_not_empty">请选择购买地</string>
+    <string name="toast_activity_easyoptcreate_easyopt_name_not_empty">草单名称不能为空</string>
+    <string name="toast_activity_easyoptcreate_easyopt_desc_not_empty">草单描述不能为空</string>
+    <string name="toast_invalidate_post">帖子已删除</string>
+
+
+    <!-- KEY -->
+    <string name="key_post_id">post_id</string>
+    <string name="key_special_id">special_id</string>
+    <string name="key_product_special_id">product_special_id</string>
+    <string name="key_img_url">img_url</string>
+    <string name="key_tag_id">tag_id</string>
+    <string name="key_tag_name">tag_name</string>
+    <string name="key_user_id">user_id</string>
+    <string name="key_mobile">mobile</string>
+    <string name="key_mobiles">mobiles</string>
+    <string name="key_open_id">open_id</string>
+    <string name="key_wb_open_id">wb_open_id</string>
+    <string name="key_wx_open_id">wxOpenId</string>
+    <string name="key_qq_open_id">qq_open_id</string>
+    <string name="key_user_token">_tk</string>
+    <string name="key_method">_mt</string>
+    <string name="key_identify_type">identify_type</string>
+    <string name="key_account_provider">account_provider</string>
+    <string name="key_password">password</string>
+    <string name="key_identify_code">identify_code</string>
+    <string name="key_content">content</string>
+    <string name="key_head_img">headImg</string>
+    <string name="key_access_token">access_token</string>
+    <string name="key_nickname">nickname</string>
+    <string name="key_country">country</string>
+    <string name="key_type">type</string>
+    <string name="key_username">username</string>
+    <string name="key_login_type">login_type</string>
+    <string name="key_sex">sex</string>
+    <string name="key_location">location</string>
+    <string name="key_signature">signature</string>
+    <string name="key_tags">tags</string>
+    <string name="key_is_hot">is_hot</string>
+    <string name="key_count">count</string>
+    <string name="key_page">page</string>
+    <string name="key_is_first_enter">is_first_enter</string>
+    <string name="key_pos">pos</string>
+    <string name="key_img_urls">imgUrls</string>
+    <string name="key_device_token">_dtk</string>
+    <string name="key_push_device_token">push_device_token</string>
+    <string name="key_uri">uri</string>
+    <string name="key_following_id">following_id</string>
+    <string name="key_comment_list">comment_list</string>
+    <string name="key_reply_count">reply_count</string>
+    <string name="key_searchkey">searchkey</string>
+    <string name="key_time">time</string>
+    <string name="key_order_id">order_id</string>
+    <string name="key_refund_no">refund_no</string>
+    <string name="key_track_number">track_number</string>
+    <string name="key_reason">reason</string>
+    <string name="key_order_status">order_status</string>
+    <string name="key_is_my_post">is_my_post</string>
+    <string name="key_phone">phone</string>
+    <string name="key_comment_id">comment_id</string>
+    <string name="key_remember_username">remember_username</string>
+    <string name="key_remember_mobile">remember_mobile</string>
+    <string name="key_email">email</string>
+    <string name="key_ftype">ftype</string>
+    <string name="key_img_path">img_path</string>
+    <string name="key_name">name</string>
+    <string name="key_suffix">suffix</string>
+    <string name="key_app_login_type">app_login_type</string>
+    <string name="key_qq">qq</string>
+
+    <!--PullToRefreshView-->
+
+    <string name="xlistview_pull_to_refresh_pull_label">继续拖动，返回商品详情</string>
+    <string name="xlistview_pull_to_refresh_release_label">松开即可加载商品详情</string>
+    <string name="xlistview_pull_to_refresh_refreshing_label">加载中...</string>
+    <string name="xlistview_pull_to_refresh_footer_pull_label">继续拖动，查看图文详情</string>
+    <string name="xlistview_pull_to_refresh_footer_release_label">松开即可加载图文详情</string>
+    <string name="xlistview_pull_to_refresh_footer_refreshing_label">加载中...</string>
+    <string name="xlistview_pull_to_refresh_empty"> </string>
+    <!--
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    -->
+
+    <string name="rmb">\uffe5</string>
+    <string name="membership_point_desc">积分是55海淘宝宝们在社区点赞，评论，分享，PO笔记等活跃行为所获得，积分可在积分商城兑换精美礼品，还能参加每日积分抽奖。</string>
+
+    <!-- 个人中心 -->
+    <string name="my_account_new_title">我的</string>
+    <string name="message">消息</string>
+    <string name="settings">设置</string>
+    <string name="avatar" translatable="false">头像</string>
+    <string name="enter_my_home_page">进入我的主页</string>
+    <string name="order_unpay">待付款</string>
+    <string name="order_undeliver">待发货</string>
+    <string name="order_unreceive">待收货</string>
+    <string name="order_complete">已完成</string>
+    <string name="order_all">全部订单</string>
+    <string name="my_coupon">我的优惠券</string>
+    <string name="my_membership_point">我的积分</string>
+    <string name="my_wishlist">我的心愿单</string>
+    <string name="my_album">我的草单</string>
+    <string name="following_store">关注的商家</string>
+    <string name="following_brand">关注的品牌</string>
+    <string name="invite_friend">去邀请</string>
+    <string name="password_login">密码登录</string>
+    <string name="login">登录</string>
+    <string name="send_verify_code">发送验证码</string>
+    <string name="default_country_code">+86</string>
+
+    <!-- 标题 -->
+    <string name="title_my_wish_list">我的心愿单</string>
+    <string name="title_my_album">我的草单</string>
+    <string name="title_easyopt_create">新建草单</string>
+    <string name="title_easyopt_edit">编辑草单</string>
+    <string name="title_sure">确定</string>
+
+    <!-- hint -->
+    <string name="hint_easyopt_name">有意思的标题容易被官方推荐哦</string>
+    <string name="hint_easyopt_desc">走心地介绍一下你的草单吧，粉丝会更喜欢哦</string>
+    <string name="hint_empty_view" translatable="false">暂无数据</string>
+    <string name="hint_error_view">加载失败</string>
+    <string name="hint_no_network_view">网络异常</string>
+    <string name="hint_search_tag">搜索标签名......</string>
+    <string name="hint_signature">介绍一下自己吧~</string>
+
+
+    <string name="service">客服</string>
+    <string name="easyopt">草单</string>
+    <string name="contact_service">联系客服</string>
+    <string name="delete">删除</string>
+    <string name="has_add_to_easyopt">已添加至草单</string>
+    <string name="easyopt_public_visible">公开可见</string>
+    <string name="dlg_easyopt_public_visible_title">什么是草单公开可见？</string>
+    <string name="dlg_easyopt_public_visible_content">开启草单公开可见后，其他小伙伴就可以在你的个人主页看到此草单，同时有机会被官方推荐到APP首页，从而获得更多的曝光机会以及草单收益哦！</string>
+    <string name="star">收藏</string>
+    <string name="comment">评论</string>
+    <string name="like">赞</string>
+    <string name="address_info">您上传的身份证照片我们将自动添加\"仅限海关清关使用\"的水印。55海淘及合作物流公司承诺所有身份信息均将进行加密存储，绝不用作其他用途。</string>
+    <string name="pay_now">立即支付</string>
+
+    <string name="order_detail_header_info_text">
+            注意：由于55海淘官网直购的商品全部都由海外官网提供，库存由各官网控制， 因此您在55海淘平台支付成功之后，有可能出现因商品缺货，涨价，或商品限制购买，禁运等导致订单被取消的情况。 如发生订单取消，我们会及时通知您，并会在1-3个工作日内为您办理退款手续。
+    </string>
+
+    <!-- 绑定第三方 -->
+    <string name="wechat">微信</string>
+    <string name="already_binded">已绑定</string>
+    <string name="weibo">微博</string>
+    <string name="qq">QQ</string>
+
+    <string name="all_like">全部点赞</string>
+    <string name="order_cancel">取消订单</string>
+    <string name="order_pay_now">立即支付</string>
+    <string name="order_back_money">申请退款</string>
+    <string name="order_confirm_received">确认收货</string>
+    <string name="order_delete">删除订单</string>
+    <string name="input_comment">请输入您的评论内容...</string>
+    <string name="send">发送</string>
+    <string name="related_post">相关笔记</string>
+    <string name="show_all_comments">查看全部评论</string>
+    <string name="system_notification">系统通知</string>
+    <string name="confirm_exchange">确认兑换</string>
+    <string name="input_exchange_code">请输入兑换码</string>
+    <string name="input_exchange_code_for_coupon">输入兑换码领取优惠券</string>
+    <string name="server_error_retry_later">服务器异常，请稍后再试</string>
+    <string name="reload">重新加载</string>
+    <string name="empty">空空如也</string>
+    <string name="empty_view_info">这里目前什么都没有啊</string>
+    <string name="network_not_good">咦，网络状态不佳哦~</string>
+    <string name="no_popularity">人气惨淡</string>
+    <string name="donnot_use_coupon">不使用优惠券</string>
+    <string name="filter">筛选</string>
+    <string name="cancel">取消</string>
+    <string name="nothing">空空如也</string>
+    <string name="nothing_here">这里目前什么都没有啊</string>
+    <string name="shopping_cart">购物车</string>
+    <string name="edit">编辑</string>
+    <string name="go_shopping">前往购物</string>
+    <string name="shopping_cart_empty">购物车内暂时没有商品...</string>
+    <string name="select_all">全选</string>
+    <string name="clear_invalidate_product">清空失效商品</string>
+    <string name="go_cash">前往结算</string>
+    <string name="summary">合计</string>
+    <string name="without_transfer_tax_fee">不含运费税费</string>
+    <string name="country_code_china">+86</string>
+    <string name="hint_input_pwd">输入密码</string>
+    <string name="forget_pwd">忘记密码？</string>
+    <string name="register">注册</string>
+    <string name="other_login_type">其他登录方式</string>
+    <string name="input_mail_username">输入邮箱 / 用户名</string>
+    <string name="input_phone">输入手机号</string>
+    <string name="input_verify_code">输入验证码</string>
+    <string name="submit">提交</string>
+    <string name="input_new_pwd">输入6-18位新密码</string>
+    <string name="reset_pwd">重置密码</string>
+    <string name="address">地址</string>
+    <string name="save">保存</string>
+    <string name="set_as_default">设为默认</string>
+    <string name="phone">电话</string>
+    <string name="ID_CARD">身份证</string>
+    <string name="district">地区</string>
+    <string name="ID_CARD_pic">身份证照片（必填，务必为收货人身份证）</string>
+    <string name="delete_address">删除地址</string>
+    <string name="pic_front_side">正面照</string>
+    <string name="pic_back_side">反面照</string>
+    <string name="change_pwd">修改密码</string>
+    <string name="publish">发布</string>
+    <string name="edit_post">编辑笔记</string>
+    <string name="hint_edit_post_title">一句话吸引宝宝们的眼球</string>
+    <string name="hint_edit_post_content">详细笔记心得能让你的粉丝暴涨哦</string>
+    <string name="add_tag">添加标签</string>
+    <string name="placeholder_fans">— 粉丝</string>
+    <string name="placeholder_likes">— 赞</string>
+    <string name="placeholder_followings">— 关注</string>
+
+</resources>

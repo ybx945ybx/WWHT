@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="542dp"
+    android:background="@color/colorWhite">
+
+    <!-- up -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <!-- Content1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="2.5dp"
+            android:orientation="vertical"
+            android:id="@+id/contentView1"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="175dp"
+                android:src="@mipmap/ic_default_square_tiny"
+                android:scaleType="fitCenter"
+                android:id="@+id/contentImage1"/>
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:text="修身牛仔裤"
+                android:textColor="@color/colorGray333333"
+                android:textSize="@dimen/size_28"
+                android:textAlignment="center"
+                android:layout_marginTop="8dp"
+                android:id="@+id/contentSubtitle1"/>
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:text="Ferragamo/菲拉格慕"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="@color/colorGray999999"
+                android:textSize="@dimen/size_24"
+                android:layout_marginTop="4dp"
+                android:textAlignment="center"
+                android:id="@+id/contentTitle1"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="24dp">
+
+                <com.a55haitao.wwht.ui.view.HaiTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="￥5319"
+                    app:expandTypeface="gotham"
+                    android:textColor="@color/colorRed"
+                    android:textSize="@dimen/size_28"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:id="@+id/contentRealPrice1"
+                    android:layout_marginRight="3dp"/>
+
+                <com.a55haitao.wwht.ui.view.HaiTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="￥9042"
+                    app:expandTypeface="gotham"
+                    android:textColor="@color/colorGray999999"
+                    android:textSize="@dimen/size_24"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:id="@+id/contentMallPrice1"
+                    android:layout_marginLeft="3dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+                
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@mipmap/ic_flag_china_wave"
+                    android:id="@+id/contentMallCountryImage1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Backcountry官网发货"
+                    android:gravity="center_horizontal"
+                    android:drawablePadding="5dp"
+                    android:textSize="@dimen/size_24"
+                    android:textColor="@color/colorGray999999"
+                    android:layout_marginLeft="4dp"
+                    android:id="@+id/contentMallSeller1"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!-- Content2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="2.5dp"
+            android:orientation="vertical"
+            android:id="@+id/contentView2"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="175dp"
+                android:scaleType="fitCenter"
+                android:id="@+id/contentImage2"/>
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:textColor="@color/colorGray333333"
+                android:textSize="@dimen/size_28"
+                android:textAlignment="center"
+                android:layout_marginTop="8dp"
+                android:id="@+id/contentSubtitle2"/>
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="@color/colorGray999999"
+                android:textSize="@dimen/size_24"
+                android:layout_marginTop="4dp"
+                android:textAlignment="center"
+                android:id="@+id/contentTitle2"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="24dp">
+
+                <com.a55haitao.wwht.ui.view.HaiTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:expandTypeface="gotham"
+                    android:textColor="@color/colorRed"
+                    android:textSize="@dimen/size_28"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:id="@+id/contentRealPrice2"
+                    android:layout_marginRight="3dp"/>
+
+                <com.a55haitao.wwht.ui.view.HaiTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:expandTypeface="gotham"
+                    android:textColor="@color/colorGray999999"
+                    android:textSize="@dimen/size_24"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:id="@+id/contentMallPrice2"
+                    android:layout_marginLeft="3dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:id="@+id/contentMallCountryImage2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:drawablePadding="5dp"
+                    android:textSize="@dimen/size_24"
+                    android:textColor="@color/colorGray999999"
+                    android:layout_marginLeft="4dp"
+                    android:id="@+id/contentMallSeller2"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- down -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <!-- Content3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="2.5dp"
+            android:orientation="vertical"
+            android:id="@+id/contentView3"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="175dp"
+                android:scaleType="fitCenter"
+                android:id="@+id/contentImage3"/>
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:textColor="@color/colorGray333333"
+                android:textSize="@dimen/size_28"
+                android:textAlignment="center"
+                android:layout_marginTop="8dp"
+                android:id="@+id/contentSubtitle3"/>
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="@color/colorGray999999"
+                android:textSize="@dimen/size_24"
+                android:layout_marginTop="4dp"
+                android:textAlignment="center"
+                android:id="@+id/contentTitle3"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="24dp">
+
+                <com.a55haitao.wwht.ui.view.HaiTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:expandTypeface="gotham"
+                    android:textColor="@color/colorRed"
+                    android:textSize="@dimen/size_28"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:id="@+id/contentRealPrice3"
+                    android:layout_marginRight="3dp"/>
+
+                <com.a55haitao.wwht.ui.view.HaiTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:expandTypeface="gotham"
+                    android:textColor="@color/colorGray999999"
+                    android:textSize="@dimen/size_24"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:id="@+id/contentMallPrice3"
+                    android:layout_marginLeft="3dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:id="@+id/contentMallCountryImage3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:drawablePadding="5dp"
+                    android:textSize="@dimen/size_24"
+                    android:textColor="@color/colorGray999999"
+                    android:layout_marginLeft="4dp"
+                    android:id="@+id/contentMallSeller3"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Content4 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="2.5dp"
+            android:orientation="vertical"
+            android:id="@+id/contentView4"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="175dp"
+                android:scaleType="fitCenter"
+                android:id="@+id/contentImage4"/>
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:textColor="@color/colorGray333333"
+                android:textSize="@dimen/size_28"
+                android:textAlignment="center"
+                android:layout_marginTop="8dp"
+                android:id="@+id/contentSubtitle4"/>
+
+            <com.a55haitao.wwht.ui.view.HaiTextView
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="@color/colorGray999999"
+                android:textSize="@dimen/size_24"
+                android:layout_marginTop="4dp"
+                android:textAlignment="center"
+                android:id="@+id/contentTitle4"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="24dp">
+
+                <com.a55haitao.wwht.ui.view.HaiTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:expandTypeface="gotham"
+                    android:textColor="@color/colorRed"
+                    android:textSize="@dimen/size_28"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:id="@+id/contentRealPrice4"
+                    android:layout_marginRight="3dp"/>
+
+                <com.a55haitao.wwht.ui.view.HaiTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:expandTypeface="gotham"
+                    android:textColor="@color/colorGray999999"
+                    android:textSize="@dimen/size_24"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:id="@+id/contentMallPrice4"
+                    android:layout_marginLeft="3dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:id="@+id/contentMallCountryImage4" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:drawablePadding="5dp"
+                    android:textSize="@dimen/size_24"
+                    android:textColor="@color/colorGray999999"
+                    android:layout_marginLeft="4dp"
+                    android:id="@+id/contentMallSeller4"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

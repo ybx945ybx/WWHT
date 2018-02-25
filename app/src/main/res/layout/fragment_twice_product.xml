@@ -1,0 +1,31 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:activity="com.a55haitao.wwht.ui.fragment.discover.TwiceProductFragment">
+
+    <include layout="@layout/line_divider_m_1_cccccc"/>
+
+    <include layout="@layout/site_sort_layout"/>
+
+    <include layout="@layout/line_divider_m_1_cccccc"/>
+
+    <include layout="@layout/site_condition_layout"/>
+
+
+    <com.a55haitao.wwht.ui.view.MultipleStatusView
+        android:id="@+id/msv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/content_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"/>
+
+    </com.a55haitao.wwht.ui.view.MultipleStatusView>
+
+</LinearLayout>
